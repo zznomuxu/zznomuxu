@@ -79,31 +79,6 @@
     
     
     <entry>
-      <title>数组类刷题day2</title>
-      <link href="/posts/4e.html"/>
-      <url>/posts/4e.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">努力刷题day2</div><h3 id="LeetCode-977-有序数组的平方-传送门"><a href="#LeetCode-977-有序数组的平方-传送门" class="headerlink" title="LeetCode 977.有序数组的平方 传送门"></a>LeetCode 977.有序数组的平方 <a href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/">传送门</a></h3><p>:::default<br>code<br>:::</p><pre><code>class Solution &amp;#123;    public int[] sortedSquares(int[] nums) &amp;#123;        for(int i=0;i&lt;nums.length;i++)        &amp;#123;            nums[i]=nums[i]*nums[i];        &amp;#125;        Arrays.sort(nums);        return nums;    &amp;#125;&amp;#125;</code></pre><h3 id="LeetCode-209-长度最小的子数组传送门"><a href="#LeetCode-209-长度最小的子数组传送门" class="headerlink" title="LeetCode 209.长度最小的子数组传送门"></a>LeetCode 209.长度最小的子数组<a href="https://leetcode-cn.com/problems/minimum-size-subarray-sum/">传送门</a></h3><p>:::default<br>code<br>:::</p><pre><code>class Solution &amp;#123;    public int minSubArrayLen(int s, int[] nums) &amp;#123;        int n = nums.length;        if (n == 0) &amp;#123;            return 0;        &amp;#125;        int ans = Integer.MAX_VALUE;        for (int i = 0; i &lt; n; i++) &amp;#123;            int sum = 0;            for (int j = i; j &lt; n; j++) &amp;#123;                sum += nums[j];                if (sum &gt;= s) &amp;#123;                    ans = Math.min(ans, j - i + 1);                    break;                &amp;#125;            &amp;#125;        &amp;#125;        return ans == Integer.MAX_VALUE ? 0 : ans;    &amp;#125;&amp;#125;</code></pre><p>+++primary 今日份总结<br>:::info<br>（1） Arrays.sort()使用方法：<a href="https://blog.csdn.net/qq_41763225/article/details/82890122/">传送门-转载-侵删致谢</a><br>（2）Integer.MAX_VALUE的含义：<a href="https://blog.csdn.net/weixin_44824500/article/details/104768290">传送门-转载-侵删致谢</a></p><p>:::</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> leetcode </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>笔试面试总结（关于测试</title>
       <link href="/posts/620e.html"/>
       <url>/posts/620e.html</url>
@@ -121,6 +96,31 @@
         <tags>
             
             <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数组类刷题day2</title>
+      <link href="/posts/4e.html"/>
+      <url>/posts/4e.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">努力刷题day2</div><h3 id="LeetCode-977-有序数组的平方-传送门"><a href="#LeetCode-977-有序数组的平方-传送门" class="headerlink" title="LeetCode 977.有序数组的平方 传送门"></a>LeetCode 977.有序数组的平方 <a href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/">传送门</a></h3><p>:::default<br>code<br>:::</p><pre><code>class Solution &amp;#123;    public int[] sortedSquares(int[] nums) &amp;#123;        for(int i=0;i&lt;nums.length;i++)        &amp;#123;            nums[i]=nums[i]*nums[i];        &amp;#125;        Arrays.sort(nums);        return nums;    &amp;#125;&amp;#125;</code></pre><h3 id="LeetCode-209-长度最小的子数组传送门"><a href="#LeetCode-209-长度最小的子数组传送门" class="headerlink" title="LeetCode 209.长度最小的子数组传送门"></a>LeetCode 209.长度最小的子数组<a href="https://leetcode-cn.com/problems/minimum-size-subarray-sum/">传送门</a></h3><p>:::default<br>code<br>:::</p><pre><code>class Solution &amp;#123;    public int minSubArrayLen(int s, int[] nums) &amp;#123;        int n = nums.length;        if (n == 0) &amp;#123;            return 0;        &amp;#125;        int ans = Integer.MAX_VALUE;        for (int i = 0; i &lt; n; i++) &amp;#123;            int sum = 0;            for (int j = i; j &lt; n; j++) &amp;#123;                sum += nums[j];                if (sum &gt;= s) &amp;#123;                    ans = Math.min(ans, j - i + 1);                    break;                &amp;#125;            &amp;#125;        &amp;#125;        return ans == Integer.MAX_VALUE ? 0 : ans;    &amp;#125;&amp;#125;</code></pre><p>+++primary 今日份总结<br>:::info<br>（1） Arrays.sort()使用方法：<a href="https://blog.csdn.net/qq_41763225/article/details/82890122/">传送门-转载-侵删致谢</a><br>（2）Integer.MAX_VALUE的含义：<a href="https://blog.csdn.net/weixin_44824500/article/details/104768290">传送门-转载-侵删致谢</a></p><p>:::</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
