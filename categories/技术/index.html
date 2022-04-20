@@ -132,6 +132,23 @@
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
 class="themespring" -->
+<script type="text/javascript">
+    var OriginTitile=document.title,st;
+	document.addEventListener("visibilitychange",function(){
+        document.hidden?(document.title="ヽ(●-`Д´-)ノ你要玩捉迷藏嘛",clearTimeout(st)):(document.title="(Ő∀Ő3)ノ好哦！",st=setTimeout(function(){document.title=OriginTitile},3e3))
+    })
+</script>
+<!-- 鼠标小点点 -->
+<script src="/js/cursor.js"></script>
+<!-- 樱花飘落 -->
+<script type="text/javascript">
+    //只在桌面版网页启用特效
+    var windowWidth = $(window).width();
+    if (windowWidth > 768) {
+        document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+    }
+    </script>
+    
 <body>
     <!-- 网站全局深色模式设置开始 -->
     <script>
@@ -160,6 +177,8 @@ class="themespring" -->
             document.body.classList.add('themespring');
         }
     </script>
+
+
     <div onclick="switchSpringThemes()" id="switchspring">
         <img class="chunjiepic" src="/medias/spring-img/denglong.png" title="春节主题" />
     </div>
@@ -635,6 +654,8 @@ class="themespring" -->
         
     </nav>
 </header>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
 <!-- header模块结束 -->
 
 <!-- 春节主题模式样式开始 -->
@@ -1214,94 +1235,6 @@ class Solution &amp;#123;
             
             <div class="article tag-post col s12 m6 l4">
                 <div class="card">
-                    <a href="/posts/4e.html" target="_blank">
-                        <div class="card-image tag-image">
-                            
-                            <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="数组类刷题day2">
-                            
-                            
-                            <!-- 福袋按钮 -->
-                            <div class="caishendeng">        
-                                <div class="caishenxian fudaixian">
-                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
-                                </div>              
-                            </div>
-                            <!-- 圣诞按钮 -->
-                            <div class="shengdandeng">        
-                                <div class="shengdanxianyou">
-                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
-                                </div>              
-                            </div>
-
-                            <span class="card-title">
-                              <!-- 文章卡片hover线条效果 -->
-                              <span class="titlesline">
-                                <style>
-                                  .titlesline {
-                                    width: 0px;
-                                    height: 4px;
-                                    background-color: #f2eb00;
-                                    border-radius: 2px;
-                                    position: absolute;
-                                    top: 10px;
-                                    left: 24px;
-                                  }
-                                  body.dark .titlesline {
-                                    filter: brightness(.7);
-                                  }
-                                  article .card .titlesline {
-                                    transition: all 0.36s ease;
-                                  }
-                                  article .card-image:hover .titlesline {
-                                    width: 36px;
-                                  }
-                                </style>
-                              </span>
-                              数组类刷题day2
-                            </span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                努力刷题day2
-
-LeetCode 977.有序数组的平方 传送门:::defaultcode:::
-class Solution &amp;#123;
-    public int[] sortedSquares(int[] nums)
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/leetcode/">
-                            <span class="chip bg-color">leetcode</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4">
-                <div class="card">
                     <a href="/posts/620e.html" target="_blank">
                         <div class="card-image tag-image">
                             
@@ -1381,6 +1314,94 @@ class Solution &amp;#123;
                         
                         <a href="/tags/%E9%9D%A2%E8%AF%95/">
                             <span class="chip bg-color">面试</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/4e.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="数组类刷题day2">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              数组类刷题day2
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                努力刷题day2
+
+LeetCode 977.有序数组的平方 传送门:::defaultcode:::
+class Solution &amp;#123;
+    public int[] sortedSquares(int[] nums)
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/leetcode/">
+                            <span class="chip bg-color">leetcode</span>
                         </a>
                         
                     </div>
@@ -2271,7 +2292,7 @@ pip 问题安装或更新都会出现一下问题：```ERROR: Exception:Tracebac
 
 
 
-    <a href="mailto:1292879769@qq.com" class="tooltipped" target="_blank" data-tooltip="nekodeng@qq.com" data-position="top" data-delay="50">
+    <a href="mailto:1292879769@qq.com" class="tooltipped" target="_blank" data-tooltip="1298279769@qq.com" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -2280,6 +2301,13 @@ pip 问题安装或更新都会出现一下问题：```ERROR: Exception:Tracebac
     <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1298279769" class="tooltipped" target="_blank" data-tooltip="1298279769" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
+
+
+
+    <a href="https://blog.csdn.net/qq_41233643" class="tooltipped" target="_blank" data-tooltip="关注我的CSDN" data-position="top" data-delay="50">
+        <i class="fab fa-csdn">C</i>
+    </a>
+
 
 
 

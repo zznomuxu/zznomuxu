@@ -132,6 +132,23 @@
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
 class="themespring" -->
+<script type="text/javascript">
+    var OriginTitile=document.title,st;
+	document.addEventListener("visibilitychange",function(){
+        document.hidden?(document.title="ヽ(●-`Д´-)ノ你要玩捉迷藏嘛",clearTimeout(st)):(document.title="(Ő∀Ő3)ノ好哦！",st=setTimeout(function(){document.title=OriginTitile},3e3))
+    })
+</script>
+<!-- 鼠标小点点 -->
+<script src="/js/cursor.js"></script>
+<!-- 樱花飘落 -->
+<script type="text/javascript">
+    //只在桌面版网页启用特效
+    var windowWidth = $(window).width();
+    if (windowWidth > 768) {
+        document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+    }
+    </script>
+    
 <body>
     <!-- 网站全局深色模式设置开始 -->
     <script>
@@ -160,6 +177,8 @@ class="themespring" -->
             document.body.classList.add('themespring');
         }
     </script>
+
+
     <div onclick="switchSpringThemes()" id="switchspring">
         <img class="chunjiepic" src="/medias/spring-img/denglong.png" title="春节主题" />
     </div>
@@ -635,6 +654,8 @@ class="themespring" -->
         
     </nav>
 </header>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
 <!-- header模块结束 -->
 
 <!-- 春节主题模式样式开始 -->
@@ -1189,7 +1210,7 @@ class="themespring" -->
 
 
 
-    <a href="mailto:1292879769@qq.com" class="tooltipped" target="_blank" data-tooltip="nekodeng@qq.com" data-position="top" data-delay="50">
+    <a href="mailto:1292879769@qq.com" class="tooltipped" target="_blank" data-tooltip="1298279769@qq.com" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -1198,6 +1219,13 @@ class="themespring" -->
     <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1298279769" class="tooltipped" target="_blank" data-tooltip="1298279769" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
+
+
+
+    <a href="https://blog.csdn.net/qq_41233643" class="tooltipped" target="_blank" data-tooltip="关注我的CSDN" data-position="top" data-delay="50">
+        <i class="fab fa-csdn">C</i>
+    </a>
+
 
 
 
