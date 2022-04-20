@@ -79,31 +79,6 @@
     
     
     <entry>
-      <title>笔试面试总结（关于测试</title>
-      <link href="/posts/620e.html"/>
-      <url>/posts/620e.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">找到工作了，一直想写一份面经汇总，奈何拖延症晚期，先开个坑，早晚得填！！！</div>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 面试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数组类刷题day2</title>
       <link href="/posts/4e.html"/>
       <url>/posts/4e.html</url>
@@ -121,6 +96,31 @@
         <tags>
             
             <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>笔试面试总结（关于测试</title>
+      <link href="/posts/620e.html"/>
+      <url>/posts/620e.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">找到工作了，一直想写一份面经汇总，奈何拖延症晚期，先开个坑，早晚得填！！！</div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 面试 </tag>
             
         </tags>
       
