@@ -1482,8 +1482,9 @@ thead {
 
 .chip-container .tag-title {
     margin-bottom: 10px;
-    color: #3C4858;
+    color: #4d6c96;
     font-size: 1.4rem;
+    
     font-weight: 400;
     font-family: 'Architects Daughter', cursive!important;
 }

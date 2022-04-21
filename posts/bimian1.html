@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="链表类刷题day5, 周周">
+    <meta name="keywords" content="笔试面试总结（关于测试, 周周">
     <meta name="description" content="这是一个神秘又开放的地方">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>链表类刷题day5 | 周周的苜蓿园</title>
+    <title>笔试面试总结（关于测试 | 周周的苜蓿园</title>
     
     <script>
         // 隐藏
@@ -887,12 +887,12 @@ class="themespring" -->
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/toc-banner/js1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/toc-banner/js4.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">链表类刷题day5</h1>
+                    <h1 class="description center-align post-title">笔试面试总结（关于测试</h1>
                 </div>
             </div>
         </div>
@@ -1012,7 +1012,7 @@ class="themespring" -->
 <div class="row">
     
     
-        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="leetcode">
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="面试">
             <style>
     #switchspring {
         bottom: 223px!important;
@@ -1179,8 +1179,8 @@ h3:hover {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/leetcode/">
-                                <span class="chip bg-color">leetcode</span>
+                            <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                <span class="chip bg-color">面试</span>
                             </a>
                         
                     </div>
@@ -1204,7 +1204,7 @@ h3:hover {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-20
+                    2022-04-12
                 </div>
                 
 
@@ -1213,7 +1213,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    290
+                    30
                 </div>
                 
 
@@ -1230,75 +1230,13 @@ h3:hover {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><div class="note info">前言：努力刷题day5</div><br></p>
-<h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><pre><code>class Solution &amp;#123;
-    public ListNode removeNthFromEnd(ListNode head, int n) &amp;#123;
-        ListNode dummyHead=new ListNode(-1);
-         dummyHead.next=head;
-        ListNode fast=dummyHead;
-        ListNode slow=dummyHead;
-        while(n-- &gt;0)
-        &amp;#123;
-            fast=fast.next;
-        &amp;#125;
-        fast=fast.next;
-        while(fast!=null)
-        &amp;#123;
-            fast=fast.next;
-            slow=slow.next;
-        &amp;#125;
-        slow.next=slow.next.next;
-        return dummyHead.next;
+                <div class="note info">找到工作了，一直想写一份面经汇总，奈何拖延症晚期，先开个坑，早晚得填！！！
 
 
 
-    &amp;#125;
-&amp;#125;
-</code></pre><h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><pre><code>public class Solution &amp;#123;
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &amp;#123;
-        ListNode curA = headA;
-        ListNode curB = headB;
-        int lenA = 0, lenB = 0;
-        while (curA != null) &amp;#123; // 求链表A的长度
-            lenA++;
-            curA = curA.next;
-        &amp;#125;
-        while (curB != null) &amp;#123; // 求链表B的长度
-            lenB++;
-            curB = curB.next;
-        &amp;#125;
-        curA = headA;
-        curB = headB;
-        // 让curA为最长链表的头，lenA为其长度
-        if (lenB &gt; lenA) &amp;#123;
-            //1. swap (lenA, lenB);
-            int tmpLen = lenA;
-            lenA = lenB;
-            lenB = tmpLen;
-            //2. swap (curA, curB);
-            ListNode tmpNode = curA;
-            curA = curB;
-            curB = tmpNode;
-        &amp;#125;
-        // 求长度差
-        int gap = lenA - lenB;
-        // 让curA和curB在同一起点上（末尾位置对齐）
-        while (gap-- &gt; 0) &amp;#123;
-            curA = curA.next;
-        &amp;#125;
-        // 遍历curA 和 curB，遇到相同则直接返回
-        while (curA != null) &amp;#123;
-            if (curA == curB) &amp;#123;
-                return curA;
-            &amp;#125;
-            curA = curA.next;
-            curB = curB.next;
-        &amp;#125;
-        return null;
-    &amp;#125;
 
-&amp;#125;
-</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+</div>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -1323,7 +1261,7 @@ h3:hover {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zznomuxu.github.io/posts/nulishuatiday5.html">https://zznomuxu.github.io/posts/nulishuatiday5.html</a>
+                    <a href="https://zznomuxu.github.io/posts/bimian1.html">https://zznomuxu.github.io/posts/bimian1.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1361,8 +1299,8 @@ h3:hover {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/leetcode/">
-                                    <span class="chip bg-color">leetcode</span>
+                                <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                                    <span class="chip bg-color">面试</span>
                                 </a>
                             
                         </div>
@@ -1897,13 +1835,12 @@ h3:hover {
         
         <div class="article col s12 m6">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/nulishuatiday5.html">
+                <a href="/posts/nulishuatiday2.html">
                     <div class="card-image">
                         
-                        <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="链表类刷题day5">
+                        <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="数组类刷题day2">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -1914,20 +1851,20 @@ h3:hover {
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          链表类刷题day5
+                          数组类刷题day2
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            努力刷题day5。
+                            努力刷题day2。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-12
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1940,7 +1877,6 @@ h3:hover {
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1959,10 +1895,10 @@ h3:hover {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/suibi1.html">
+                <a href="/posts/nulishuatiday1.html">
                     <div class="card-image">
                         
-                        <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="那年杏花微雨">
+                        <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="数组类刷题day1">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -1973,26 +1909,26 @@ h3:hover {
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          那年杏花微雨
+                          数组类刷题day1
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一次看甄嬛。
+                            努力刷题day1。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
                                 </a>
                             
                             
@@ -2002,8 +1938,8 @@ h3:hover {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BD%B1%E8%A7%86%E5%89%A7/">
-                        <span class="chip bg-color">影视剧</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
                 </div>
@@ -2087,7 +2023,7 @@ h3:hover {
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         
         
-        <div class="toc-widget" data-spmid="leetcode">
+        <div class="toc-widget" data-spmid="面试">
             <div class="toc-title">
                 <i class="far fa-list-alt"></i>
                 &nbsp;&nbsp;目录
@@ -2102,7 +2038,7 @@ h3:hover {
 <!-- TOC 悬浮按钮. -->
 
     
-<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="leetcode">
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="面试">
     <a class="btn-floating btn-large bg-color">
         <i class="fas fa-list-ul"></i>
     </a>

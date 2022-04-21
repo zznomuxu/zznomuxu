@@ -132,23 +132,6 @@
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
 class="themespring" -->
-<script type="text/javascript">
-    var OriginTitile=document.title,st;
-	document.addEventListener("visibilitychange",function(){
-        document.hidden?(document.title="ヽ(●-`Д´-)ノ你要玩捉迷藏嘛",clearTimeout(st)):(document.title="(Ő∀Ő3)ノ好哦！",st=setTimeout(function(){document.title=OriginTitile},3e3))
-    })
-</script>
-<!-- 鼠标小点点 -->
-<script src="/js/cursor.js"></script>
-<!-- 樱花飘落 -->
-<script type="text/javascript">
-    //只在桌面版网页启用特效
-    var windowWidth = $(window).width();
-    if (windowWidth > 768) {
-        document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
-    }
-    </script>
-    
 <body>
     <!-- 网站全局深色模式设置开始 -->
     <script>
@@ -177,8 +160,6 @@ class="themespring" -->
             document.body.classList.add('themespring');
         }
     </script>
-
-
     <div onclick="switchSpringThemes()" id="switchspring">
         <img class="chunjiepic" src="/medias/spring-img/denglong.png" title="春节主题" />
     </div>
@@ -395,6 +376,15 @@ class="themespring" -->
         </style>
       </div>
     </ul>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/goodpapers" class="waves-effect waves-light">
+      
+      <span>好文收藏</span>
+    </a>
     
   </li>
   
@@ -626,6 +616,17 @@ class="themespring" -->
                 </li>
               
             </ul>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/goodpapers" class="waves-effect waves-light">
+			
+				<i class="fas fa-fw"></i>
+			
+			好文收藏
+		</a>
           
         </li>
         
@@ -976,19 +977,19 @@ class="themespring" -->
             <div class="tag-chips">
                 
                 
-                <a href="/tags/python/" title="python: 1">
+                <a href="/tags/%E5%AD%A6%E6%9C%AF/" title="学术: 1">
                     <span class="chip center-align waves-effect waves-light
                      chip-default "
-                            data-tagname="python" style="background-color: #F9EBEA;">🔖&nbsp;python
+                            data-tagname="学术" style="background-color: #F9EBEA;">🔖&nbsp;学术
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E5%AD%A6%E6%9C%AF/" title="学术: 1">
+                <a href="/tags/python/" title="python: 1">
                     <span class="chip center-align waves-effect waves-light
                      chip-default "
-                            data-tagname="学术" style="background-color: #F5EEF8;">🔖&nbsp;学术
+                            data-tagname="python" style="background-color: #F5EEF8;">🔖&nbsp;python
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -1003,20 +1004,20 @@ class="themespring" -->
                 </a>
                 
                 
-                <a href="/tags/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
+                <a href="/tags/leetcode/" title="leetcode: 5">
                     <span class="chip center-align waves-effect waves-light
                      chip-default "
-                            data-tagname="博客" style="background-color: #E8F8F5;">🔖&nbsp;博客
-                        <span class="tag-length">1</span>
+                            data-tagname="leetcode" style="background-color: #E8F8F5;">🔖&nbsp;leetcode
+                        <span class="tag-length">5</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/leetcode/" title="leetcode: 5">
+                <a href="/tags/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
                     <span class="chip center-align waves-effect waves-light
                      chip-default "
-                            data-tagname="leetcode" style="background-color: #FEF9E7;">🔖&nbsp;leetcode
-                        <span class="tag-length">5</span>
+                            data-tagname="博客" style="background-color: #FEF9E7;">🔖&nbsp;博客
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -1062,7 +1063,7 @@ class="themespring" -->
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"python","weight":1,"link":"/tags/python/"},{"text":"学术","weight":1,"link":"/tags/学术/"},{"text":"bug","weight":2,"link":"/tags/bug/"},{"text":"博客","weight":1,"link":"/tags/博客/"},{"text":"leetcode","weight":5,"link":"/tags/leetcode/"},{"text":"面试","weight":2,"link":"/tags/面试/"},{"text":"影视剧","weight":1,"link":"/tags/影视剧/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"学术","weight":1,"link":"/tags/学术/"},{"text":"python","weight":1,"link":"/tags/python/"},{"text":"bug","weight":2,"link":"/tags/bug/"},{"text":"leetcode","weight":5,"link":"/tags/leetcode/"},{"text":"博客","weight":1,"link":"/tags/博客/"},{"text":"面试","weight":2,"link":"/tags/面试/"},{"text":"影视剧","weight":1,"link":"/tags/影视剧/"}], {
         autoResize: true
     });
 </script>
@@ -1097,7 +1098,7 @@ class="themespring" -->
       <span id="year">2022</span>
       <a href="/about" target="_blank">周周</a>
       &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
-      &nbsp;Theme&nbsp;<a href="https://github.com/nekodeng/hexo-theme-itsneko" target="_blank">itsNeko</a>
+      <!-- &nbsp;Theme&nbsp;<a href="https://github.com/nekodeng/hexo-theme-itsneko" target="_blank">itsNeko</a> -->
       <br>
 
       
@@ -1589,25 +1590,5 @@ $(function () {
             }
         });
     </script>
-    <!-- 一言API -->
-<!-- 现代写法，推荐 -->
-<!-- 兼容低版本浏览器 (包括 IE)，可移除 -->
-<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-<!--End-->
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res){
-      return res.json();
-    })
-    .then(function (data) {
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto + '——【' + data.from + '】';
-    })
-    .catch(function (err) {
-      console.error(err);
-    })
-</script>
-
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-koharu"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>
