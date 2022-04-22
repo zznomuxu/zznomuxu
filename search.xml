@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>链表类刷题day5</title>
-      <link href="/posts/nulishuatiday5.html"/>
-      <url>/posts/nulishuatiday5.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day5</div><br></p><h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><pre><code>class Solution &amp;#123;    public ListNode removeNthFromEnd(ListNode head, int n) &amp;#123;        ListNode dummyHead=new ListNode(-1);         dummyHead.next=head;        ListNode fast=dummyHead;        ListNode slow=dummyHead;        while(n-- &gt;0)        &amp;#123;            fast=fast.next;        &amp;#125;        fast=fast.next;        while(fast!=null)        &amp;#123;            fast=fast.next;            slow=slow.next;        &amp;#125;        slow.next=slow.next.next;        return dummyHead.next;    &amp;#125;&amp;#125;</code></pre><h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><pre><code>public class Solution &amp;#123;    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &amp;#123;        ListNode curA = headA;        ListNode curB = headB;        int lenA = 0, lenB = 0;        while (curA != null) &amp;#123; // 求链表A的长度            lenA++;            curA = curA.next;        &amp;#125;        while (curB != null) &amp;#123; // 求链表B的长度            lenB++;            curB = curB.next;        &amp;#125;        curA = headA;        curB = headB;        // 让curA为最长链表的头，lenA为其长度        if (lenB &gt; lenA) &amp;#123;            //1. swap (lenA, lenB);            int tmpLen = lenA;            lenA = lenB;            lenB = tmpLen;            //2. swap (curA, curB);            ListNode tmpNode = curA;            curA = curB;            curB = tmpNode;        &amp;#125;        // 求长度差        int gap = lenA - lenB;        // 让curA和curB在同一起点上（末尾位置对齐）        while (gap-- &gt; 0) &amp;#123;            curA = curA.next;        &amp;#125;        // 遍历curA 和 curB，遇到相同则直接返回        while (curA != null) &amp;#123;            if (curA == curB) &amp;#123;                return curA;            &amp;#125;            curA = curA.next;            curB = curB.next;        &amp;#125;        return null;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> leetcode </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>那年杏花微雨</title>
       <link href="/posts/suibi1.html"/>
       <url>/posts/suibi1.html</url>
@@ -46,6 +21,31 @@
         <tags>
             
             <tag> 影视剧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>链表类刷题day5</title>
+      <link href="/posts/nulishuatiday5.html"/>
+      <url>/posts/nulishuatiday5.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day5</div><br></p><h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><pre><code>class Solution &amp;#123;    public ListNode removeNthFromEnd(ListNode head, int n) &amp;#123;        ListNode dummyHead=new ListNode(-1);         dummyHead.next=head;        ListNode fast=dummyHead;        ListNode slow=dummyHead;        while(n-- &gt;0)        &amp;#123;            fast=fast.next;        &amp;#125;        fast=fast.next;        while(fast!=null)        &amp;#123;            fast=fast.next;            slow=slow.next;        &amp;#125;        slow.next=slow.next.next;        return dummyHead.next;    &amp;#125;&amp;#125;</code></pre><h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><pre><code>public class Solution &amp;#123;    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &amp;#123;        ListNode curA = headA;        ListNode curB = headB;        int lenA = 0, lenB = 0;        while (curA != null) &amp;#123; // 求链表A的长度            lenA++;            curA = curA.next;        &amp;#125;        while (curB != null) &amp;#123; // 求链表B的长度            lenB++;            curB = curB.next;        &amp;#125;        curA = headA;        curB = headB;        // 让curA为最长链表的头，lenA为其长度        if (lenB &gt; lenA) &amp;#123;            //1. swap (lenA, lenB);            int tmpLen = lenA;            lenA = lenB;            lenB = tmpLen;            //2. swap (curA, curB);            ListNode tmpNode = curA;            curA = curB;            curB = tmpNode;        &amp;#125;        // 求长度差        int gap = lenA - lenB;        // 让curA和curB在同一起点上（末尾位置对齐）        while (gap-- &gt; 0) &amp;#123;            curA = curA.next;        &amp;#125;        // 遍历curA 和 curB，遇到相同则直接返回        while (curA != null) &amp;#123;            if (curA == curB) &amp;#123;                return curA;            &amp;#125;            curA = curA.next;            curB = curB.next;        &amp;#125;        return null;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
