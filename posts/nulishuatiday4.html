@@ -1228,7 +1228,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    127
+                    196
                 </div>
                 
 
@@ -1248,34 +1248,9 @@ h3:hover {
                 <div class="note info">努力刷题day4</div>
 
 
-<h3 id="1-LeetCode-206-反转链表-传送门"><a href="#1-LeetCode-206-反转链表-传送门" class="headerlink" title="1.LeetCode 206.反转链表 传送门"></a>1.LeetCode 206.反转链表 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list/">传送门</a></h3><pre><code>// 双指针
-class Solution &amp;#123;
-    public ListNode reverseList(ListNode head) &amp;#123;
-        ListNode prev = null;
-        ListNode cur = head;
-        ListNode temp = null;
-        while (cur != null) &amp;#123;
-            temp = cur.next;// 保存下一个节点
-            cur.next = prev;
-            prev = cur;
-            cur = temp;
-        &amp;#125;
-        return prev;
-    &amp;#125;
-&amp;#125;
-</code></pre><h3 id="2-LeetCode-24-两两交换链表中的节点-传送门"><a href="#2-LeetCode-24-两两交换链表中的节点-传送门" class="headerlink" title="2.LeetCode 24.两两交换链表中的节点 传送门"></a>2.LeetCode 24.两两交换链表中的节点 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/swap-nodes-in-pairs/">传送门</a></h3><pre><code>// 递归
-class Solution &amp;#123;
-    public ListNode swapPairs(ListNode head) &amp;#123;
-        if (head == null || head.next == null) &amp;#123;
-            return head;
-        &amp;#125;
-        ListNode newHead = head.next;
-        head.next = swapPairs(newHead.next);
-        newHead.next = head;
-        return newHead;
-    &amp;#125;
-&amp;#125;
-</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<h3 id="1-LeetCode-206-反转链表-传送门"><a href="#1-LeetCode-206-反转链表-传送门" class="headerlink" title="1.LeetCode 206.反转链表 传送门"></a>1.LeetCode 206.反转链表 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list/">传送门</a></h3><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre class=" language-hljs q"><span class="hljs-comment">// 双指针</span><br>class Solution &#123;<br>    public ListNode reverseList(ListNode head) &#123;<br>        ListNode <span class="hljs-built_in">prev</span> = <span class="hljs-built_in">null</span>;<br>        ListNode cur = head;<br>        ListNode temp = <span class="hljs-built_in">null</span>;<br>        <span class="hljs-keyword">while</span> (cur != <span class="hljs-built_in">null</span>) &#123;<br>            temp = cur.<span class="hljs-built_in">next</span>;<span class="hljs-comment">// 保存下一个节点</span><br>            cur.<span class="hljs-built_in">next</span> = <span class="hljs-built_in">prev</span>;<br>            <span class="hljs-built_in">prev</span> = cur;<br>            cur = temp;<br>        &#125;<br>        return <span class="hljs-built_in"><code class="language-hljs q"><span class="hljs-comment">// 双指针</span><br>class Solution &#123;<br>    public ListNode reverseList(ListNode head) &#123;<br>        ListNode <span class="hljs-built_in">prev</span> = <span class="hljs-built_in">null</span>;<br>        ListNode cur = head;<br>        ListNode temp = <span class="hljs-built_in">null</span>;<br>        <span class="hljs-keyword">while</span> (cur != <span class="hljs-built_in">null</span>) &#123;<br>            temp = cur.<span class="hljs-built_in">next</span>;<span class="hljs-comment">// 保存下一个节点</span><br>            cur.<span class="hljs-built_in">next</span> = <span class="hljs-built_in">prev</span>;<br>            <span class="hljs-built_in">prev</span> = cur;<br>            cur = temp;<br>        &#125;<br>        return <span class="hljs-built_in">prev</span>;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<h3 id="2-LeetCode-24-两两交换链表中的节点-传送门"><a href="#2-LeetCode-24-两两交换链表中的节点-传送门" class="headerlink" title="2.LeetCode 24.两两交换链表中的节点 传送门"></a>2.LeetCode 24.两两交换链表中的节点 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/swap-nodes-in-pairs/">传送门</a></h3><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre class=" language-hljs haxe"><span class="hljs-comment">// 递归</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> ListNode swapPairs(ListNode head) &#123;<br>        <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">null</span> || head.next == <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">return</span> head;<br>        &#125;<br>        ListNode <span class="hljs-keyword">new</span><span class="hljs-type">Head</span> = head.next;<br>        head.next = swapPairs(<span class="hljs-keyword">new</span><span class="hljs-type">Head</span>.next);<br>        <span class="hljs-keyword">new</span><span class="hljs-type">Head</span>.next = head;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span><span class="hljs-type"><code class="language-hljs haxe"><span class="hljs-comment">// 递归</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;<br>    <span class="hljs-keyword">public</span> ListNode swapPairs(ListNode head) &#123;<br>        <span class="hljs-keyword">if</span> (head == <span class="hljs-literal">null</span> || head.next == <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">return</span> head;<br>        &#125;<br>        ListNode <span class="hljs-keyword">new</span><span class="hljs-type">Head</span> = head.next;<br>        head.next = swapPairs(<span class="hljs-keyword">new</span><span class="hljs-type">Head</span>.next);<br>        <span class="hljs-keyword">new</span><span class="hljs-type">Head</span>.next = head;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span><span class="hljs-type">Head</span>;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -1814,8 +1789,8 @@ class Solution &amp;#123;
         el: '#vcomments',
         enableQQ: true,
         boolean: true,
-        appId: '',
-        appKey: '',
+        appId: 'InSJBO9ciW87pMwpX8sGIc7a-MdYXbMMI',
+        appKey: 'j3DTHbjD3OWs6Peu4HBU1M0D',
         notify: 'false' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
@@ -2197,7 +2172,7 @@ class Solution &amp;#123;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">3.1k</span>&nbsp;
+        class="white-color">3.8k</span>&nbsp;
       
       
       

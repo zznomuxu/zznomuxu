@@ -1228,14 +1228,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    290
+                    481
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -1246,74 +1246,8 @@ h3:hover {
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><div class="note info">前言：努力刷题day5</div><br></p>
-<h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><pre><code>class Solution &amp;#123;
-    public ListNode removeNthFromEnd(ListNode head, int n) &amp;#123;
-        ListNode dummyHead=new ListNode(-1);
-         dummyHead.next=head;
-        ListNode fast=dummyHead;
-        ListNode slow=dummyHead;
-        while(n-- &gt;0)
-        &amp;#123;
-            fast=fast.next;
-        &amp;#125;
-        fast=fast.next;
-        while(fast!=null)
-        &amp;#123;
-            fast=fast.next;
-            slow=slow.next;
-        &amp;#125;
-        slow.next=slow.next.next;
-        return dummyHead.next;
-
-
-
-    &amp;#125;
-&amp;#125;
-</code></pre><h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><pre><code>public class Solution &amp;#123;
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &amp;#123;
-        ListNode curA = headA;
-        ListNode curB = headB;
-        int lenA = 0, lenB = 0;
-        while (curA != null) &amp;#123; // 求链表A的长度
-            lenA++;
-            curA = curA.next;
-        &amp;#125;
-        while (curB != null) &amp;#123; // 求链表B的长度
-            lenB++;
-            curB = curB.next;
-        &amp;#125;
-        curA = headA;
-        curB = headB;
-        // 让curA为最长链表的头，lenA为其长度
-        if (lenB &gt; lenA) &amp;#123;
-            //1. swap (lenA, lenB);
-            int tmpLen = lenA;
-            lenA = lenB;
-            lenB = tmpLen;
-            //2. swap (curA, curB);
-            ListNode tmpNode = curA;
-            curA = curB;
-            curB = tmpNode;
-        &amp;#125;
-        // 求长度差
-        int gap = lenA - lenB;
-        // 让curA和curB在同一起点上（末尾位置对齐）
-        while (gap-- &gt; 0) &amp;#123;
-            curA = curA.next;
-        &amp;#125;
-        // 遍历curA 和 curB，遇到相同则直接返回
-        while (curA != null) &amp;#123;
-            if (curA == curB) &amp;#123;
-                return curA;
-            &amp;#125;
-            curA = curA.next;
-            curB = curB.next;
-        &amp;#125;
-        return null;
-    &amp;#125;
-
-&amp;#125;
-</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre class=" language-hljs routeros">class Solution &#123;<br>    public ListNode removeNthFromEnd(ListNode head, int n) &#123;<br>        ListNode <span class="hljs-attribute">dummyHead</span>=new ListNode(-1);<br>         dummyHead.<span class="hljs-attribute">next</span>=head;<br>        ListNode <span class="hljs-attribute">fast</span>=dummyHead;<br>        ListNode <span class="hljs-attribute">slow</span>=dummyHead;<br>        <span class="hljs-keyword">while</span>(n-- &gt;0)<br>        &#123;<br>            <span class="hljs-attribute">fast</span>=fast.next;<br>        &#125;<br>        <span class="hljs-attribute">fast</span>=fast.next;<br>        <span class="hljs-keyword">while</span>(fast!=<span class="hljs-literal">null</span>)<br>        &#123;<br>            <span class="hljs-attribute">fast</span>=fast.next;<br>            <span class="hljs-attribute">slow</span>=slow.next;<br>        &#125;<br>        slow.<span class="hljs-attribute"><code class="language-hljs routeros">class Solution &#123;<br>    public ListNode removeNthFromEnd(ListNode head, int n) &#123;<br>        ListNode <span class="hljs-attribute">dummyHead</span>=new ListNode(-1);<br>         dummyHead.<span class="hljs-attribute">next</span>=head;<br>        ListNode <span class="hljs-attribute">fast</span>=dummyHead;<br>        ListNode <span class="hljs-attribute">slow</span>=dummyHead;<br>        <span class="hljs-keyword">while</span>(n-- &gt;0)<br>        &#123;<br>            <span class="hljs-attribute">fast</span>=fast.next;<br>        &#125;<br>        <span class="hljs-attribute">fast</span>=fast.next;<br>        <span class="hljs-keyword">while</span>(fast!=<span class="hljs-literal">null</span>)<br>        &#123;<br>            <span class="hljs-attribute">fast</span>=fast.next;<br>            <span class="hljs-attribute">slow</span>=slow.next;<br>        &#125;<br>        slow.<span class="hljs-attribute">next</span>=slow.next.next;<br>        return dummyHead.next;<br>       <br><br><br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre class=" language-hljs gradle"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> Solution &#123;<br>    <span class="hljs-keyword">public</span> ListNode getIntersectionNode(ListNode headA, ListNode headB) &#123;<br>        ListNode curA = headA;<br>        ListNode curB = headB;<br>        <span class="hljs-keyword">int</span> lenA = <span class="hljs-number">0</span>, lenB = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (curA != <span class="hljs-keyword">null</span>) &#123; <span class="hljs-comment">// 求链表A的长度</span><br>            lenA++;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-keyword">while</span> (curB != <span class="hljs-keyword">null</span>) &#123; <span class="hljs-comment">// 求链表B的长度</span><br>            lenB++;<br>            curB = curB.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        curA = headA;<br>        curB = headB;<br>        <span class="hljs-comment">// 让curA为最长链表的头，lenA为其长度</span><br>        <span class="hljs-keyword">if</span> (lenB &gt; lenA) &#123;<br>            <span class="hljs-comment">//1. swap (lenA, lenB);</span><br>            <span class="hljs-keyword">int</span> tmpLen = lenA;<br>            lenA = lenB;<br>            lenB = tmpLen;<br>            <span class="hljs-comment">//2. swap (curA, curB);</span><br>            ListNode tmpNode = curA;<br>            curA = curB;<br>            curB = tmpNode;<br>        &#125;<br>        <span class="hljs-comment">// 求长度差</span><br>        <span class="hljs-keyword">int</span> gap = lenA - lenB;<br>        <span class="hljs-comment">// 让curA和curB在同一起点上（末尾位置对齐）</span><br>        <span class="hljs-keyword">while</span> (gap-- &gt; <span class="hljs-number">0</span>) &#123;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-comment">// 遍历curA 和 curB，遇到相同则直接返回</span><br>        <span class="hljs-keyword">while</span> (curA != <span class="hljs-keyword">null</span>) &#123;<br>            <span class="hljs-keyword">if</span> (curA == curB) &#123;<br>                <span class="hljs-keyword">return</span> curA;<br>            &#125;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>            curB = curB.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword"><code class="language-hljs gradle"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> Solution &#123;<br>    <span class="hljs-keyword">public</span> ListNode getIntersectionNode(ListNode headA, ListNode headB) &#123;<br>        ListNode curA = headA;<br>        ListNode curB = headB;<br>        <span class="hljs-keyword">int</span> lenA = <span class="hljs-number">0</span>, lenB = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (curA != <span class="hljs-keyword">null</span>) &#123; <span class="hljs-comment">// 求链表A的长度</span><br>            lenA++;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-keyword">while</span> (curB != <span class="hljs-keyword">null</span>) &#123; <span class="hljs-comment">// 求链表B的长度</span><br>            lenB++;<br>            curB = curB.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        curA = headA;<br>        curB = headB;<br>        <span class="hljs-comment">// 让curA为最长链表的头，lenA为其长度</span><br>        <span class="hljs-keyword">if</span> (lenB &gt; lenA) &#123;<br>            <span class="hljs-comment">//1. swap (lenA, lenB);</span><br>            <span class="hljs-keyword">int</span> tmpLen = lenA;<br>            lenA = lenB;<br>            lenB = tmpLen;<br>            <span class="hljs-comment">//2. swap (curA, curB);</span><br>            ListNode tmpNode = curA;<br>            curA = curB;<br>            curB = tmpNode;<br>        &#125;<br>        <span class="hljs-comment">// 求长度差</span><br>        <span class="hljs-keyword">int</span> gap = lenA - lenB;<br>        <span class="hljs-comment">// 让curA和curB在同一起点上（末尾位置对齐）</span><br>        <span class="hljs-keyword">while</span> (gap-- &gt; <span class="hljs-number">0</span>) &#123;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-comment">// 遍历curA 和 curB，遇到相同则直接返回</span><br>        <span class="hljs-keyword">while</span> (curA != <span class="hljs-keyword">null</span>) &#123;<br>            <span class="hljs-keyword">if</span> (curA == curB) &#123;<br>                <span class="hljs-keyword">return</span> curA;<br>            &#125;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>            curB = curB.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;<br>    &#125;<br>    <br>&#125;<br><br></code></pre></td></tr></table></figure><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -1852,8 +1786,8 @@ h3:hover {
         el: '#vcomments',
         enableQQ: true,
         boolean: true,
-        appId: '',
-        appKey: '',
+        appId: 'InSJBO9ciW87pMwpX8sGIc7a-MdYXbMMI',
+        appKey: 'j3DTHbjD3OWs6Peu4HBU1M0D',
         notify: 'false' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
@@ -2235,7 +2169,7 @@ h3:hover {
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">3.1k</span>&nbsp;
+        class="white-color">3.8k</span>&nbsp;
       
       
       

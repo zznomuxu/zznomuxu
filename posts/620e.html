@@ -1228,7 +1228,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    629
+                    676
                 </div>
                 
 
@@ -1248,24 +1248,12 @@ h3:hover {
                 <blockquote>
 <p>常见游戏规则：<br>从扑克中每次取出4张牌。使用加减乘除，第一个能得出24者为赢。（其中，J代表&gt;11，Q代表12，K代表13，A代表1），按照要求编程解决24点游戏。</p>
 </blockquote>
-<p>随机产生四个数字用python中的函数进行全排列<br>随机数的生成：<br>对于python随机数的生成，通过导入包来实现，即import  random<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202202222143990.png" alt><br>本程序中因为要生成4个（1——13）的整形数字，采用randint<br>对四个随机数的全排列：<br>对于python可以通过python的包itertools所以不用自己写递归函数实现</p>
-<pre class=" language-lang-itertools.permutations"><code class="language-lang-itertools.permutations">```
-通俗地讲，就是返回可迭代对象的所有数学全排列方式。
-```listCardSet = list(set(itertools.permutations(listCardNum, 4)))#全排列4个数
-return  listCardSet
-</code></pre>
-<p>例如：8,13,3,5产生的全排列</p>
+<p>随机产生四个数字用python中的函数进行全排列<br>随机数的生成：<br>对于python随机数的生成，通过导入包来实现，即import  random<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202202222143990.png" alt><br>本程序中因为要生成4个（1——13）的整形数字，采用randint<br>对四个随机数的全排列：<br>对于python可以通过python的包itertools所以不用自己写递归函数实现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre class=" language-hljs itertools.permutations"><code class="language-hljs itertools.permutations">&#96;&#96;&#96;<br>通俗地讲，就是返回可迭代对象的所有数学全排列方式。<br>&#96;&#96;&#96;listCardSet &#x3D; list(set(itertools.permutations(listCardNum, 4)))#全排列4个数<br>return  listCardSet<br></code></pre></td></tr></table></figure><br>例如：8,13,3,5产生的全排列</p>
 <p>(8, 13, 3, 5), (13, 5, 8, 3), (5, 3, 8, 13), (13, 3, 8, 5), (3, 5, 8, 13), (3, 13, 5, 8),</p>
 <p> (3, 5, 13, 8), (5, 3, 13, 8), (8, 13, 5, 3), (8, 5, 13, 3), (8, 3, 5, 13), (5, 8, 3, 13),</p>
 <p> (13, 8, 3, 5), (13, 3, 5, 8), (8, 3, 13, 5), (5, 8, 13, 3), (3, 8, 13, 5), (5, 13, 3, 8),</p>
 <p> (13, 8, 5, 3), (5, 13, 8, 3), (8, 5, 3, 13), (3, 13, 8, 5), (3, 8, 5, 13), (13, 5, 3, 8)</p>
-<p>显示：<br>```if <strong>name</strong> == “<strong>main</strong>“:<br>    print(“<strong><strong><strong><strong><strong><em>**</em></strong></strong></strong></strong></strong>欢迎进入24点游戏<strong><strong><strong><strong><strong><em>**</em></strong></strong></strong></strong></strong>“)<br>    print(“该系统会随机产生四张牌，并帮助您算出可以实现24点的所有算法”)</p>
-<pre><code> ![](https://zzblogimages.oss-cn-beijing.aliyuncs.com/202202222146226.png)
-代码分析：
-I.需要的包：
-```import itertools
-import random
-</code></pre><p>II.随机产生数字和全排列：</p>
+<p>显示：<br><figure class="highlight plain"><figcaption><span>__name__ </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre class=" language-hljs if">print(&quot;************************欢迎进入24点游戏************************&quot;)<br>print(&quot;该系统会随机产生四张牌，并帮助您算出可以实现24点的所有算法&quot;)<br></code></pre></td></tr></table></figure><br> <img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202202222146226.png" alt><br>代码分析：<br>I.需要的包：<br><figure class="highlight plain"><figcaption><span>itertools</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs import"><code class="language-hljs if">print(&quot;************************欢迎进入24点游戏************************&quot;)<br>print(&quot;该系统会随机产生四张牌，并帮助您算出可以实现24点的所有算法&quot;)<br></code></pre></td></tr></table></figure><br> <img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202202222146226.png" alt><br>代码分析：<br>I.需要的包：<br><figure class="highlight plain"><figcaption><span>itertools</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs import">import random<br></code></pre></td></tr></table></figure><br>II.随机产生数字和全排列：</p>
 <p>```def card_rand():<br>    for i in range(4):<br>        list_random.append(random.randint(1, 13))                    #list.append(obj)<br>    list_quanpai = list(set(itertools.permutations(list_random, 4)))#全排列4个数<br>    return  list_quanpai<br>listCard = card_rand()  # 排列组合结果</p>
 <h1 id="print-listCard-输出所有排列"><a href="#print-listCard-输出所有排列" class="headerlink" title="print(listCard)#输出所有排列"></a>print(listCard)#输出所有排列</h1><p>```III. 计算函数：</p>
 <p>```def card_calculate():<br>    for i in range(len(listCard)):<br>        list1_Card = listCard[i]</p>
@@ -1850,8 +1838,8 @@ import random
         el: '#vcomments',
         enableQQ: true,
         boolean: true,
-        appId: '',
-        appKey: '',
+        appId: 'InSJBO9ciW87pMwpX8sGIc7a-MdYXbMMI',
+        appKey: 'j3DTHbjD3OWs6Peu4HBU1M0D',
         notify: 'false' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
@@ -2240,7 +2228,7 @@ import random
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">3.1k</span>&nbsp;
+        class="white-color">3.8k</span>&nbsp;
       
       
       
