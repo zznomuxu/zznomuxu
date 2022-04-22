@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>哈希表类刷题day6</title>
+      <link href="/posts/798a.html"/>
+      <url>/posts/798a.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day5</div><br></p><h3 id="LeetCode-349-两个数组的交集传送门"><a href="#LeetCode-349-两个数组的交集传送门" class="headerlink" title="LeetCode 349.  两个数组的交集传送门"></a>LeetCode 349.  两个数组的交集<a href="https://leetcode-cn.com/problems/intersection-of-two-arrays/">传送门</a></h3><pre><code>import java.util.HashSet;import java.util.Set;class Solution &amp;#123;    public int[] intersection(int[] nums1, int[] nums2) &amp;#123;        if (nums1 == null || nums1.length == 0 || nums2 == null || nums2.length == 0) &amp;#123;            return new int[0];        &amp;#125;        Set&lt;Integer&gt; set1 = new HashSet&lt;&gt;();        Set&lt;Integer&gt; resSet = new HashSet&lt;&gt;();        //遍历数组1        for (int i : nums1) &amp;#123;            set1.add(i);        &amp;#125;        //遍历数组2的过程中判断哈希表中是否存在该元素        for (int i : nums2) &amp;#123;            if (set1.contains(i)) &amp;#123;                resSet.add(i);            &amp;#125;        &amp;#125;        int[] resArr = new int[resSet.size()];        int index = 0;        //将结果几何转为数组        for (int i : resSet) &amp;#123;            resArr[index++] = i;        &amp;#125;        return resArr;    &amp;#125;&amp;#125;</code></pre><h3 id="LeetCode-242-有效的字母异位词-传送门"><a href="#LeetCode-242-有效的字母异位词-传送门" class="headerlink" title="LeetCode 242.有效的字母异位词 传送门"></a>LeetCode 242.有效的字母异位词 <a href="https://leetcode-cn.com/problems/valid-anagram/">传送门</a></h3><pre><code>class Solution &amp;#123;    public boolean isAnagram(String s, String t) &amp;#123;        if (s.length() != t.length()) &amp;#123;            return false;        &amp;#125;        int[] table = new int[26];        for (int i = 0; i &lt; s.length(); i++) &amp;#123;            table[s.charAt(i) - &#39;a&#39;]++;        &amp;#125;        for (int i = 0; i &lt; t.length(); i++) &amp;#123;            table[t.charAt(i) - &#39;a&#39;]--;            if (table[t.charAt(i) - &#39;a&#39;] &lt; 0) &amp;#123;                return false;            &amp;#125;        &amp;#125;        return true;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>那年杏花微雨</title>
       <link href="/posts/suibi1.html"/>
       <url>/posts/suibi1.html</url>
@@ -158,7 +183,7 @@
       <link href="/posts/nulishuatiday1.html"/>
       <url>/posts/nulishuatiday1.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">努力刷题day1                                                         </div><h3 id="LeetCode-704-二分查找【传送门】"><a href="#LeetCode-704-二分查找【传送门】" class="headerlink" title="LeetCode 704.二分查找【传送门】"></a>LeetCode 704.二分查找【<a href="https://leetcode-cn.com/problems/binary-search/">传送门</a>】</h3><p>:::default<br>code<br>:::</p><pre><code>class Solution &amp;#123;    public int search(int[] nums, int target) &amp;#123;        // 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算        if (target &lt; nums[0] || target &gt; nums[nums.length - 1]) &amp;#123;            return -1;        &amp;#125;        int left = 0, right = nums.length - 1;        while (left &lt;= right) &amp;#123;            int mid = left + ((right - left) &gt;&gt; 1);            if (nums[mid] == target)                return mid;            else if (nums[mid] &lt; target)                left = mid + 1;            else if (nums[mid] &gt; target)                right = mid - 1;        &amp;#125;        return -1;    &amp;#125;&amp;#125;</code></pre><h3 id="LeetCode-27-移除元素【传送门】"><a href="#LeetCode-27-移除元素【传送门】" class="headerlink" title="LeetCode 27.移除元素【传送门】"></a>LeetCode 27.移除元素【<a href="https://leetcode-cn.com/problems/remove-element/">传送门</a>】</h3><p>:::default<br>code<br>:::</p><pre><code>class Solution &amp;#123;    public int removeElement(int[] nums, int val) &amp;#123;        // 快慢指针        int fastIndex = 0;        int slowIndex;        for (slowIndex = 0; fastIndex &lt; nums.length; fastIndex++) &amp;#123;            if (nums[fastIndex] != val) &amp;#123;                nums[slowIndex] = nums[fastIndex];                slowIndex++;            &amp;#125;        &amp;#125;        return slowIndex;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">努力刷题day1  嘻嘻                                                       </div><h3 id="LeetCode-704-二分查找【传送门】"><a href="#LeetCode-704-二分查找【传送门】" class="headerlink" title="LeetCode 704.二分查找【传送门】"></a>LeetCode 704.二分查找【<a href="https://leetcode-cn.com/problems/binary-search/">传送门</a>】</h3><pre><code>class Solution &amp;#123;    public int search(int[] nums, int target) &amp;#123;        // 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算        if (target &lt; nums[0] || target &gt; nums[nums.length - 1]) &amp;#123;            return -1;        &amp;#125;        int left = 0, right = nums.length - 1;        while (left &lt;= right) &amp;#123;            int mid = left + ((right - left) &gt;&gt; 1);            if (nums[mid] == target)                return mid;            else if (nums[mid] &lt; target)                left = mid + 1;            else if (nums[mid] &gt; target)                right = mid - 1;        &amp;#125;        return -1;    &amp;#125;&amp;#125;</code></pre><h3 id="LeetCode-27-移除元素【传送门】"><a href="#LeetCode-27-移除元素【传送门】" class="headerlink" title="LeetCode 27.移除元素【传送门】"></a>LeetCode 27.移除元素【<a href="https://leetcode-cn.com/problems/remove-element/">传送门</a>】</h3><pre><code>class Solution &amp;#123;    public int removeElement(int[] nums, int val) &amp;#123;        // 快慢指针        int fastIndex = 0;        int slowIndex;        for (slowIndex = 0; fastIndex &lt; nums.length; fastIndex++) &amp;#123;            if (nums[fastIndex] != val) &amp;#123;                nums[slowIndex] = nums[fastIndex];                slowIndex++;            &amp;#125;        &amp;#125;        return slowIndex;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
