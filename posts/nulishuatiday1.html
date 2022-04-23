@@ -1228,7 +1228,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    296
+                    180
                 </div>
                 
 
@@ -1252,8 +1252,42 @@ h3:hover {
 
 
 
-<h3 id="LeetCode-704-二分查找【传送门】"><a href="#LeetCode-704-二分查找【传送门】" class="headerlink" title="LeetCode 704.二分查找【传送门】"></a>LeetCode 704.二分查找【<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-search/">传送门</a>】</h3><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre class=" language-hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> search(<span class="hljs-built_in">int</span>[] nums, <span class="hljs-built_in">int</span> target) &#123;<br>        <span class="hljs-comment">// 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算</span><br>        <span class="hljs-keyword">if</span> (target &lt; nums[<span class="hljs-number">0</span>] || target &gt; nums[nums.length - <span class="hljs-number">1</span>]) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>        &#125;<br>        <span class="hljs-built_in">int</span> left = <span class="hljs-number">0</span>, right = nums.length - <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">while</span> (left &lt;= right) &#123;<br>            <span class="hljs-built_in">int</span> mid = left + ((right - left) &gt;&gt; <span class="hljs-number">1</span>);<br>            <span class="hljs-keyword">if</span> (nums[mid] == target)<br>                <span class="hljs-keyword">return</span> mid;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; target)<br>                left = mid + <span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target)<br>                right = mid - <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number"><code class="language-hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> search(<span class="hljs-built_in">int</span>[] nums, <span class="hljs-built_in">int</span> target) &#123;<br>        <span class="hljs-comment">// 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算</span><br>        <span class="hljs-keyword">if</span> (target &lt; nums[<span class="hljs-number">0</span>] || target &gt; nums[nums.length - <span class="hljs-number">1</span>]) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>        &#125;<br>        <span class="hljs-built_in">int</span> left = <span class="hljs-number">0</span>, right = nums.length - <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">while</span> (left &lt;= right) &#123;<br>            <span class="hljs-built_in">int</span> mid = left + ((right - left) &gt;&gt; <span class="hljs-number">1</span>);<br>            <span class="hljs-keyword">if</span> (nums[mid] == target)<br>                <span class="hljs-keyword">return</span> mid;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &lt; target)<br>                left = mid + <span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[mid] &gt; target)<br>                right = mid - <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<h3 id="LeetCode-27-移除元素【传送门】"><a href="#LeetCode-27-移除元素【传送门】" class="headerlink" title="LeetCode 27.移除元素【传送门】"></a>LeetCode 27.移除元素【<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-element/">传送门</a>】</h3><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre class=" language-hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> removeElement(<span class="hljs-built_in">int</span>[] nums, <span class="hljs-built_in">int</span> val) &#123;<br><br>        <span class="hljs-comment">// 快慢指针</span><br>        <span class="hljs-built_in">int</span> fastIndex = <span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">int</span> slowIndex;<br>        <span class="hljs-keyword">for</span> (slowIndex = <span class="hljs-number">0</span>; fastIndex &lt; nums.length; fastIndex++) &#123;<br>            <span class="hljs-keyword">if</span> (nums[fastIndex] != val) &#123;<br>                nums[slowIndex] = nums[fastIndex];<br>                slowIndex++;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword"><code class="language-hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> removeElement(<span class="hljs-built_in">int</span>[] nums, <span class="hljs-built_in">int</span> val) &#123;<br><br>        <span class="hljs-comment">// 快慢指针</span><br>        <span class="hljs-built_in">int</span> fastIndex = <span class="hljs-number">0</span>;<br>        <span class="hljs-built_in">int</span> slowIndex;<br>        <span class="hljs-keyword">for</span> (slowIndex = <span class="hljs-number">0</span>; fastIndex &lt; nums.length; fastIndex++) &#123;<br>            <span class="hljs-keyword">if</span> (nums[fastIndex] != val) &#123;<br>                nums[slowIndex] = nums[fastIndex];<br>                slowIndex++;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> slowIndex;<br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<h3 id="LeetCode-704-二分查找【传送门】"><a href="#LeetCode-704-二分查找【传送门】" class="headerlink" title="LeetCode 704.二分查找【传送门】"></a>LeetCode 704.二分查找【<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-search/">传送门</a>】</h3><pre><code>class Solution &amp;#123;
+    public int search(int[] nums, int target) &amp;#123;
+        // 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算
+        if (target &lt; nums[0] || target &gt; nums[nums.length - 1]) &amp;#123;
+            return -1;
+        &amp;#125;
+        int left = 0, right = nums.length - 1;
+        while (left &lt;= right) &amp;#123;
+            int mid = left + ((right - left) &gt;&gt; 1);
+            if (nums[mid] == target)
+                return mid;
+            else if (nums[mid] &lt; target)
+                left = mid + 1;
+            else if (nums[mid] &gt; target)
+                right = mid - 1;
+        &amp;#125;
+        return -1;
+    &amp;#125;
+&amp;#125;
+</code></pre><h3 id="LeetCode-27-移除元素【传送门】"><a href="#LeetCode-27-移除元素【传送门】" class="headerlink" title="LeetCode 27.移除元素【传送门】"></a>LeetCode 27.移除元素【<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-element/">传送门</a>】</h3><pre><code>class Solution &amp;#123;
+    public int removeElement(int[] nums, int val) &amp;#123;
+
+        // 快慢指针
+        int fastIndex = 0;
+        int slowIndex;
+        for (slowIndex = 0; fastIndex &lt; nums.length; fastIndex++) &amp;#123;
+            if (nums[fastIndex] != val) &amp;#123;
+                nums[slowIndex] = nums[fastIndex];
+                slowIndex++;
+            &amp;#125;
+        &amp;#125;
+        return slowIndex;
+
+    &amp;#125;
+&amp;#125;
+</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -1794,14 +1828,14 @@ h3:hover {
         boolean: true,
         appId: 'hYFVfTQvPY5pcN9l6ABBx0Q9-gzGzoHsz',
         appKey: 'A5Ccoui9NbwB9DBCjDnWaFN3',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
         // avatar: 'mm',
         avatar: '/medias/robot.png',
         pageSize: '16',
         lang: 'zh-cn',
-        placeholder: '评论前记得点击下方机器人验证按钮~ （客官留下QQ邮箱可好，会得到及时回复哦~）',    
+        placeholder: '各位大佬，有问题一定要指点我呀！',    
 
         adminEmailMd5: '',
 
@@ -2174,8 +2208,8 @@ h3:hover {
       <br>
 
       
-      &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">3.8k</span>&nbsp;
+      &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
+        class="white-color">3.1k</span>&nbsp;
       
       
       
@@ -2226,14 +2260,14 @@ h3:hover {
             diffMinutes * minutes) / seconds);
           if (startYear == todayYear) {
             document.getElementById("year").innerHTML = todayYear;
-            document.getElementById("sitetime").innerHTML = "The site has been running for " +
+            document.getElementById("sitetime").innerHTML = "小破站已经在我每日的瞎折腾下坚强的存活了 " +
               "<span class= 'white-color'>" + diffDays + "</span>" + " d " + "<span class= 'white-color'>" + diffHours +
               "</span>" +
               " h " + "<span class= 'white-color'>" + diffMinutes + "</span>" + " m " + "<span class= 'white-color'>" +
               diffSeconds + "</span>" + " s";
           } else {
             document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-            document.getElementById("sitetime").innerHTML = "The site has been running for " +
+            document.getElementById("sitetime").innerHTML = "小破站已经在我每日的瞎折腾下坚强的存活了" +
               "<span class= 'white-color'>" + diffYears + "</span>" + " y " + "<span class= 'white-color'>" + diffDays +
               "</span>" +
               " d " + "<span class= 'white-color'>" + diffHours + "</span>" + " h " + "<span class= 'white-color'>" +

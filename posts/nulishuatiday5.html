@@ -1228,14 +1228,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    481
+                    290
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -1246,8 +1246,74 @@ h3:hover {
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><div class="note info">前言：努力刷题day5</div><br></p>
-<h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre class=" language-hljs routeros">class Solution &#123;<br>    public ListNode removeNthFromEnd(ListNode head, int n) &#123;<br>        ListNode <span class="hljs-attribute">dummyHead</span>=new ListNode(-1);<br>         dummyHead.<span class="hljs-attribute">next</span>=head;<br>        ListNode <span class="hljs-attribute">fast</span>=dummyHead;<br>        ListNode <span class="hljs-attribute">slow</span>=dummyHead;<br>        <span class="hljs-keyword">while</span>(n-- &gt;0)<br>        &#123;<br>            <span class="hljs-attribute">fast</span>=fast.next;<br>        &#125;<br>        <span class="hljs-attribute">fast</span>=fast.next;<br>        <span class="hljs-keyword">while</span>(fast!=<span class="hljs-literal">null</span>)<br>        &#123;<br>            <span class="hljs-attribute">fast</span>=fast.next;<br>            <span class="hljs-attribute">slow</span>=slow.next;<br>        &#125;<br>        slow.<span class="hljs-attribute"><code class="language-hljs routeros">class Solution &#123;<br>    public ListNode removeNthFromEnd(ListNode head, int n) &#123;<br>        ListNode <span class="hljs-attribute">dummyHead</span>=new ListNode(-1);<br>         dummyHead.<span class="hljs-attribute">next</span>=head;<br>        ListNode <span class="hljs-attribute">fast</span>=dummyHead;<br>        ListNode <span class="hljs-attribute">slow</span>=dummyHead;<br>        <span class="hljs-keyword">while</span>(n-- &gt;0)<br>        &#123;<br>            <span class="hljs-attribute">fast</span>=fast.next;<br>        &#125;<br>        <span class="hljs-attribute">fast</span>=fast.next;<br>        <span class="hljs-keyword">while</span>(fast!=<span class="hljs-literal">null</span>)<br>        &#123;<br>            <span class="hljs-attribute">fast</span>=fast.next;<br>            <span class="hljs-attribute">slow</span>=slow.next;<br>        &#125;<br>        slow.<span class="hljs-attribute">next</span>=slow.next.next;<br>        return dummyHead.next;<br>       <br><br><br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-<h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre class=" language-hljs gradle"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> Solution &#123;<br>    <span class="hljs-keyword">public</span> ListNode getIntersectionNode(ListNode headA, ListNode headB) &#123;<br>        ListNode curA = headA;<br>        ListNode curB = headB;<br>        <span class="hljs-keyword">int</span> lenA = <span class="hljs-number">0</span>, lenB = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (curA != <span class="hljs-keyword">null</span>) &#123; <span class="hljs-comment">// 求链表A的长度</span><br>            lenA++;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-keyword">while</span> (curB != <span class="hljs-keyword">null</span>) &#123; <span class="hljs-comment">// 求链表B的长度</span><br>            lenB++;<br>            curB = curB.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        curA = headA;<br>        curB = headB;<br>        <span class="hljs-comment">// 让curA为最长链表的头，lenA为其长度</span><br>        <span class="hljs-keyword">if</span> (lenB &gt; lenA) &#123;<br>            <span class="hljs-comment">//1. swap (lenA, lenB);</span><br>            <span class="hljs-keyword">int</span> tmpLen = lenA;<br>            lenA = lenB;<br>            lenB = tmpLen;<br>            <span class="hljs-comment">//2. swap (curA, curB);</span><br>            ListNode tmpNode = curA;<br>            curA = curB;<br>            curB = tmpNode;<br>        &#125;<br>        <span class="hljs-comment">// 求长度差</span><br>        <span class="hljs-keyword">int</span> gap = lenA - lenB;<br>        <span class="hljs-comment">// 让curA和curB在同一起点上（末尾位置对齐）</span><br>        <span class="hljs-keyword">while</span> (gap-- &gt; <span class="hljs-number">0</span>) &#123;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-comment">// 遍历curA 和 curB，遇到相同则直接返回</span><br>        <span class="hljs-keyword">while</span> (curA != <span class="hljs-keyword">null</span>) &#123;<br>            <span class="hljs-keyword">if</span> (curA == curB) &#123;<br>                <span class="hljs-keyword">return</span> curA;<br>            &#125;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>            curB = curB.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword"><code class="language-hljs gradle"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> Solution &#123;<br>    <span class="hljs-keyword">public</span> ListNode getIntersectionNode(ListNode headA, ListNode headB) &#123;<br>        ListNode curA = headA;<br>        ListNode curB = headB;<br>        <span class="hljs-keyword">int</span> lenA = <span class="hljs-number">0</span>, lenB = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">while</span> (curA != <span class="hljs-keyword">null</span>) &#123; <span class="hljs-comment">// 求链表A的长度</span><br>            lenA++;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-keyword">while</span> (curB != <span class="hljs-keyword">null</span>) &#123; <span class="hljs-comment">// 求链表B的长度</span><br>            lenB++;<br>            curB = curB.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        curA = headA;<br>        curB = headB;<br>        <span class="hljs-comment">// 让curA为最长链表的头，lenA为其长度</span><br>        <span class="hljs-keyword">if</span> (lenB &gt; lenA) &#123;<br>            <span class="hljs-comment">//1. swap (lenA, lenB);</span><br>            <span class="hljs-keyword">int</span> tmpLen = lenA;<br>            lenA = lenB;<br>            lenB = tmpLen;<br>            <span class="hljs-comment">//2. swap (curA, curB);</span><br>            ListNode tmpNode = curA;<br>            curA = curB;<br>            curB = tmpNode;<br>        &#125;<br>        <span class="hljs-comment">// 求长度差</span><br>        <span class="hljs-keyword">int</span> gap = lenA - lenB;<br>        <span class="hljs-comment">// 让curA和curB在同一起点上（末尾位置对齐）</span><br>        <span class="hljs-keyword">while</span> (gap-- &gt; <span class="hljs-number">0</span>) &#123;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-comment">// 遍历curA 和 curB，遇到相同则直接返回</span><br>        <span class="hljs-keyword">while</span> (curA != <span class="hljs-keyword">null</span>) &#123;<br>            <span class="hljs-keyword">if</span> (curA == curB) &#123;<br>                <span class="hljs-keyword">return</span> curA;<br>            &#125;<br>            curA = curA.<span class="hljs-keyword">next</span>;<br>            curB = curB.<span class="hljs-keyword">next</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;<br>    &#125;<br>    <br>&#125;<br><br></code></pre></td></tr></table></figure><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><pre><code>class Solution &amp;#123;
+    public ListNode removeNthFromEnd(ListNode head, int n) &amp;#123;
+        ListNode dummyHead=new ListNode(-1);
+         dummyHead.next=head;
+        ListNode fast=dummyHead;
+        ListNode slow=dummyHead;
+        while(n-- &gt;0)
+        &amp;#123;
+            fast=fast.next;
+        &amp;#125;
+        fast=fast.next;
+        while(fast!=null)
+        &amp;#123;
+            fast=fast.next;
+            slow=slow.next;
+        &amp;#125;
+        slow.next=slow.next.next;
+        return dummyHead.next;
+
+
+
+    &amp;#125;
+&amp;#125;
+</code></pre><h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><pre><code>public class Solution &amp;#123;
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &amp;#123;
+        ListNode curA = headA;
+        ListNode curB = headB;
+        int lenA = 0, lenB = 0;
+        while (curA != null) &amp;#123; // 求链表A的长度
+            lenA++;
+            curA = curA.next;
+        &amp;#125;
+        while (curB != null) &amp;#123; // 求链表B的长度
+            lenB++;
+            curB = curB.next;
+        &amp;#125;
+        curA = headA;
+        curB = headB;
+        // 让curA为最长链表的头，lenA为其长度
+        if (lenB &gt; lenA) &amp;#123;
+            //1. swap (lenA, lenB);
+            int tmpLen = lenA;
+            lenA = lenB;
+            lenB = tmpLen;
+            //2. swap (curA, curB);
+            ListNode tmpNode = curA;
+            curA = curB;
+            curB = tmpNode;
+        &amp;#125;
+        // 求长度差
+        int gap = lenA - lenB;
+        // 让curA和curB在同一起点上（末尾位置对齐）
+        while (gap-- &gt; 0) &amp;#123;
+            curA = curA.next;
+        &amp;#125;
+        // 遍历curA 和 curB，遇到相同则直接返回
+        while (curA != null) &amp;#123;
+            if (curA == curB) &amp;#123;
+                return curA;
+            &amp;#125;
+            curA = curA.next;
+            curB = curB.next;
+        &amp;#125;
+        return null;
+    &amp;#125;
+
+&amp;#125;
+</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -1788,14 +1854,14 @@ h3:hover {
         boolean: true,
         appId: 'hYFVfTQvPY5pcN9l6ABBx0Q9-gzGzoHsz',
         appKey: 'A5Ccoui9NbwB9DBCjDnWaFN3',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
         // avatar: 'mm',
         avatar: '/medias/robot.png',
         pageSize: '16',
         lang: 'zh-cn',
-        placeholder: '评论前记得点击下方机器人验证按钮~ （客官留下QQ邮箱可好，会得到及时回复哦~）',    
+        placeholder: '各位大佬，有问题一定要指点我呀！',    
 
         adminEmailMd5: '',
 
@@ -1848,6 +1914,64 @@ h3:hover {
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/posts/798a.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="哈希表类刷题day6">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          哈希表类刷题day6
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前言：努力刷题day6。
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-22
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/posts/suibi1.html">
                     <div class="card-image">
                         
@@ -1873,9 +1997,9 @@ h3:hover {
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1893,64 +2017,6 @@ h3:hover {
                     
                     <a href="/tags/%E5%BD%B1%E8%A7%86%E5%89%A7/">
                         <span class="chip bg-color">影视剧</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/nulishuatiday4.html">
-                    <div class="card-image">
-                        
-                        <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="链表类刷题day4">
-                        
-                        <!-- 福袋按钮 -->
-                        <div class="caishendeng">        
-                            <div class="caishenxian wenzhangxian">
-                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
-                            </div>              
-                        </div>
-                        <span class="card-title">
-                          <!-- 文章卡片hover线条效果 -->
-                          <span class="titlesline"></span>
-                          链表类刷题day4
-                        </span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            努力刷题day4。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-19
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    技术
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/leetcode/">
-                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
                 </div>
@@ -2168,8 +2234,8 @@ h3:hover {
       <br>
 
       
-      &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">3.8k</span>&nbsp;
+      &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
+        class="white-color">3.1k</span>&nbsp;
       
       
       
@@ -2220,14 +2286,14 @@ h3:hover {
             diffMinutes * minutes) / seconds);
           if (startYear == todayYear) {
             document.getElementById("year").innerHTML = todayYear;
-            document.getElementById("sitetime").innerHTML = "The site has been running for " +
+            document.getElementById("sitetime").innerHTML = "小破站已经在我每日的瞎折腾下坚强的存活了 " +
               "<span class= 'white-color'>" + diffDays + "</span>" + " d " + "<span class= 'white-color'>" + diffHours +
               "</span>" +
               " h " + "<span class= 'white-color'>" + diffMinutes + "</span>" + " m " + "<span class= 'white-color'>" +
               diffSeconds + "</span>" + " s";
           } else {
             document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-            document.getElementById("sitetime").innerHTML = "The site has been running for " +
+            document.getElementById("sitetime").innerHTML = "小破站已经在我每日的瞎折腾下坚强的存活了" +
               "<span class= 'white-color'>" + diffYears + "</span>" + " y " + "<span class= 'white-color'>" + diffDays +
               "</span>" +
               " d " + "<span class= 'white-color'>" + diffHours + "</span>" + " h " + "<span class= 'white-color'>" +

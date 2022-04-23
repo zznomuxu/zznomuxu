@@ -1228,7 +1228,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    270
+                    189
                 </div>
                 
 
@@ -1247,9 +1247,39 @@ h3:hover {
             <div id="articleContent">
                 <div class="note info">努力刷题day2</div>
 
-<h3 id="LeetCode-977-有序数组的平方-传送门"><a href="#LeetCode-977-有序数组的平方-传送门" class="headerlink" title="LeetCode 977.有序数组的平方 传送门"></a>LeetCode 977.有序数组的平方 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/">传送门</a></h3><p>:::default<br>code<br>:::<br><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre class=" language-hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span>[] sortedSquares(<span class="hljs-built_in">int</span>[] nums) &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;nums.length;i++)<br>        &#123;<br>            nums[i]=nums[i]*nums[i];<br>        &#125;<br>        Arrays.sort(nums);<br>        <span class="hljs-keyword"><code class="language-hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span>[] sortedSquares(<span class="hljs-built_in">int</span>[] nums) &#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-built_in">int</span> i=<span class="hljs-number">0</span>;i&lt;nums.length;i++)<br>        &#123;<br>            nums[i]=nums[i]*nums[i];<br>        &#125;<br>        Arrays.sort(nums);<br>        <span class="hljs-keyword">return</span> nums;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></p>
-<h3 id="LeetCode-209-长度最小的子数组传送门"><a href="#LeetCode-209-长度最小的子数组传送门" class="headerlink" title="LeetCode 209.长度最小的子数组传送门"></a>LeetCode 209.长度最小的子数组<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-size-subarray-sum/">传送门</a></h3><p>:::default<br>code<br>:::<br><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre class=" language-hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> minSubArrayLen(<span class="hljs-built_in">int</span> s, <span class="hljs-built_in">int</span>[] nums) &#123;<br>        <span class="hljs-built_in">int</span> n = nums.length;<br>        <span class="hljs-keyword">if</span> (n == <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br>        <span class="hljs-built_in">int</span> ans = Integer.MAX_VALUE;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>            <span class="hljs-built_in">int</span> sum = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = i; j &lt; n; j++) &#123;<br>                sum += nums[j];<br>                <span class="hljs-keyword">if</span> (sum &gt;= s) &#123;<br>                    ans = Math.min(ans, j - i + <span class="hljs-number">1</span>);<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans == Integer.MAX_VALUE ? <span class="hljs-number"><code class="language-hljs angelscript"><span class="hljs-keyword">class</span> <span class="hljs-symbol">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-built_in">int</span> minSubArrayLen(<span class="hljs-built_in">int</span> s, <span class="hljs-built_in">int</span>[] nums) &#123;<br>        <span class="hljs-built_in">int</span> n = nums.length;<br>        <span class="hljs-keyword">if</span> (n == <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br>        <span class="hljs-built_in">int</span> ans = Integer.MAX_VALUE;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>            <span class="hljs-built_in">int</span> sum = <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> j = i; j &lt; n; j++) &#123;<br>                sum += nums[j];<br>                <span class="hljs-keyword">if</span> (sum &gt;= s) &#123;<br>                    ans = Math.min(ans, j - i + <span class="hljs-number">1</span>);<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans == Integer.MAX_VALUE ? <span class="hljs-number">0</span> : ans;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></p>
-<div class="spoiler collapsed">
+<h3 id="LeetCode-977-有序数组的平方-传送门"><a href="#LeetCode-977-有序数组的平方-传送门" class="headerlink" title="LeetCode 977.有序数组的平方 传送门"></a>LeetCode 977.有序数组的平方 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/">传送门</a></h3><p>:::default<br>code<br>:::</p>
+<pre><code>class Solution &amp;#123;
+    public int[] sortedSquares(int[] nums) &amp;#123;
+        for(int i=0;i&lt;nums.length;i++)
+        &amp;#123;
+            nums[i]=nums[i]*nums[i];
+        &amp;#125;
+        Arrays.sort(nums);
+        return nums;
+    &amp;#125;
+&amp;#125;
+</code></pre><h3 id="LeetCode-209-长度最小的子数组传送门"><a href="#LeetCode-209-长度最小的子数组传送门" class="headerlink" title="LeetCode 209.长度最小的子数组传送门"></a>LeetCode 209.长度最小的子数组<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-size-subarray-sum/">传送门</a></h3><p>:::default<br>code<br>:::</p>
+<pre><code>class Solution &amp;#123;
+    public int minSubArrayLen(int s, int[] nums) &amp;#123;
+        int n = nums.length;
+        if (n == 0) &amp;#123;
+            return 0;
+        &amp;#125;
+        int ans = Integer.MAX_VALUE;
+        for (int i = 0; i &lt; n; i++) &amp;#123;
+            int sum = 0;
+            for (int j = i; j &lt; n; j++) &amp;#123;
+                sum += nums[j];
+                if (sum &gt;= s) &amp;#123;
+                    ans = Math.min(ans, j - i + 1);
+                    break;
+                &amp;#125;
+            &amp;#125;
+        &amp;#125;
+        return ans == Integer.MAX_VALUE ? 0 : ans;
+    &amp;#125;
+&amp;#125;
+</code></pre><div class="spoiler collapsed">
     <div class="spoiler-title">
         code
     </div>
@@ -1799,14 +1829,14 @@ h3:hover {
         boolean: true,
         appId: 'hYFVfTQvPY5pcN9l6ABBx0Q9-gzGzoHsz',
         appKey: 'A5Ccoui9NbwB9DBCjDnWaFN3',
-        notify: 'false' === 'true',
+        notify: 'true' === 'true',
         verify: 'false' === 'true',
         visitor: 'true' === 'true',
         // avatar: 'mm',
         avatar: '/medias/robot.png',
         pageSize: '16',
         lang: 'zh-cn',
-        placeholder: '评论前记得点击下方机器人验证按钮~ （客官留下QQ邮箱可好，会得到及时回复哦~）',    
+        placeholder: '各位大佬，有问题一定要指点我呀！',    
 
         adminEmailMd5: '',
 
@@ -2179,8 +2209,8 @@ h3:hover {
       <br>
 
       
-      &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total number of words: &nbsp;<span
-        class="white-color">3.8k</span>&nbsp;
+      &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
+        class="white-color">3.1k</span>&nbsp;
       
       
       
@@ -2231,14 +2261,14 @@ h3:hover {
             diffMinutes * minutes) / seconds);
           if (startYear == todayYear) {
             document.getElementById("year").innerHTML = todayYear;
-            document.getElementById("sitetime").innerHTML = "The site has been running for " +
+            document.getElementById("sitetime").innerHTML = "小破站已经在我每日的瞎折腾下坚强的存活了 " +
               "<span class= 'white-color'>" + diffDays + "</span>" + " d " + "<span class= 'white-color'>" + diffHours +
               "</span>" +
               " h " + "<span class= 'white-color'>" + diffMinutes + "</span>" + " m " + "<span class= 'white-color'>" +
               diffSeconds + "</span>" + " s";
           } else {
             document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-            document.getElementById("sitetime").innerHTML = "The site has been running for " +
+            document.getElementById("sitetime").innerHTML = "小破站已经在我每日的瞎折腾下坚强的存活了" +
               "<span class= 'white-color'>" + diffYears + "</span>" + " y " + "<span class= 'white-color'>" + diffDays +
               "</span>" +
               " d " + "<span class= 'white-color'>" + diffHours + "</span>" + " h " + "<span class= 'white-color'>" +
