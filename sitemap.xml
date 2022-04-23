@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zznomuxu.github.io/posts/suibi1.html</loc>
+    <loc>https://zznomuxu.github.io/posts/suibi2.html</loc>
     
     <lastmod>2022-04-23</lastmod>
     
@@ -268,14 +268,14 @@
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/musics/index.html</loc>
+    <loc>https://zznomuxu.github.io/lab/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/lab/index.html</loc>
+    <loc>https://zznomuxu.github.io/musics/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
@@ -296,6 +296,13 @@
   </url>
   
   <url>
+    <loc>https://zznomuxu.github.io/record/index.html</loc>
+    
+    <lastmod>2022-04-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zznomuxu.github.io/tags/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
@@ -310,21 +317,7 @@
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/record/index.html</loc>
-    
-    <lastmod>2022-04-20</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zznomuxu.github.io/gallery/index.html</loc>
-    
-    <lastmod>2022-04-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zznomuxu.github.io/contact/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
@@ -345,6 +338,13 @@
   </url>
   
   <url>
+    <loc>https://zznomuxu.github.io/contact/index.html</loc>
+    
+    <lastmod>2022-04-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zznomuxu.github.io/essay/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
@@ -359,13 +359,6 @@
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/categories/index.html</loc>
-    
-    <lastmod>2022-04-20</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zznomuxu.github.io/about/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
@@ -373,14 +366,21 @@
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/collection/index.html</loc>
+    <loc>https://zznomuxu.github.io/books/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/books/index.html</loc>
+    <loc>https://zznomuxu.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-04-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zznomuxu.github.io/collection/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
@@ -438,6 +438,13 @@
   </url>
   
   <url>
+    <loc>https://zznomuxu.github.io/tags/%E4%B9%A6%E5%8D%95/</loc>
+    <lastmod>2022-04-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://zznomuxu.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</loc>
     <lastmod>2022-04-23</lastmod>
     <changefreq>daily</changefreq>
@@ -460,13 +467,6 @@
   
   <url>
     <loc>https://zznomuxu.github.io/tags/%E5%BD%B1%E8%A7%86%E5%89%A7/</loc>
-    <lastmod>2022-04-23</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://zznomuxu.github.io/tags/%E4%B9%A6%E5%8D%95/</loc>
     <lastmod>2022-04-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
