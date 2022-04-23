@@ -4,11 +4,36 @@
   
     
     <entry>
-      <title>哈希表类刷题day6</title>
-      <link href="/posts/798a.html"/>
-      <url>/posts/798a.html</url>
+      <title>python作业汇总</title>
+      <link href="/posts/zuoye2.html"/>
+      <url>/posts/zuoye2.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day5</div><br></p><h3 id="LeetCode-349-两个数组的交集传送门"><a href="#LeetCode-349-两个数组的交集传送门" class="headerlink" title="LeetCode 349.  两个数组的交集传送门"></a>LeetCode 349.  两个数组的交集<a href="https://leetcode-cn.com/problems/intersection-of-two-arrays/">传送门</a></h3><pre><code>import java.util.HashSet;import java.util.Set;class Solution &amp;#123;    public int[] intersection(int[] nums1, int[] nums2) &amp;#123;        if (nums1 == null || nums1.length == 0 || nums2 == null || nums2.length == 0) &amp;#123;            return new int[0];        &amp;#125;        Set&lt;Integer&gt; set1 = new HashSet&lt;&gt;();        Set&lt;Integer&gt; resSet = new HashSet&lt;&gt;();        //遍历数组1        for (int i : nums1) &amp;#123;            set1.add(i);        &amp;#125;        //遍历数组2的过程中判断哈希表中是否存在该元素        for (int i : nums2) &amp;#123;            if (set1.contains(i)) &amp;#123;                resSet.add(i);            &amp;#125;        &amp;#125;        int[] resArr = new int[resSet.size()];        int index = 0;        //将结果几何转为数组        for (int i : resSet) &amp;#123;            resArr[index++] = i;        &amp;#125;        return resArr;    &amp;#125;&amp;#125;</code></pre><h3 id="LeetCode-242-有效的字母异位词-传送门"><a href="#LeetCode-242-有效的字母异位词-传送门" class="headerlink" title="LeetCode 242.有效的字母异位词 传送门"></a>LeetCode 242.有效的字母异位词 <a href="https://leetcode-cn.com/problems/valid-anagram/">传送门</a></h3><pre><code>class Solution &amp;#123;    public boolean isAnagram(String s, String t) &amp;#123;        if (s.length() != t.length()) &amp;#123;            return false;        &amp;#125;        int[] table = new int[26];        for (int i = 0; i &lt; s.length(); i++) &amp;#123;            table[s.charAt(i) - &#39;a&#39;]++;        &amp;#125;        for (int i = 0; i &lt; t.length(); i++) &amp;#123;            table[t.charAt(i) - &#39;a&#39;]--;            if (table[t.charAt(i) - &#39;a&#39;] &lt; 0) &amp;#123;                return false;            &amp;#125;        &amp;#125;        return true;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="table-container"><table><thead><tr><th>题目</th><th>链接</th></tr></thead><tbody><tr><td>python1</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/100621739">https://blog.csdn.net/qq_41233643/article/details/100621739</a></td></tr><tr><td>python2</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/101698919">https://blog.csdn.net/qq_41233643/article/details/101698919</a></td></tr><tr><td>python3</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/102614250">https://blog.csdn.net/qq_41233643/article/details/102614250</a></td></tr><tr><td>python5</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/102617398">https://blog.csdn.net/qq_41233643/article/details/102617398</a></td></tr><tr><td>python4</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/102617409">https://blog.csdn.net/qq_41233643/article/details/102617409</a></td></tr><tr><td>python6</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/102732760">https://blog.csdn.net/qq_41233643/article/details/102732760</a></td></tr><tr><td>python7</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/103104930">https://blog.csdn.net/qq_41233643/article/details/103104930</a></td></tr></tbody></table></div><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>哈希表类刷题day7</title>
+      <link href="/posts/nulishuaitiqi.html"/>
+      <url>/posts/nulishuaitiqi.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day5</div><br></p><h3 id="LeetCode-202-快乐数传送门"><a href="#LeetCode-202-快乐数传送门" class="headerlink" title="LeetCode 202. 快乐数传送门"></a>LeetCode 202. 快乐数<a href="https://leetcode-cn.com/problems/happy-number/">传送门</a></h3><pre><code>class Solution &amp;#123;    public boolean isHappy(int n) &amp;#123;        Set&lt;Integer&gt; record = new HashSet&lt;&gt;();        while (n != 1 &amp;&amp; !record.contains(n)) &amp;#123;            record.add(n);            n = getNextNumber(n);        &amp;#125;        return n == 1;    &amp;#125;    private int getNextNumber(int n) &amp;#123;        int res = 0;        while (n &gt; 0) &amp;#123;            int temp = n % 10;            res += temp * temp;            n = n / 10;        &amp;#125;        return res;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
@@ -29,11 +54,36 @@
     
     
     <entry>
-      <title>链表类刷题day5</title>
-      <link href="/posts/nulishuatiday5.html"/>
-      <url>/posts/nulishuatiday5.html</url>
+      <title>程序设计方法学汇总</title>
+      <link href="/posts/zuoye1.html"/>
+      <url>/posts/zuoye1.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day5</div><br></p><h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><pre><code>class Solution &amp;#123;    public ListNode removeNthFromEnd(ListNode head, int n) &amp;#123;        ListNode dummyHead=new ListNode(-1);         dummyHead.next=head;        ListNode fast=dummyHead;        ListNode slow=dummyHead;        while(n-- &gt;0)        &amp;#123;            fast=fast.next;        &amp;#125;        fast=fast.next;        while(fast!=null)        &amp;#123;            fast=fast.next;            slow=slow.next;        &amp;#125;        slow.next=slow.next.next;        return dummyHead.next;    &amp;#125;&amp;#125;</code></pre><h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><pre><code>public class Solution &amp;#123;    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &amp;#123;        ListNode curA = headA;        ListNode curB = headB;        int lenA = 0, lenB = 0;        while (curA != null) &amp;#123; // 求链表A的长度            lenA++;            curA = curA.next;        &amp;#125;        while (curB != null) &amp;#123; // 求链表B的长度            lenB++;            curB = curB.next;        &amp;#125;        curA = headA;        curB = headB;        // 让curA为最长链表的头，lenA为其长度        if (lenB &gt; lenA) &amp;#123;            //1. swap (lenA, lenB);            int tmpLen = lenA;            lenA = lenB;            lenB = tmpLen;            //2. swap (curA, curB);            ListNode tmpNode = curA;            curA = curB;            curB = tmpNode;        &amp;#125;        // 求长度差        int gap = lenA - lenB;        // 让curA和curB在同一起点上（末尾位置对齐）        while (gap-- &gt; 0) &amp;#123;            curA = curA.next;        &amp;#125;        // 遍历curA 和 curB，遇到相同则直接返回        while (curA != null) &amp;#123;            if (curA == curB) &amp;#123;                return curA;            &amp;#125;            curA = curA.next;            curB = curB.next;        &amp;#125;        return null;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="table-container"><table><thead><tr><th>题目</th><th>链接地址</th><th>备注</th></tr></thead><tbody><tr><td>最大公约数几种算法分析</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/88369518?spm=1001.2014.3001.5501">https://blog.csdn.net/qq_41233643/article/details/88369518?spm=1001.2014.3001.5501</a></td><td></td></tr><tr><td>求多个数的最大公约数，最小公倍数以及hanks son问题</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/88747890?spm=1001.2014.3001.5501">https://blog.csdn.net/qq_41233643/article/details/88747890?spm=1001.2014.3001.5501</a></td><td></td></tr><tr><td>图灵机UN+1</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/88752561?spm=1001.2014.3001.5501">https://blog.csdn.net/qq_41233643/article/details/88752561?spm=1001.2014.3001.5501</a></td><td></td></tr><tr><td>单词小助手</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/89044033?spm=1001.2014.3001.5501">https://blog.csdn.net/qq_41233643/article/details/89044033?spm=1001.2014.3001.5501</a></td><td></td></tr><tr><td>KFC点餐系统</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/90133789?spm=1001.2014.3001.5501">https://blog.csdn.net/qq_41233643/article/details/90133789?spm=1001.2014.3001.5501</a></td><td></td></tr><tr><td>CORBA组建化编程</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/90313985?spm=1001.2014.3001.5501">https://blog.csdn.net/qq_41233643/article/details/90313985?spm=1001.2014.3001.5501</a></td><td></td></tr><tr><td>十进制数n转成b进制和2的幂次方表示</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/90724798?spm=1001.2014.3001.5501">https://blog.csdn.net/qq_41233643/article/details/90724798?spm=1001.2014.3001.5501</a></td><td></td></tr><tr><td>数鸭子和角谷定理</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/90724745?spm=1001.2014.3001.5501">https://blog.csdn.net/qq_41233643/article/details/90724745?spm=1001.2014.3001.5501</a></td><td></td></tr><tr><td>“三天打鱼两天晒网”从文件读入数据输出到文件结果的C程序</td><td><a href="https://blog.csdn.net/qq_41233643/article/details/88070527?spm=1001.2014.3001.5501">https://blog.csdn.net/qq_41233643/article/details/88070527?spm=1001.2014.3001.5501</a></td></tr></tbody></table></div><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 程序设计方法学,作业 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>哈希表类刷题day6</title>
+      <link href="/posts/798a.html"/>
+      <url>/posts/798a.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day5</div><br></p><h3 id="LeetCode-349-两个数组的交集传送门"><a href="#LeetCode-349-两个数组的交集传送门" class="headerlink" title="LeetCode 349.  两个数组的交集传送门"></a>LeetCode 349.  两个数组的交集<a href="https://leetcode-cn.com/problems/intersection-of-two-arrays/">传送门</a></h3><pre><code>import java.util.HashSet;import java.util.Set;class Solution &amp;#123;    public int[] intersection(int[] nums1, int[] nums2) &amp;#123;        if (nums1 == null || nums1.length == 0 || nums2 == null || nums2.length == 0) &amp;#123;            return new int[0];        &amp;#125;        Set&lt;Integer&gt; set1 = new HashSet&lt;&gt;();        Set&lt;Integer&gt; resSet = new HashSet&lt;&gt;();        //遍历数组1        for (int i : nums1) &amp;#123;            set1.add(i);        &amp;#125;        //遍历数组2的过程中判断哈希表中是否存在该元素        for (int i : nums2) &amp;#123;            if (set1.contains(i)) &amp;#123;                resSet.add(i);            &amp;#125;        &amp;#125;        int[] resArr = new int[resSet.size()];        int index = 0;        //将结果几何转为数组        for (int i : resSet) &amp;#123;            resArr[index++] = i;        &amp;#125;        return resArr;    &amp;#125;&amp;#125;</code></pre><h3 id="LeetCode-242-有效的字母异位词-传送门"><a href="#LeetCode-242-有效的字母异位词-传送门" class="headerlink" title="LeetCode 242.有效的字母异位词 传送门"></a>LeetCode 242.有效的字母异位词 <a href="https://leetcode-cn.com/problems/valid-anagram/">传送门</a></h3><pre><code>class Solution &amp;#123;    public boolean isAnagram(String s, String t) &amp;#123;        if (s.length() != t.length()) &amp;#123;            return false;        &amp;#125;        int[] table = new int[26];        for (int i = 0; i &lt; s.length(); i++) &amp;#123;            table[s.charAt(i) - &#39;a&#39;]++;        &amp;#125;        for (int i = 0; i &lt; t.length(); i++) &amp;#123;            table[t.charAt(i) - &#39;a&#39;]--;            if (table[t.charAt(i) - &#39;a&#39;] &lt; 0) &amp;#123;                return false;            &amp;#125;        &amp;#125;        return true;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
@@ -71,6 +121,31 @@
         <tags>
             
             <tag> 影视剧 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>链表类刷题day5</title>
+      <link href="/posts/nulishuatiday5.html"/>
+      <url>/posts/nulishuatiday5.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day5</div><br></p><h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><pre><code>class Solution &amp;#123;    public ListNode removeNthFromEnd(ListNode head, int n) &amp;#123;        ListNode dummyHead=new ListNode(-1);         dummyHead.next=head;        ListNode fast=dummyHead;        ListNode slow=dummyHead;        while(n-- &gt;0)        &amp;#123;            fast=fast.next;        &amp;#125;        fast=fast.next;        while(fast!=null)        &amp;#123;            fast=fast.next;            slow=slow.next;        &amp;#125;        slow.next=slow.next.next;        return dummyHead.next;    &amp;#125;&amp;#125;</code></pre><h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><pre><code>public class Solution &amp;#123;    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &amp;#123;        ListNode curA = headA;        ListNode curB = headB;        int lenA = 0, lenB = 0;        while (curA != null) &amp;#123; // 求链表A的长度            lenA++;            curA = curA.next;        &amp;#125;        while (curB != null) &amp;#123; // 求链表B的长度            lenB++;            curB = curB.next;        &amp;#125;        curA = headA;        curB = headB;        // 让curA为最长链表的头，lenA为其长度        if (lenB &gt; lenA) &amp;#123;            //1. swap (lenA, lenB);            int tmpLen = lenA;            lenA = lenB;            lenB = tmpLen;            //2. swap (curA, curB);            ListNode tmpNode = curA;            curA = curB;            curB = tmpNode;        &amp;#125;        // 求长度差        int gap = lenA - lenB;        // 让curA和curB在同一起点上（末尾位置对齐）        while (gap-- &gt; 0) &amp;#123;            curA = curA.next;        &amp;#125;        // 遍历curA 和 curB，遇到相同则直接返回        while (curA != null) &amp;#123;            if (curA == curB) &amp;#123;                return curA;            &amp;#125;            curA = curA.next;            curB = curB.next;        &amp;#125;        return null;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
@@ -304,6 +379,81 @@
     
     
     <entry>
+      <title>英文文献搜索总结</title>
+      <link href="/posts/e5f3.html"/>
+      <url>/posts/e5f3.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p> <a href="https://gfsoso.99lb.net/sci-hub.html">https://gfsoso.99lb.net/sci-hub.html</a></p><p> <a href="https://sci-hub.shop/">https://sci-hub.shop/</a></p><p> <a href="https://panda321.com/">https://panda321.com/</a></p><p>endnote出现大括号问题：</p><p><a href="https://wenku.baidu.com/view/86761e381cb91a37f111f18583d049649b660ed9.html">https://wenku.baidu.com/view/86761e381cb91a37f111f18583d049649b660ed9.html</a></p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>eclipse闪退以及出现等待的进度条</title>
+      <link href="/posts/bug6.html"/>
+      <url>/posts/bug6.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="闪退（快把我气死了）"><a href="#闪退（快把我气死了）" class="headerlink" title="闪退（快把我气死了）"></a>闪退（快把我气死了）</h3><p>大家总结了很多经验，我一个一个试了一遍，最后只有一条可以用：</p><p>把jdk下的jre目录直接复制到Eclipse文件夹下。</p><h3 id="当无论你建个什么或者运行，都出现等待的进度条："><a href="#当无论你建个什么或者运行，都出现等待的进度条：" class="headerlink" title="当无论你建个什么或者运行，都出现等待的进度条："></a>当无论你建个什么或者运行，都出现等待的进度条：</h3><p>不要犹豫，卸了重装吧，我看了大家的经验一个一个试了一遍，一个都没用，我哭了</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>有限自动机DFA</title>
+      <link href="/posts/dfa.html"/>
+      <url>/posts/dfa.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>M=(K, S, f,S0,Z )称为一个确定的有限自动机 (DFA: Deterministic Finite Automata)<br>(1) 有限个状态之集,记作K;</p><p>(2) 有限个输入符号组成的字母表,记作S;</p><p>(3) 从K´S到K的转换函数 f: K´S®K. f(p,a)=q表示若当前状态为p,且输入符号为a,则进入下一个状态为q;</p><p>(4) S0ÎK,初始(开始)状态;</p><p>(5) 若干个终态之集: Z( ÍK )</p><p>由此可见,一DFA实际上是状态转换图的形式描述(数学定义),状态转换图是DFA的几何(图形)表示.</p><p>确定的有限自动机：在状态转换的每一步，根据FA当前的状态及扫描的输入字符，便能唯一地确定FA的下一状态。在转换图上看，若|S|=n，则任何结点所引出的矢线至多有n条，且矢线上的标记均不同。<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231254003.png" alt></p><p>非确定的有限自动机：在U状态下，输入符号为a时，FA的下一状态不唯一，而是在状态集{A,B,C,…,X}中任选其一。具有这种性质的FA称为非确定的NFA<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231255409.png" alt></p><p>对于任意一个不确定有限自动机都有一个确定的有限自动机与其相对应，且等价。</p><p>=============================================================================</p><p>NFA转DFA目前有些没理清楚，理清再写吧！o(╥﹏╥)o</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 编译原理 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>citespace使用方法/经验总结</title>
       <link href="/posts/ec7a.html"/>
       <url>/posts/ec7a.html</url>
@@ -346,6 +496,131 @@
         <tags>
             
             <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解释器提示如：SyntaxError:invalid character in identifier</title>
+      <link href="/posts/bug4.html"/>
+      <url>/posts/bug4.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解释器提示如：SyntaxError: invalid character in identifier相信很多时候遇到这个Error会找不到问题出在哪里，此时就要看错误行是不是夹杂了中文空格字符等。</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>运行时报错：AttributeError:module &#39;urllib&#39; has no attribute &#39;urlopen&#39;</title>
+      <link href="/posts/bug5.html"/>
+      <url>/posts/bug5.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在Python3中如果写以下代码会出现报错，原因就是在Python3中应该把            import urllib=======》import urllib.request</p><p>把所有位置都换成带有.request，就可以解决错误了</p><pre><code>import urllibfrom bs4 import BeautifulSoupresponse = urllib.urlopen(&quot;http://www.imau.edu.cn&quot;)html = response.read()data = html.decode(&#39;utf-8&#39;)soup = BeautifulSoup(data)# print soup.findAll(&#39;span&#39;)</code></pre><p>response = urllib.urlopen(“<a href="http://www.imau.edu.cn">http://www.imau.edu.cn</a>“)<br>AttributeError: module ‘urllib’ has no attribute ‘urlopen’</p><p>例如这个例子改一下：两处改好就OK了</p><pre><code>import urllib.requestfrom bs4 import BeautifulSoupresponse = urllib.request.urlopen(&quot;http://www.imau.edu.cn&quot;)html = response.read()data = html.decode(&#39;utf-8&#39;)soup = BeautifulSoup(data)# print soup.findAll(&#39;span&#39;)</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在Online Judege 平台上出现的Presentation Error 错误</title>
+      <link href="/posts/bug3.html"/>
+      <url>/posts/bug3.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>相信很多人在各种OJ平台上提交自己在编译器已经成功的代码还是会出现Presentation Error错误，不过也不要不开心，这种错误也是可以确定的是你的思路正确，只是输出结果和标准输出结果有点小小的不一样，这种错误的原因：</p><p>可能是再输出结果后面少了或者多了没什么意义的空格。</p><p>所以要认真的检查一下输出结果</p><p>OJ对格式要求很严格</p><p>如果还是没找到问题，可以试试在你的输出结果后面加空格或换行符，因为标准输出后面可能有你看不见的空格或换行符</p><p>如果你成功解决了    为你撒花撒花撒花 ~~~</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>爬取猫眼电影榜单Top100—利用requests、正则表达式</title>
+      <link href="/posts/pachong2.html"/>
+      <url>/posts/pachong2.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">小菜鸟前言：好多东西还是实际操作一下，你会发现好多意想不到的错误，55555~~~~爬取猫眼电影榜单的博客好多好多，因为爬取猫眼电影榜单是个很基础的爬区，但是作为一个爬虫小白，也想记录一下：</div><p>爬取不外乎分为四个大的步骤：</p><p>发起请求：通过HTTP库向目标站点发起请求，即发送一个Requests，请求可以包含额外的headers等信息，等待服务器响应。<br>解析内容：得到的内容可能是HTML，可以用正则表达式、网页解析库进行解析，可以是Json，可以直接转化为Json，可能是二进制数据，可以做保存或进一步处理。<br>获取响应内容：如果服务器能正常响应，会得到一个Response，Response的内容便是所要获取的页面内容，类型可能是HTML，Json字符串等，二进制数据（图片视频）等。<br>保存数据：保存形式多样，可以存为文本，也可以保存至数据库或者保存特定格式的文件。</p><p>说了这么多乱七八糟的，言归正传，我们这次利用requests库和正则表达式来抓取相关内容</p><p>要开始啦：</p><h3 id="首先确定已经安装好了requests库"><a href="#首先确定已经安装好了requests库" class="headerlink" title="首先确定已经安装好了requests库"></a>首先确定已经安装好了requests库</h3><p>现在我们开始进行抓取前的分析：</p><p>我们需要抓取的目标站点是：<a href="https://maoyan.com/board/4，页面如下">https://maoyan.com/board/4，页面如下</a><br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231157450.png" alt><br>将网页滚动到最下方，可以发现这个不止一页，所以现在我们点击第二页，看URL和内容都进行了变化<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231157285.png" alt></p><p>可以发现此时页面的URL变为<a href="https://maoyan.com/board/4?offset=10，比之前的URL多了一个参数offset=10，目前显示11~20名的电影，再点击下一页，发现URL变成">https://maoyan.com/board/4?offset=10，比之前的URL多了一个参数offset=10，目前显示11~20名的电影，再点击下一页，发现URL变成</a> <a href="https://maoyan.com/board/4?offset=20，offset变成了20，目前显示21~30的电影。">https://maoyan.com/board/4?offset=20，offset变成了20，目前显示21~30的电影。</a></p><p>总结规律，offest代表偏移量值，如果偏移量（内存中存储数据的方式是：一个存储数据的“实际地址”=段首地址+偏移量）为n，则电影序号就是n+1~n+10，每页显示10 个。所以我们想要获取100个，需要分开10次请求，10次每次的offest参数分别设置为0、10、20、30、40、50、60、70、80、90。</p><h3 id="当当当当-抓取首页了"><a href="#当当当当-抓取首页了" class="headerlink" title="当当当当~抓取首页了"></a>当当当当~抓取首页了</h3><p>首先抓取第一页的内容，我们实现了get_one_page()方法，给他传入url参数，然后将抓取的页面结果返回，再通过main()方法调用。headers根据自己实际情况</p><pre><code>import requestsdef get_one_page(url):    headers = &amp;#123;        &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36&#39;,    &amp;#125;    response = requests.get(url,headers=headers)    if response.status_code == 200:        return response.text    return Nonedef main():    url = &#39;https://maoyan.com/board/4&#39;    html = get_one_page(url)    print(html)main()</code></pre><p>下图为源码：一部分，哈哈哈哈哈<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231159349.png" alt></p><p>我们回到网页看源代码：我们可以看到一部电影的源代码是一个dd节点，我们用正则表达式来提取里面的一些电影信息。<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231200077.png" alt></p><p>首先提取排名信息。他的排名信息是在class为board-index的i节点内，这里利用非贪婪匹配来提取i节点内的信息，正则表达式写为：</p><pre><code>&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;</code></pre><p>接下来提取电影图片，可以看到后面有a节点，其内部有两个img节点。经过检查发现，第二个img节点的data-src属性是图片链接。这里提取第二个img节点的data-src属性，正则表达式可以写为</p><pre><code>&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;</code></pre><p>再往后需要提取电影的名称，他在后面的p节点内，class为name。所以，可以用name做一个标志位，然后进一步提取到其内a节点的正文内容，此时正则表达式改写如下：</p><pre><code>&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;.*?data-src=&quot;(.*?name.*?a.*?&gt;(.*?)&lt;/a&gt;</code></pre><p>在提取主演、发布时间/评分等，原理一样，正则表达式如下：</p><pre><code>&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;.*?name.*?a.*?&gt;(.*?)&lt;/a&gt;.*?star.*?&gt;(.*?)&lt;/p&gt;.*?releasetime.*?&gt;(&gt;*?)&lt;/p&gt;.*?integer.*?&gt;(.*?)&lt;/i&gt;.*?fraction.*?&gt;(.*?)&lt;/i&gt;.*?&lt;/dd&gt;</code></pre><p>这样一个正则表达式就可以匹配一个电影的结果，里面匹配了7个信息，通过调用findall()方法提取出所有内容。</p><p>代码如下：</p><pre><code>def parse_one_page(html):    pattern = re.compile(        &#39;&lt;dd&gt;.*?board-index.*?&gt;(\d+)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;.*?name&quot;&gt;&lt;a&#39;        + &#39;.*?&gt;(.*?)&lt;/a&gt;.*?star&quot;&gt;(.*?)&lt;/p&gt;.*?releasetime&quot;&gt;(.*?)&lt;/p&gt;&#39;        + &#39;.*?integer&quot;&gt;(.*?)&lt;/i&gt;.*?fraction&quot;&gt;(.*?)&lt;/i&gt;.*?&lt;/dd&gt;&#39;,        re.S)    items = re.findall(pattern,html)    print(items)</code></pre><p>通过以上我们可以提取一页的10个电影信息，但是数据会很乱，我们需要再进行处理：</p><pre><code>def parse_one_page(html):    pattern = re.compile(&#39;&lt;dd&gt;.*?board-index.*?&gt;(\d+)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;.*?name&quot;&gt;&lt;a&#39;                         + &#39;.*?&gt;(.*?)&lt;/a&gt;.*?star&quot;&gt;(.*?)&lt;/p&gt;.*?releasetime&quot;&gt;(.*?)&lt;/p&gt;&#39;                         + &#39;.*?integer&quot;&gt;(.*?)&lt;/i&gt;.*?fraction&quot;&gt;(.*?)&lt;/i&gt;.*?&lt;/dd&gt;&#39;, re.S)    items = re.findall(pattern, html)    for item in items:        yield &amp;#123;            &#39;index&#39;: item[0],            &#39;image&#39;: item[1],            &#39;title&#39;: item[2],            &#39;actor&#39;: item[3].strip()[3:],            &#39;time&#39;: item[4].strip()[5:],            &#39;score&#39;: item[5] + item[6]        &amp;#125;</code></pre><h3 id="接下来进行写入文件："><a href="#接下来进行写入文件：" class="headerlink" title="接下来进行写入文件："></a>接下来进行写入文件：</h3><p>我们在这里直接写入到一个文本文件。这里通过Json库的dumps()方法实现字典的序列化，并指定ensure_ascii参数为False，这样保证输出结果是中文形式而不是Unicode编码。代码：</p><pre><code>def write_to_file(content):    with open(&#39;result.txt&#39;, &#39;a&#39;, encoding=&#39;utf-8&#39;) as f:        f.write(json.dumps(content, ensure_ascii=False) + &#39;\n&#39;)</code></pre><p>通过write_to_file()即可将字典写入到文本文件。此处的content参数就是一个电影的提取结果，是一个字典。</p><p>整合代码啦<del>~</del>终于要结束了</p><p>最后用main() 函数调用前面的方法，将单页电影结果写入文件</p><p>代码：</p><pre><code>def main():    url = &#39;http://maoyan.com/board/4&#39;    html = get_one_page(url)    for item in parse_one_page(html):        write_to_file(item)</code></pre><p>但现在我们完成了10部电影的提取。我们需要top100的电影，所以还需要遍历一下，给链接传入offset参数，将其他90部电影爬取，要添加一下：</p><pre><code>if __name__ == &#39;__main__&#39;:    for i in range(10):        main(offset=i * 10)</code></pre><p>我们还需要把main()函数改一下，接受一个offest值作为偏移量，然后构造URL进行爬取。代码：</p><pre><code>def main(offset):    url = &#39;http://maoyan.com/board/4?offset=&#39; + str(offset)    html = get_one_page(url)    for item in parse_one_page(html):        print(item)        write_to_file(item)</code></pre><h3 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h3><pre><code>import jsonimport requestsfrom requests.exceptions import RequestExceptionimport reimport timedef get_one_page(url):    try:        headers = &amp;#123;            &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&#39;        &amp;#125;        response = requests.get(url, headers=headers)        if response.status_code == 200:            return response.text        return None    except RequestException:        return Nonedef parse_one_page(html):    pattern = re.compile(&#39;&lt;dd&gt;.*?board-index.*?&gt;(\d+)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;.*?name&quot;&gt;&lt;a&#39;                         + &#39;.*?&gt;(.*?)&lt;/a&gt;.*?star&quot;&gt;(.*?)&lt;/p&gt;.*?releasetime&quot;&gt;(.*?)&lt;/p&gt;&#39;                         + &#39;.*?integer&quot;&gt;(.*?)&lt;/i&gt;.*?fraction&quot;&gt;(.*?)&lt;/i&gt;.*?&lt;/dd&gt;&#39;, re.S)    items = re.findall(pattern, html)    for item in items:        yield &amp;#123;            &#39;index&#39;: item[0],            &#39;image&#39;: item[1],            &#39;title&#39;: item[2],            &#39;actor&#39;: item[3].strip()[3:],            &#39;time&#39;: item[4].strip()[5:],            &#39;score&#39;: item[5] + item[6]        &amp;#125;def write_to_file(content):    with open(&#39;result.txt&#39;, &#39;a&#39;, encoding=&#39;utf-8&#39;) as f:        f.write(json.dumps(content, ensure_ascii=False) + &#39;\n&#39;)def main(offset):    url = &#39;http://maoyan.com/board/4?offset=&#39; + str(offset)    html = get_one_page(url)    for item in parse_one_page(html):        print(item)        write_to_file(item)if __name__ == &#39;__main__&#39;:    for i in range(10):        main(offset=i * 10)        time.sleep(1)</code></pre><h3 id="延时等待"><a href="#延时等待" class="headerlink" title="延时等待"></a>延时等待</h3><p>猫眼已经增加了反爬虫~如果速度过快则无响应，所以最后加了一个延时等待</p><p>运行结果：（只截取一部分~~）<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231205110.png" alt></p><p>文本文件：（截取一部分）<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231205407.png" alt></p><p>So~~~此时此刻全部完成了</p><p>撒花撒花撒花<del>~</del>~</p><p>自己的一些看法总结，有错误请大神们指出。</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python爬虫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python爬虫-- HTML/CSS/JS</title>
+      <link href="/posts/pachong1.html"/>
+      <url>/posts/pachong1.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>​</p><div class="note info">作为想要学习python爬虫的小白，在最近学习爬虫的过程中发现，总是在学习过程中遇到不会的网页知识，因此，来写一些基础知识。至少要会读一些代码。</div><p><code><br>HTML 定义了网页的内容<br>CSS 描述了网页的布局<br>JavaScript 网页的行为</code></p><h3 id="HTML基本知识"><a href="#HTML基本知识" class="headerlink" title="HTML基本知识"></a>HTML基本知识</h3><p>(1) HTML 指的是超文本标记语言 (Hyper Text Markup Language)<br>(2) HTML 不是一种编程语言，而是一种标记语言 (markup language)<br>(3) 标记语言是一套标记标签 (markup tag)<br>(4)HTML 使用标记标签来描述网页</p><pre><code>&lt;html&gt;&lt;body&gt;&lt;h1&gt;My First Heading &lt;/h1&gt;&lt;p&gt;My First Body&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h4 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h4><pre><code>&lt;html&gt; 与 &lt;/html&gt; &lt;!-- 之间的文本描述网页 --&gt; &lt;body&gt; 与 &lt;/body&gt; &lt;!--之间的文本是可见的页面内容 --&gt;&lt;h1&gt; 与 &lt;/h1&gt; &lt;!--之间的文本被显示为标题 --&gt;&lt;p&gt; 与 &lt;/p&gt; &lt;!-- 之间的文本被显示为段 --&gt;</code></pre><h4 id="HTML标签"><a href="#HTML标签" class="headerlink" title="HTML标签"></a>HTML标签</h4><pre><code>HTML 标签是由尖括号包围的关键词，比如 &lt;html&gt;HTML 标签通常是成对出现的，比如 &lt;p&gt; 和 &lt;/p&gt;标签对中的第一个标签是开始标签，第二个标签是结束标签开始和结束标签也被称为开放标签和闭合标签</code></pre><h4 id="HTML编辑器"><a href="#HTML编辑器" class="headerlink" title="HTML编辑器"></a>HTML编辑器</h4><p>可以使用文本编辑器，例如NotePad++<br>写第一个HTML代码<br>首先打开NotePad++,写入代码，如下图：<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231028648.png" alt><br>然后保存，将后缀名改为html;<br>最后在浏览器中运行，双击已经保存好的html格式：即可出现：<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231029546.png" alt></p><h4 id="HTML标题"><a href="#HTML标题" class="headerlink" title="HTML标题"></a>HTML标题</h4><p>HTML 标题（Heading）是通过 <code>&lt;h1&gt; - &lt;h6&gt;</code> 等标签进行定义的。<br>例如：</p><pre><code>&lt;h1&gt;This is first heading &lt;/h1&gt;&lt;h2&gt;This is second heading &lt;/h2&gt;&lt;h3&gt;This is thirst heading &lt;/h3&gt;</code></pre><h4 id="HTML段落"><a href="#HTML段落" class="headerlink" title="HTML段落"></a>HTML段落</h4><p>HTML 段落是通过 <code>&lt;p&gt;</code>标签进行定义的.<br>例如：</p><pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;&lt;p&gt;This is another paragraph.&lt;/p&gt;</code></pre><h4 id="HTML-链接"><a href="#HTML-链接" class="headerlink" title="HTML 链接"></a>HTML 链接</h4><p>HTML 链接是通过 <code>&lt;a&gt;</code>标签进行定义的。<br>例如：href属性</p><pre><code>&lt;a href=&quot;http://www.baidu.com.cn&quot;&gt;</code></pre><h4 id="HTML图片"><a href="#HTML图片" class="headerlink" title="HTML图片"></a>HTML图片</h4><p>HTML 图像是通过 <code>&lt;img&gt;</code> 标签进行定义的。</p><p>例如：</p><pre><code>&lt;img src=&quot;/i/eg_w3school.gif&quot; width=&quot;300&quot; height=&quot;120&quot; /&gt;</code></pre><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><h4 id="CSS-指层叠样式表-Cascading-Style-Sheets"><a href="#CSS-指层叠样式表-Cascading-Style-Sheets" class="headerlink" title="CSS 指层叠样式表 (Cascading Style Sheets)"></a>CSS 指层叠样式表 (Cascading Style Sheets)</h4><p>样式定义如何显示 HTML 元素<br>样式通常存储在样式表中</p><h4 id="CSS语法"><a href="#CSS语法" class="headerlink" title="CSS语法"></a>CSS语法</h4><p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明。<br>选择器通常是您需要改变样式的 HTML 元素。<br>每条声明由一个属性和一个值组成。<br>属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被冒号分开。</p><p>格式：</p><pre><code>selector &amp;#123;property: value&amp;#125;h1 &amp;#123;color:red; font-size:14px;&amp;#125;</code></pre><p>解释：<br>h1为选择器，color，font-size为属性，red,value为值<br>注意：值要是为若干个单词需要给值加引号</p><h3 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h3><p>JavaScript 是一种轻量级的编程语言。<br>JavaScript 是可插入 HTML 页面的编程代码。<br>JavaScript 插入 HTML 页面后，可由所有的现代浏览器执行。<br>​</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python爬虫 </tag>
             
         </tags>
       
