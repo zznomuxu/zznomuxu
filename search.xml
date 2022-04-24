@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>哈希表类刷题day8</title>
+      <link href="/posts/nulishuaitiba.html"/>
+      <url>/posts/nulishuaitiba.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day8</div>&lt;</p><h3 id="LeetCode-1-两数之和传送门"><a href="#LeetCode-1-两数之和传送门" class="headerlink" title="LeetCode 1. 两数之和传送门"></a>LeetCode 1. 两数之和<a href="https://leetcode-cn.com/problems/two-sum/">传送门</a></h3><pre><code>class Solution &amp;#123;    public int[] twoSum(int[] nums, int target) &amp;#123;        int[] res = new int[2];    if(nums == null || nums.length == 0)&amp;#123;        return res;    &amp;#125;    Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();    for(int i = 0; i &lt; nums.length; i++)&amp;#123;        int temp = target - nums[i];        if(map.containsKey(temp))&amp;#123;            res[1] = i;            res[0] = map.get(temp);        &amp;#125;        map.put(nums[i], i);    &amp;#125;    return res;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python作业汇总</title>
       <link href="/posts/zuoye2.html"/>
       <url>/posts/zuoye2.html</url>
@@ -29,31 +54,6 @@
     
     
     <entry>
-      <title>哈希表类刷题day7</title>
-      <link href="/posts/nulishuaitiqi.html"/>
-      <url>/posts/nulishuaitiqi.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day5</div><br></p><h3 id="LeetCode-202-快乐数传送门"><a href="#LeetCode-202-快乐数传送门" class="headerlink" title="LeetCode 202. 快乐数传送门"></a>LeetCode 202. 快乐数<a href="https://leetcode-cn.com/problems/happy-number/">传送门</a></h3><pre><code>class Solution &amp;#123;    public boolean isHappy(int n) &amp;#123;        Set&lt;Integer&gt; record = new HashSet&lt;&gt;();        while (n != 1 &amp;&amp; !record.contains(n)) &amp;#123;            record.add(n);            n = getNextNumber(n);        &amp;#125;        return n == 1;    &amp;#125;    private int getNextNumber(int n) &amp;#123;        int res = 0;        while (n &gt; 0) &amp;#123;            int temp = n % 10;            res += temp * temp;            n = n / 10;        &amp;#125;        return res;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> leetcode </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>《城南旧事》</title>
       <link href="/posts/suibi2.html"/>
       <url>/posts/suibi2.html</url>
@@ -71,6 +71,31 @@
         <tags>
             
             <tag> 书单 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>哈希表类刷题day7</title>
+      <link href="/posts/nulishuaitiqi.html"/>
+      <url>/posts/nulishuaitiqi.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day5</div><br></p><h3 id="LeetCode-202-快乐数传送门"><a href="#LeetCode-202-快乐数传送门" class="headerlink" title="LeetCode 202. 快乐数传送门"></a>LeetCode 202. 快乐数<a href="https://leetcode-cn.com/problems/happy-number/">传送门</a></h3><pre><code>class Solution &amp;#123;    public boolean isHappy(int n) &amp;#123;        Set&lt;Integer&gt; record = new HashSet&lt;&gt;();        while (n != 1 &amp;&amp; !record.contains(n)) &amp;#123;            record.add(n);            n = getNextNumber(n);        &amp;#125;        return n == 1;    &amp;#125;    private int getNextNumber(int n) &amp;#123;        int res = 0;        while (n &gt; 0) &amp;#123;            int temp = n % 10;            res += temp * temp;            n = n / 10;        &amp;#125;        return res;    &amp;#125;&amp;#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
