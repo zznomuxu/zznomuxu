@@ -33,7 +33,7 @@
       <link href="/posts/qianduan11.html"/>
       <url>/posts/qianduan11.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="HTML、CSS与JS的关系"><a href="#HTML、CSS与JS的关系" class="headerlink" title="HTML、CSS与JS的关系"></a>HTML、CSS与JS的关系</h2><hr><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204241527153.png" alt></p><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><hr><h3 id="1-基础语法"><a href="#1-基础语法" class="headerlink" title="1.基础语法"></a>1.基础语法</h3><h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p><strong>单标签：</strong></p><ul><li>无属性&lt;标签名/&gt;</li><li>有属性&lt;标签名 属性名=”属性值”/&gt;<br><strong>双标签：</strong></li><li>无属性 &lt;标签名&gt;&lt;/标签名&gt;</li><li>有属性 &lt;标签名 属性名=”属性值”&gt;&lt;/标签名&gt;<h4 id="整体结构"><a href="#整体结构" class="headerlink" title="整体结构"></a>整体结构</h4></li></ul><pre><code>&lt;html&gt;&lt;/html&gt; 表示当前是一个网页&lt;head&gt;&lt;/head&gt; 头部信息&lt;body&gt;&lt;/body&gt;  身体部分</code></pre><h3 id="2-常用标签"><a href="#2-常用标签" class="headerlink" title="2.常用标签"></a>2.常用标签</h3><p>⚠️ 标签的属性之间要以空格隔开</p><h4 id="body标签"><a href="#body标签" class="headerlink" title="body标签"></a>body标签</h4><p><strong>bgcolor 背景颜色</strong></p><ul><li>颜色名</li><li>rgb</li><li>十六进制</li></ul><p><strong>text 字体颜色</strong></p><ul><li>颜色名</li><li>rgb</li><li>十六进制</li></ul><h4 id="标题标签"><a href="#标题标签" class="headerlink" title="标题标签"></a>标题标签</h4><p><strong>h1-h6</strong> 从大到小<br>⚠️ 不建议在页面中写多个h1标签，h1标签可以被搜索引擎获取到，如有多个，可能进入搜索引擎黑名单</p><pre><code>&lt;h1&gt;&lt;/h1&gt;&lt;h2&gt;&lt;/h2&gt;&lt;h3&gt;&lt;/h3&gt;&lt;h4&gt;&lt;/h4&gt;&lt;h5&gt;&lt;/h5&gt;&lt;h6&gt;&lt;/h6&gt;</code></pre><h4 id="水平线标签"><a href="#水平线标签" class="headerlink" title="水平线标签"></a>水平线标签</h4><p><strong>hr</strong></p><pre><code>&lt;hr/&gt;</code></pre><ul><li>width 宽度 百分比 px</li><li>align 对齐方式 left right center（默认）</li><li>size 粗细</li></ul><h4 id="段落标签"><a href="#段落标签" class="headerlink" title="段落标签"></a>段落标签</h4><p><strong>p</strong></p><pre><code>&lt;p&gt;&lt;/p&gt;</code></pre><ul><li>align 对齐方式<br>left 左对齐<br>right 右对齐<br>center 中<br>justify 两端对齐</li></ul><h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><p><strong>无序列表</strong></p><ul><li>格式<pre><code>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</code></pre></li><li>常用属性<br>type 列表的图标<br>  square 实心方块<br>  circle 空心圆<br>  disc 实心圆</li></ul><p><strong>有序列表</strong></p><ul><li>格式<pre><code>&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;</code></pre></li><li>常用属性<br>type 列表的图标<br>1 数字序号<br>a 小写字母<br>A 大写字母<br>i 小写罗马字母<br>I 大写罗马字母</li></ul><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="HTML、CSS与JS的关系"><a href="#HTML、CSS与JS的关系" class="headerlink" title="HTML、CSS与JS的关系"></a>HTML、CSS与JS的关系</h2><hr><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204241527153.png" alt></p><h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><hr><h3 id="1-基础语法"><a href="#1-基础语法" class="headerlink" title="1.基础语法"></a>1.基础语法</h3><h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p><strong>单标签：</strong></p><ul><li>无属性&lt;标签名/&gt;</li><li>有属性&lt;标签名 属性名=”属性值”/&gt;<br><strong>双标签：</strong></li><li>无属性 &lt;标签名&gt;&lt;/标签名&gt;</li><li>有属性 &lt;标签名 属性名=”属性值”&gt;&lt;/标签名&gt;<h4 id="整体结构"><a href="#整体结构" class="headerlink" title="整体结构"></a>整体结构</h4></li></ul><pre><code>&lt;html&gt;&lt;/html&gt; 表示当前是一个网页&lt;head&gt;&lt;/head&gt; 头部信息&lt;body&gt;&lt;/body&gt;  身体部分</code></pre><h3 id="2-常用标签"><a href="#2-常用标签" class="headerlink" title="2.常用标签"></a>2.常用标签</h3><p>⚠️ 标签的属性之间要以空格隔开</p><h4 id="body标签"><a href="#body标签" class="headerlink" title="body标签"></a>body标签</h4><p><strong>bgcolor 背景颜色</strong></p><ul><li>颜色名</li><li>rgb</li><li>十六进制</li></ul><p><strong>text 字体颜色</strong></p><ul><li>颜色名</li><li>rgb</li><li>十六进制</li></ul><h4 id="标题标签"><a href="#标题标签" class="headerlink" title="标题标签"></a>标题标签</h4><p><strong>h1-h6</strong> 从大到小<br>⚠️ 不建议在页面中写多个h1标签，h1标签可以被搜索引擎获取到，如有多个，可能进入搜索引擎黑名单</p><pre><code>&lt;h1&gt;&lt;/h1&gt;&lt;h2&gt;&lt;/h2&gt;&lt;h3&gt;&lt;/h3&gt;&lt;h4&gt;&lt;/h4&gt;&lt;h5&gt;&lt;/h5&gt;&lt;h6&gt;&lt;/h6&gt;</code></pre><h4 id="水平线标签"><a href="#水平线标签" class="headerlink" title="水平线标签"></a>水平线标签</h4><p><strong>hr</strong></p><pre><code>&lt;hr/&gt;</code></pre><ul><li>width 宽度 百分比 px</li><li>align 对齐方式 left right center（默认）</li><li>size 粗细</li></ul><h4 id="段落标签"><a href="#段落标签" class="headerlink" title="段落标签"></a>段落标签</h4><p><strong>p</strong></p><pre><code>&lt;p&gt;&lt;/p&gt;</code></pre><ul><li>align 对齐方式<br>left 左对齐<br>right 右对齐<br>center 中<br>justify 两端对齐</li></ul><h4 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h4><p><strong>无序列表</strong></p><ul><li>格式<pre><code>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</code></pre></li><li>常用属性<br>type 列表的图标<br>  square 实心方块<br>  circle 空心圆<br>  disc 实心圆</li></ul><p><strong>有序列表</strong></p><ul><li>格式<pre><code>&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;</code></pre></li><li>常用属性<br>type 列表的图标<br>1 数字序号<br>a 小写字母<br>A 大写字母<br>i 小写罗马字母<br>I 大写罗马字母</li></ul><h4 id="div"><a href="#div" class="headerlink" title="div"></a>div</h4><h4 id="span"><a href="#span" class="headerlink" title="span"></a>span</h4><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
@@ -308,31 +308,6 @@
     
     
     <entry>
-      <title>数组类刷题day2</title>
-      <link href="/posts/nulishuatiday2.html"/>
-      <url>/posts/nulishuatiday2.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">努力刷题day2</div><h3 id="LeetCode-977-有序数组的平方-传送门"><a href="#LeetCode-977-有序数组的平方-传送门" class="headerlink" title="LeetCode 977.有序数组的平方 传送门"></a>LeetCode 977.有序数组的平方 <a href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/">传送门</a></h3><p>:::default<br>code<br>:::</p><pre><code>class Solution &amp;#123;    public int[] sortedSquares(int[] nums) &amp;#123;        for(int i=0;i&lt;nums.length;i++)        &amp;#123;            nums[i]=nums[i]*nums[i];        &amp;#125;        Arrays.sort(nums);        return nums;    &amp;#125;&amp;#125;</code></pre><h3 id="LeetCode-209-长度最小的子数组传送门"><a href="#LeetCode-209-长度最小的子数组传送门" class="headerlink" title="LeetCode 209.长度最小的子数组传送门"></a>LeetCode 209.长度最小的子数组<a href="https://leetcode-cn.com/problems/minimum-size-subarray-sum/">传送门</a></h3><p>:::default<br>code<br>:::</p><pre><code>class Solution &amp;#123;    public int minSubArrayLen(int s, int[] nums) &amp;#123;        int n = nums.length;        if (n == 0) &amp;#123;            return 0;        &amp;#125;        int ans = Integer.MAX_VALUE;        for (int i = 0; i &lt; n; i++) &amp;#123;            int sum = 0;            for (int j = i; j &lt; n; j++) &amp;#123;                sum += nums[j];                if (sum &gt;= s) &amp;#123;                    ans = Math.min(ans, j - i + 1);                    break;                &amp;#125;            &amp;#125;        &amp;#125;        return ans == Integer.MAX_VALUE ? 0 : ans;    &amp;#125;&amp;#125;</code></pre><div class="spoiler collapsed">    <div class="spoiler-title">        code    </div>    <div class="spoiler-content">        <p>（1） Arrays.sort()使用方法：<a href="https://blog.csdn.net/qq_41763225/article/details/82890122/">传送门-转载-侵删致谢</a><br>（2）Integer.MAX_VALUE的含义：<a href="https://blog.csdn.net/weixin_44824500/article/details/104768290">传送门-转载-侵删致谢</a></p>    </div></div><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> leetcode </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>笔试面试总结（关于测试</title>
       <link href="/posts/bimian1.html"/>
       <url>/posts/bimian1.html</url>
@@ -350,6 +325,31 @@
         <tags>
             
             <tag> 面试 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数组类刷题day2</title>
+      <link href="/posts/nulishuatiday2.html"/>
+      <url>/posts/nulishuatiday2.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">努力刷题day2</div><h3 id="LeetCode-977-有序数组的平方-传送门"><a href="#LeetCode-977-有序数组的平方-传送门" class="headerlink" title="LeetCode 977.有序数组的平方 传送门"></a>LeetCode 977.有序数组的平方 <a href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/">传送门</a></h3><p>:::default<br>code<br>:::</p><pre><code>class Solution &amp;#123;    public int[] sortedSquares(int[] nums) &amp;#123;        for(int i=0;i&lt;nums.length;i++)        &amp;#123;            nums[i]=nums[i]*nums[i];        &amp;#125;        Arrays.sort(nums);        return nums;    &amp;#125;&amp;#125;</code></pre><h3 id="LeetCode-209-长度最小的子数组传送门"><a href="#LeetCode-209-长度最小的子数组传送门" class="headerlink" title="LeetCode 209.长度最小的子数组传送门"></a>LeetCode 209.长度最小的子数组<a href="https://leetcode-cn.com/problems/minimum-size-subarray-sum/">传送门</a></h3><p>:::default<br>code<br>:::</p><pre><code>class Solution &amp;#123;    public int minSubArrayLen(int s, int[] nums) &amp;#123;        int n = nums.length;        if (n == 0) &amp;#123;            return 0;        &amp;#125;        int ans = Integer.MAX_VALUE;        for (int i = 0; i &lt; n; i++) &amp;#123;            int sum = 0;            for (int j = i; j &lt; n; j++) &amp;#123;                sum += nums[j];                if (sum &gt;= s) &amp;#123;                    ans = Math.min(ans, j - i + 1);                    break;                &amp;#125;            &amp;#125;        &amp;#125;        return ans == Integer.MAX_VALUE ? 0 : ans;    &amp;#125;&amp;#125;</code></pre><div class="spoiler collapsed">    <div class="spoiler-title">        code    </div>    <div class="spoiler-content">        <p>（1） Arrays.sort()使用方法：<a href="https://blog.csdn.net/qq_41763225/article/details/82890122/">传送门-转载-侵删致谢</a><br>（2）Integer.MAX_VALUE的含义：<a href="https://blog.csdn.net/weixin_44824500/article/details/104768290">传送门-转载-侵删致谢</a></p>    </div></div><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
