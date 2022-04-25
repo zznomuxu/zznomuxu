@@ -1255,14 +1255,14 @@ h3:hover {
 
 ```pip install XXX -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 </code></pre><h3 id="使用oenpyxl的问题"><a href="#使用oenpyxl的问题" class="headerlink" title="使用oenpyxl的问题"></a>使用oenpyxl的问题</h3><p>1、如下：</p>
-<p>```TypeError: got invalid input value of type <class 'xml.etree.elementtree.element'>, expected string </class></p>
+<p>```TypeError: got invalid input value of type <class 'xml.etree.ElementTree.Element'>, expected string </p>
 <pre><code>openpyxl版本问题，我把本身自带的版本3.0.2卸载，安装了3.0.0后就不再出现次错误。
 
 安装3.0.0
 
 ```pip install openpyxl==3.0.0 -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
-</code></pre><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202201191016019.png" alt></p>
-<p>卸载3.0.2<br><code>pip uninstall openpyxl</code><br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202201191017522.png" alt></p>
+</code></pre><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202201191016019.png" alt=""></p>
+<p>卸载3.0.2<br><code>pip uninstall openpyxl</code><br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202201191017522.png" alt=""></p>
 <p>补充：网上有教程是包冲突，我卸载了lxml，还是会报错，不过大家可以尝试一下。</p>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
@@ -2186,7 +2186,7 @@ h3:hover {
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">8.6k</span>&nbsp;
+        class="white-color">9k</span>&nbsp;
       
       
       

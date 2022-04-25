@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="friends, 周周">
+    <meta name="keywords" content="哈希表类刷题day9, 周周">
     <meta name="description" content="这是一个神秘又开放的地方">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>friends | 周周的苜蓿园</title>
+    <title>哈希表类刷题day9 | 周周的苜蓿园</title>
     
     <script>
         // 隐藏
@@ -900,514 +900,623 @@ class="themespring" -->
 </div>
 <!-- 春节主题模式样式结束 -->
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-        <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    friends
-                 
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: ['欢迎来到苜蓿园，请不要忘记我……',''],
-                        startDelay: 200,
-                        typeSpeed: 120,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/toc-banner/js1.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">哈希表类刷题day9</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+
+
+
+<main class="post-container content">
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+        
+    }
+
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #93a1ee;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #f3c7f7;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+    .suibis[data-spmid="随笔"] {
+        width: 100%!important;
+    }
+    .toc-widget[data-spmid="随笔"],
+    #floating-toc-btn[data-spmid="随笔"]
+    {
+        display: none!important;
+    }
+     
+</style>
+
+<div class="row">
+    
+    
+        <div id="main-content" class="col s12 m12 l9 suibis" data-spmid="leetcode">
+            <style>
+    #switchspring {
+        bottom: 223px!important;
+    }
+    @media only screen and (max-width: 601px) {
+        #switchspring {
+            bottom: 178px!important;
+        }
+    }
+    #switchchristmas {
+        bottom: 281px!important;
+    }
+    @media only screen and (max-width: 601px) {
+        #switchchristmas {
+            bottom: 235px!important;
+        }
+    }
+    .ititle {
+        margin: 15px 0;
+        text-align:center;
+        font-family: 'Architects Daughter', cursive;
+    }
+    .ipage {
+        line-height: 30px;
+        margin: 0 auto;
+        padding: 15px 32px 29px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+        -moz-border-radius-bottomleft: 20px 500px;
+        -moz-border-radius-bottomright: 500px 30px;
+        -moz-border-radius-topright: 5px 100px;	
+        -webkit-border-bottom-left-radius: 20px 500px;
+        -webkit-border-bottom-right-radius: 64px 10px;
+        -webkit-border-top-right-radius: 5px 100px;    
+        border-bottom-left-radius: 20px 500px;
+        border-bottom-right-radius: 64px 10px;
+        border-top-right-radius: 5px 100px;           
+        -webkit-background-size: 100% 30px;
+        -moz-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 1px 0 #F6EF97;
+        position: relative;
+    }
+.izhengwen {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: auto;
+    background: repeating-linear-gradient(to bottom, #f9f9f9, #f9f9f9 31px, #6BA2D8 1px, #f9f9f9);
+    background-size: 100% 32px;
+}
+.izhengwen p {
+    letter-spacing: .1rem;
+}
+#articleContent p {
+    margin: 0
+}
+.ititle {
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.45rem!important;
+    padding: 10px auto;
+}
+.izhengwen p {
+    position: relative;
+    line-height: 2.2rem!important;
+    text-indent: 2em;
+    font-family: 'Architects Daughter', cursive!important;
+    font-size: 1.45rem!important;
+}
+.ipage::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 52px;
+    z-index: 4;
+    width: 4px;
+    height: 100%;
+    border-left: 1px solid #fca1a1;
+}
+.izhengwen p:nth-child(odd):before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -16px;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.26);
+}
+.ipage:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 52px;
+    z-index: 3;
+    width: 4px;
+    height: 100%;
+    border-left: 4px double #fca1a1;
+}
+.ipage p {
+    padding: 0 2em;
+    color: #333!important;
+}
+body.dark .ipage {
+    opacity: 0.85;
+}
+/*小屏幕下(手机类)的样式*/
+@media only screen and (max-width: 600px) {
+    .ipage {
+        padding: 15px 23px 29px;
+    }
+    .ipage:after {
+        left: 36px;
+    }
+    .ipage::before {
+        right: 36px;    
+    }
+    .ipage p, .ititle {
+        padding: 0 0.9em;
+    }
+
+}
+h3 {
+    font-size: 1.32rem;
+    font-weight: 400;
+    color: #101012;
+    transition: 0.8s;
+    cursor: pointer;
+}
+h3:hover {
+    transform: translateX(15px);
+}
+</style>
+
+<!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        
+        <div class="card-content article-info">
+            <!-- 福袋按钮 -->
+            <div class="caishendeng">        
+                <div class="guguxian wenzhangxian">
+                    <img class="caishenpic gugus" src="/medias/spring-img/caishen.png" />
+                </div>              
+            </div>
+            <!-- 圣诞按钮 -->
+            <div class="shengdandeng">        
+                <div class="shengdanxian" style="left: 50%;">
+                    <img class="shengdanpic fudai" src="/medias/christmas-img/shengdanren4.png" />
+                </div>              
+            </div>
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/leetcode/">
+                                <span class="chip bg-color">leetcode</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                技术
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-04-25
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    291
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    1 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><div class="note info">前言：努力刷题day9</div>&lt;</p>
+<h3 id="LeetCode-454-四数相加-II-传送门"><a href="#LeetCode-454-四数相加-II-传送门" class="headerlink" title="LeetCode 454. 四数相加 II 传送门"></a>LeetCode 454. 四数相加 II <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/4sum-ii/">传送门</a></h3><pre><code>class Solution &amp;#123;
+    public int fourSumCount(int[] A, int[] B, int[] C, int[] D) &amp;#123;
+        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+        //Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+        int res = 0;
+        for(int i = 0;i&lt;A.length;i++)&amp;#123;
+            for(int j= 0;j&lt;B.length;j++)&amp;#123;
+                int sumAB = A[i]+B[j];
+                if(map.containsKey(sumAB)) map.put(sumAB,map.get(sumAB)+1);
+                else map.put(sumAB,1);
+            &amp;#125;
+        &amp;#125;
+
+        for(int i = 0;i&lt;C.length;i++)&amp;#123;
+            for(int j = 0;j&lt;D.length;j++)&amp;#123;
+                int sumCD = -(C[i]+D[j]);
+                if(map.containsKey(sumCD)) res += map.get(sumCD);
+            &amp;#125;
+        &amp;#125;
+        return res;
+    &amp;#125;
+&amp;#125;
+</code></pre><h3 id="LeetCode-383-赎金信-传送门"><a href="#LeetCode-383-赎金信-传送门" class="headerlink" title="LeetCode 383. 赎金信 传送门"></a>LeetCode 383. 赎金信 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ransom-note/">传送门</a></h3><pre><code>class Solution &amp;#123;
+    public boolean canConstruct(String ransomNote, String magazine) &amp;#123;
+        //记录杂志字符串出现的次数
+        int[] arr = new int[26];
+        int temp;
+        for (int i = 0; i &lt; magazine.length(); i++) &amp;#123;
+            temp = magazine.charAt(i) - &#39;a&#39;;
+            arr[temp]++;
+        &amp;#125;
+        for (int i = 0; i &lt; ransomNote.length(); i++) &amp;#123;
+            temp = ransomNote.charAt(i) - &#39;a&#39;;
+            //对于金信中的每一个字符都在数组中查找
+            //找到相应位减一，否则找不到返回false
+            if (arr[temp] &gt; 0) &amp;#123;
+                arr[temp]--;
+            &amp;#125; else &amp;#123;
+                return false;
+            &amp;#125;
+        &amp;#125;
+        return true;
+    &amp;#125;
+&amp;#125;
+</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">周周</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://zznomuxu.github.io/posts/nulishuaitijiu.html">https://zznomuxu.github.io/posts/nulishuaitijiu.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">周周</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/leetcode/">
+                                    <span class="chip bg-color">leetcode</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢赞赏哦~</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+    $(function () {
+        $('.tabs').tabs();
+    });
 </script>
 
-
-    </div>
-    <div class="mohuxiaoguo"></div>
-</div>
-
-
-<style>
-  .friends-container {
-    margin-top: -100px;
-    margin-bottom: 30px;
-  }
-
-  .friends-container .tag-title {
-    margin-bottom: 10px;
-    color: #3C4858;
-    font-size: 1.75rem;
-    font-weight: 400;
-  }
-
-  @media only screen and (max-width: 601px) {
-    #switchspring {
-      bottom: 178px !important;
-    }
-  }
-
-  .frind-ship img {
-    border-radius: 50%;
-  }
-
-  /* 以下是按钮样式 */
-  .frind-ship {
-    padding: 10px 20px;
-  }
-
-  .frind-ship .title {
-    display: flex;
-    align-items: center;
-  }
-
-  .frind-ship .title div {
-    color: #fff;
-    padding-left: 10px;
-  }
-
-  .frind-ship .title img {
-    width: 100px;
-    height: 100px;
-    flex-shrink: 0;
-  }
-
-  .frind-ship .title h1 {
-    padding-bottom: 5px;
-    border-bottom: 2px solid #fff;
-    position: relative;
-    top: -15px;
-    left: 3px;
-  }
-
-  .friend-button {
-    display: flex;
-    justify-content: center;
-    margin-bottom: -27px;
-  }
-
-  .friend-button a {
-    border-radius: 40px;
-  }
-
-  .friend-all .tag-post {
-    margin-bottom: 30px;
-  }
-
-  .button-caution {
-    background-color: #FF4351;
-    border-color: #FF4351;
-    color: #FFF;
-  }
-
-  .button {
-    font-weight: 300;
-    font-size: 16px;
-    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    text-decoration: none;
-    text-align: center;
-    line-height: 40px;
-    height: 40px;
-    padding: 0 40px;
-    margin: 0;
-    display: inline-block;
-    appearance: none;
-    cursor: pointer;
-    border: none;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: .3s;
-    transition-duration: .3s;
-  }
-
-  .title {
-    margin-bottom: 0rem !important;
-  }
-
-  .card {
-    margin: 3rem 0 1rem 0 !important;
-  }
-
-  .button-glow.button-caution {
-    -webkit-animation-name: glowing-caution;
-    animation-name: glowing-caution;
-  }
-
-  @-webkit-keyframes glowing-caution {
-    from {
-      -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-      box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-    }
-
-    50% {
-      -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-      box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-    }
-
-    to {
-      -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-      box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-    }
-  }
-
-  @keyframes glowing-caution {
-    from {
-      -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-      box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-    }
-
-    50% {
-      -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-      box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
-    }
-
-    to {
-      -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-      box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
-    }
-  }
-
-  .button-caution:hover {
-    background-color: #ff7680;
-    border-color: #ff7680;
-    color: #FFF;
-    text-decoration: none;
-  }
-
-  .frind-card1 {
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%) !important;
-  }
-
-  .frind-card2 {
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-  }
-
-  .frind-card3 {
-    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%) !important;
-  }
-
-  .frind-card4 {
-    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%) !important;
-  }
-
-  .frind-card5 {
-    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%) !important;
-  }
-
-  .frind-card6 {
-    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%) !important;
-  }
-
-  .frind-card7 {
-    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%) !important;
-  }
-
-  .frind-card8 {
-    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%) !important;
-  }
-
-  .frind-card9 {
-    background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%) !important;
-  }
-
-  .frind-card10 {
-    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%) !important;
-  }
-
-  article .card {
-    overflow: visible !important;
-  }
-
-  #sma {
-    bottom: 139.25px;
-  }
-
-  .comment-scroll {
-    bottom: 79.25px;
-  }
-
-  .bg-cover .title,
-  .description #subtitle {
-    color: rgba(255, 255, 255, 1) !important;
-  }
-
-  .bg-cover::before {
-    background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
-  }
-
-  .frind-ship .title .msgs p,
-  .frind-ship .title .msgs h1 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .frind-ship .title .msgs {
-    width: 196px;
-  }
-
-  @media only screen and (min-width: 800px) and (max-width: 1100px) {
-    .frind-ship .title .msgs {
-      width: 129px;
-    }
-  }
-
-  @media only screen and (min-width: 760px) and (max-width: 800px) {
-    .frind-ship .title .msgs {
-      width: 150px;
-    }
-  }
-
-  @media only screen and (min-width: 410px) and (max-width: 759px) {
-    .frind-ship .title .msgs {
-      width: 180px;
-    }
-  }
-
-  @media only screen and (min-width: 362px) and (max-width: 410px) {
-    .frind-ship .title .msgs {
-      width: 145px;
-    }
-  }
-
-  @media only screen and (max-width: 361px) {
-    .frind-ship .title .msgs {
-      width: 133px;
-    }
-  }
-
-  @media only screen and (max-width: 321px) {
-    .frind-ship .title .msgs {
-      width: 96px;
-    }
-  }
-</style>
-
-<style>
-  @media only screen and (max-width: 800px) {
-    .swbk {
-      padding: 26px 2px !important;
-      margin: 14px 0px !important;
-    }
-
-    .swbk p {
-      padding: 2px 10px;
-    }
-  }
-
-  .youlian {
-    color: rgb(178, 143, 206);
-    font-size: 26px;
-    font-weight: 500;
-  }
-
-  @media only screen and (max-width: 770px) {
-    .youliansmall {
-      display: none;
-    }
-  }
-
-  .swbk {
-    position: relative;
-    padding: 26px 20px;
-    font-style: italic;
-    margin: 10px 2px;
-    -webkit-box-shadow: 0 14px 38px rgba(0, 0, 0, .08), 0 3px 8px rgba(0, 0, 0, .06);
-    box-shadow: 0 14px 38px rgba(0, 0, 0, .08), 0 3px 8px rgba(0, 0, 0, .06);
-    -webkit-transition: all .3s ease 0s, -webkit-transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
-    transition: all .3s ease 0s, -webkit-transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
-    transition: all .3s ease 0s, transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
-    transition: all .3s ease 0s, transform .6s cubic-bezier(.6, .2, .1, 1) 0s, -webkit-transform .6s cubic-bezier(.6, .2, .1, 1) 0s;
-  }
-
-  .swbk:before {
-    content: " “ ";
-    top: 56px;
-    left: 10px;
-  }
-
-  .swbk:after {
-    content: " ” ";
-    bottom: 8px;
-    right: 5px;
-  }
-
-  .swbk:after,
-  .swbk:before {
-    position: absolute;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 42px;
-    text-decoration: inherit;
-  }
-
-  body.dark .swbk:after,
-  body.dark .swbk:before {
-    color: #d2c9c9;
-  }
-
-  .swbk p {
-    font-size: 19px !important;
-    line-height: 2.4rem;
-    text-indent: 2rem;
-    font-style: italic;
-    font-family: 'Architects Daughter', cursive !important;
-  }
-
-  .swbk .label {
-    display: inline-block;
-    position: relative;
-    margin-bottom: 10px;
-    padding: 0 14px 0 32px;
-    height: 32px;
-    line-height: 32px;
-    border-radius: 0 3px 3px 0;
-    background-color: currentColor;
-  }
-
-  .swbk .label span {
-    color: #fff;
-  }
-
-  .swbk .label:after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 0;
-    background-color: transparent;
-    border-style: solid;
-    border-width: 0 16px 16px 0;
-    border-color: transparent;
-    border-right-color: currentColor;
-    -webkit-filter: brightness(120%);
-    filter: brightness(120%);
-  }
-
-  @media screen and (min-width: 768px) {
-    .swbk .label {
-      left: -37px;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    .swbk .label {
-      left: -18px;
-    }
-  }
-
-  .swbk:hover {
-    -webkit-transform: translateY(-4px);
-    transform: translateY(-4px);
-    -webkit-box-shadow: 0 14px 38px rgba(0, 0, 0, .14), 0 3px 8px rgba(0, 0, 0, .12);
-    box-shadow: 0 14px 38px rgba(0, 0, 0, .14), 0 3px 8px rgba(0, 0, 0, .12);
-  }
-</style>
-
-<main class="content">
-  <div class="container friends-container">
-    <div class="card huacard">
-      <!-- 福袋按钮 -->
-      <div class="caishendeng">
-        <div class="guguxian">
-          <img class="caishenpic gugus" src="/medias/spring-img/gu1.png" />
-        </div>
-      </div>
-
-      <div class="card-content">
-        <div class="tag-title center-align">
-          <i class="fas fa-address-book"></i>&nbsp;&nbsp;友情链接
-        </div>
-        <hr>
-
-        <!-- 友链数目统计模块开始 -->
-        
-        
-        <div class="swbk">
-          <!-- 福袋按钮 -->
-          <div class="caishendeng">
-            <div class="caishenxian">
-              <img class="caishenpic lions" src="/medias/spring-img/lion.png" />
-            </div>
-          </div>
-          <div class="label" style="color: rgb(178, 143, 206);">
-            <!-- 小帽子 -->
-            <img class="labelmz" src="/medias/spring-img/maozi.png" />
-            <span>友链：</span></div>
-          <!-- <p>
-            当前共有<span class="youlian"> 1 </span>个友链啦，接下来的日子也请多多关照哦 ～
-          </p> -->
-        </div>
-        
-        <!-- 友链数目统计模块结束 -->
-
-        <!-- <article id="friends-link">
-          
-          
-          <div class="row tags-posts friend-all">
             
-            
-            <div class="col s12 m6 l4 friend-div">
-           <div class="card frind-card1">
-                <div class="frind-ship">
-                  <div class="title">
-                    <div class="weilemz">
-          
-                      <img class="friendmz" src="/medias/spring-img/maozi.png" />
-                      <img class="friendpics" src="https://dyfa.top/medias/avatar.jpg" alt="img">
-                    </div>
-                    <div class="msgs">
-                      <h1 class="friend-name">itsNeko开源博客作者</h1>
-                      <p style="position: relative;top: -35px;">十万伏特皮卡丘</p>
-                    </div>
-                  </div>
-                  <div class="friend-button">
-                    <a href="https://dyfa.top/" target="_blank"
-                      class="button button-glow button-rounded button-caution">
-                      前去康康开源作者
-                    </a>
-                  </div>
-                </div>
-              </div> 
-            </div>
-            
-          </div> 
-          
-        </article> -->
-      </div>
+        </div>
     </div>
 
-    <div class="card">
-      
+    
 
-      
+    
 
-      
+    
 
-      
+    
 
-      
-      <style>
+    
+        <style>
     .valine-card {
         margin: 1.5rem auto;
     }
@@ -1771,18 +1880,319 @@ class="themespring" -->
     });
 </script>
 
-      
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/nulishuaitijiu.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="哈希表类刷题day9">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          哈希表类刷题day9
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前言：努力刷题day9。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-25
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/qianduan11.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/toc-banner/js3.jpg" class="responsive-img" alt="B站念安老师课程HTML+CSS笔记">
+                        
+                        <!-- 福袋按钮 -->
+                        <div class="caishendeng">        
+                            <div class="caishenxian wenzhangxian">
+                                <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                            </div>              
+                        </div>
+                        <span class="card-title">
+                          <!-- 文章卡片hover线条效果 -->
+                          <span class="titlesline"></span>
+                          B站念安老师课程HTML+CSS笔记
+                        </span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            前言：自用整理笔记。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/HTML/">
+                        <span class="chip bg-color">HTML</span>
+                    </a>
+                    
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
     </div>
-  </div>
-</main>
+</article>
+<style>
+  .articles .row .article {
+    position: relative;
+  }
+</style>
+
+</div>
+
 
 <script>
-  $(function () {
-    $('#friends-link').masonry({
-      itemSelector: '.friend-div'
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('30')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 周周的苜蓿园<br />'
+            + '文章作者: 周周<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
     });
-  });
 </script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+        </div>
+        
+        
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        
+        
+        <div class="toc-widget" data-spmid="leetcode">
+            <div class="toc-title">
+                <i class="far fa-list-alt"></i>
+                &nbsp;&nbsp;目录
+            </div>
+            <div id="toc-content"></div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+    
+<div id="floating-toc-btn" class="hide-on-med-and-down" data-spmid="leetcode">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+</main>
+
+
+
 
     <style>
   footer {
