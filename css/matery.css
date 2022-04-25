@@ -84,7 +84,7 @@
     }
 }
 body {
-    background-color: #eaeaea;
+    background-color: #fff;
     /* background-color: lavender;
     background-image: linear-gradient(45deg,
     rgba(255,255,255,.15) 25%,
@@ -95,7 +95,7 @@ body {
     transparent);
     background-size: 80px 80px; */
     margin: 0;
-    color: #f4cffc;
+    color: #000;
 }
 #rewardModal .reward-title {
     padding: 0px 52px;
@@ -116,7 +116,7 @@ h1 {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.8rem;
-    color: #db9ce7!important;
+    color: #20519b!important;
 }
 
 h2 {
@@ -124,7 +124,7 @@ h2 {
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.5rem;
-    color: #db9ce7!important;
+    color: #20519b!important;
 }
 
 h3 {
@@ -132,7 +132,7 @@ h3 {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.5rem;
-    color: #db9ce7!important;
+    color: #20519b!important;
 }
 
 h4 {
@@ -140,7 +140,7 @@ h4 {
     line-height: 1.45rem;
     font-size: 1.18rem;
     font-weight: 500;
-    color: #db9ce7!important;
+    color: #20519b!important;
 }
 
 h5 {
@@ -148,7 +148,7 @@ h5 {
     font-size: 1.08rem;
     font-weight: 500;
     line-height: 1.2rem;
-    color: #db9ce7!important;
+    color: #20519b!important;
 }
 
 h6 {
@@ -156,7 +156,7 @@ h6 {
     font-size: 1.1rem;
     line-height: 1.1rem;
     font-weight: 500;
-    color: #db9ce7!important;
+    color: #20519b!important;
 }
 
 p {
@@ -171,7 +171,7 @@ hr {
 }
 
 blockquote {
-    border-left: 5px solid #42b983;
+    border-left: 5px solid #efa3ed;
     padding: 1rem 0.8rem 0.2rem 0.8rem;
     color: #666;
     background-color: rgba(66, 185, 131, .1);
@@ -197,7 +197,7 @@ blockquote {
 }
 
 pre {
-    padding: 2.5rem 1.5rem 1.5rem 1.5rem !important;
+    padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;
     margin: 1rem 0 !important;
     background: #272822;
     overflow: auto;
@@ -205,11 +205,12 @@ pre {
     tab-size: 4;
 }
 
+
 .code-area::after {
     content: " ";
     position: absolute;
     border-radius: 50%;
-    background: #89cec5;
+    background: #ff5f56;
     width: 12px;
     height: 12px;
     top: 0;
@@ -223,9 +224,9 @@ code {
     padding: 1px 5px;
     top: 13px !important;
     font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
-    font-size: 1.18rem;
+    font-size: 0.91rem;
     color: #e96900;
-    background-color: #f5f5f5;
+    background-color: #f8f8f8;
     border-radius: 2px;
 }
 
@@ -335,10 +336,14 @@ mark {
     padding: .2em;
 }
 
+/*加入卡片星星背景图片 可以自己选*/
+
 .card {
-    border-radius: 10px;
-    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    background: url(https://codecheng-1305009997.cos.ap-chengdu.myqcloud.com/img/20210504193531.jfif) top;
+   border-radius: 25px;
+   box-shadow: 0 15px 35px rgba(42, 89, 165, .1), 0 5px 15px rgba(71, 159, 188, .07) !important;
 }
+
 
 .card .card-image img {
     /* 修改文章列表图片填充样式为 cover 以覆盖整个区域而不会被缩放 */
@@ -698,7 +703,7 @@ header .go-back i {
 }
 
 .index-cover {
-    height: 100vh;
+    height: 110vh;
 }
 
 .post-cover {
@@ -3934,5 +3939,5 @@ nav,
 .nav-menu li .sub-nav, 
 .menus_item_child:before
 {
-  background-color: #039be5;
+  background-color: #204354;
 }

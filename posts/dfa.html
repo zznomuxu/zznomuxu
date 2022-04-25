@@ -129,7 +129,8 @@
     
       
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="周周的苜蓿园" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -234,6 +235,13 @@ class="themespring" -->
         <a href="/count">
           
           <span>统计</span>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/journal">
+          
+          <span>日志</span>
         </a>
       </li>
       
@@ -369,6 +377,13 @@ class="themespring" -->
         </a>
       </li>
       
+      <li>
+        <a href="/goodpapers">
+          
+          <span>好文收藏</span>
+        </a>
+      </li>
+      
       <!-- 波浪wave条 -->
       <div class="wavelineerji">
         <style>
@@ -390,9 +405,9 @@ class="themespring" -->
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/goodpapers" class="waves-effect waves-light">
+    <a href="/MyMarkdown" class="waves-effect waves-light">
       
-      <span>好文收藏</span>
+      <span>MyMarkdown</span>
     </a>
     
   </li>
@@ -516,6 +531,14 @@ class="themespring" -->
                   </a>
                 </li>
               
+                <li>
+
+                  <a href="/journal " style="margin-left:75px">
+				  
+		          <span>日志</span>
+                  </a>
+                </li>
+              
             </ul>
           
         </li>
@@ -632,17 +655,25 @@ class="themespring" -->
                   </a>
                 </li>
               
+                <li>
+
+                  <a href="/goodpapers " style="margin-left:75px">
+				  
+		          <span>好文收藏</span>
+                  </a>
+                </li>
+              
             </ul>
           
         </li>
         
         <li class="m-nav-item">
 	  
-		<a href="/goodpapers" class="waves-effect waves-light">
+		<a href="/MyMarkdown" class="waves-effect waves-light">
 			
 				<i class="fas fa-fw"></i>
 			
-			好文收藏
+			MyMarkdown
 		</a>
           
         </li>
@@ -1253,8 +1284,8 @@ h3:hover {
 <p>(4) S0ÎK,初始(开始)状态;</p>
 <p>(5) 若干个终态之集: Z( ÍK )</p>
 <p>由此可见,一DFA实际上是状态转换图的形式描述(数学定义),状态转换图是DFA的几何(图形)表示.</p>
-<p>确定的有限自动机：在状态转换的每一步，根据FA当前的状态及扫描的输入字符，便能唯一地确定FA的下一状态。在转换图上看，若|S|=n，则任何结点所引出的矢线至多有n条，且矢线上的标记均不同。<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231254003.png" alt=""></p>
-<p>非确定的有限自动机：在U状态下，输入符号为a时，FA的下一状态不唯一，而是在状态集{A,B,C,…,X}中任选其一。具有这种性质的FA称为非确定的NFA<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231255409.png" alt=""></p>
+<p>确定的有限自动机：在状态转换的每一步，根据FA当前的状态及扫描的输入字符，便能唯一地确定FA的下一状态。在转换图上看，若|S|=n，则任何结点所引出的矢线至多有n条，且矢线上的标记均不同。<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231254003.png" alt></p>
+<p>非确定的有限自动机：在U状态下，输入符号为a时，FA的下一状态不唯一，而是在状态集{A,B,C,…,X}中任选其一。具有这种性质的FA称为非确定的NFA<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231255409.png" alt></p>
 <p>对于任意一个不确定有限自动机都有一个确定的有限自动机与其相对应，且等价。</p>
 <p>=============================================================================</p>
 <p>NFA转DFA目前有些没理清楚，理清再写吧！o(╥﹏╥)o</p>
@@ -2019,7 +2050,7 @@ h3:hover {
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -2037,6 +2068,12 @@ h3:hover {
 
 
 <!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
 
 
         </div>
@@ -2180,7 +2217,7 @@ h3:hover {
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">9k</span>&nbsp;
+        class="white-color">9.3k</span>&nbsp;
       
       
       
