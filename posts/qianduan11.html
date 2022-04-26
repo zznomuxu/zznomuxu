@@ -919,7 +919,7 @@ class="themespring" -->
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/toc-banner/js3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/toc-banner/js14.jpeg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1253,14 +1253,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 
@@ -1272,8 +1272,7 @@ h3:hover {
             <div id="articleContent">
                 <h2 id="HTML、CSS与JS的关系"><a href="#HTML、CSS与JS的关系" class="headerlink" title="HTML、CSS与JS的关系"></a>HTML、CSS与JS的关系</h2><hr>
 <p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204241527153.png" alt></p>
-<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><hr>
-<h3 id="1-基础语法"><a href="#1-基础语法" class="headerlink" title="1.基础语法"></a>1.基础语法</h3><h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p><strong>单标签：</strong></p>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="1-基础语法"><a href="#1-基础语法" class="headerlink" title="1.基础语法"></a>1.基础语法</h3><h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p><strong>单标签：</strong></p>
 <ul>
 <li>无属性&lt;标签名/&gt;</li>
 <li>有属性&lt;标签名 属性名=”属性值”/&gt;</li>
@@ -1397,7 +1396,68 @@ h3:hover {
 <ul>
 <li>border-collapse;合并单元格</li>
 </ul>
-<h4 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h4><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<h4 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h4><p><strong>form</strong><br>表单用于向服务器传输数据。form是块级元素，其前后会产生折行。<br>表单提交时，必须设置表单元素的name属性值，否则无法获取数据。<br>表单需要结合表单元素一起使用。<br>常用属性</p>
+<ul>
+<li>action 提交表单的地址</li>
+<li>method 提交方式<br>GET 提交<br>POST 提交</li>
+<li>target 提交数据时打开窗口的方式<br>_self 当前<br>_lank空白</li>
+</ul>
+<p>⚠️ GET与POST的区别<br>（1）get请求参数会跟在浏览器地址栏的后面，而post不会<br>（2）get相对于post不那么安全<br>（3）get传递的数据长度有限，而post基本没限制（用不到那么多<br>（4）get请求比post快，两倍左右。<br>（5）get请求有缓存，会将数据存在浏览器中，而post无缓存<br>⚠️ 所有标签都有的属性</p>
+<ul>
+<li>id 用来标识元素的唯一性</li>
+<li>name 提交数据的参数名</li>
+<li>style 设置元素的样式（具体的样式</li>
+<li>class 设置元素的样式名</li>
+</ul>
+<p><strong>input</strong><br>用来搜集用户信息，根据不同的type属性值，输入字段拥有很多种形式，输入字段可以是文本字段，复选框，单选按钮，按钮等。</p>
+<p>常用属性</p>
+<ul>
+<li><p>type 元素类型<br>text 文本框<br>password 密码框<br>radio 单选框<br>checkbox 多选框<br>file 文件域<br>hidden 隐藏域<br>button 普通按钮<br>submit 提交按钮<br>reset 重置按钮<br>date 日期框</p>
+</li>
+<li><p>value 元素的值</p>
+</li>
+<li>readonly 只读</li>
+<li>maxlength 最大长度</li>
+<li>disabled 禁用标签</li>
+</ul>
+<p>⚠️ 单选框，多选框需要通过name属性设置成一组<br>  如果是需要上传文件的表单，则表单需要设置一个属性 enctype=”multipart/form-data”,提交方式为post.<br>  没有name属性是无法提交数据的。</p>
+<p><strong>textarea</strong><br>该标签是多行的文本输入控件</p>
+<ul>
+<li>cols 文本的可见宽度</li>
+<li>rows 文本的可见行数</li>
+</ul>
+<p><strong>lable</strong></p>
+<ul>
+<li>for<br>当 for属性与元素的id一致时，点击lable标签，会自动元素聚焦。</li>
+</ul>
+<p><strong>button</strong></p>
+<ul>
+<li>type （button，sunmit(默认），reset）</li>
+</ul>
+<p>和input的区别：双标签，标签之间可以添加内容</p>
+<p><strong>select</strong><br>下拉列表</p>
+<ul>
+<li>select 下拉框标签</li>
+<li>option 选项</li>
+</ul>
+<p>select常见属性</p>
+<ul>
+<li>multiple 设置下拉框可多选</li>
+<li>size 设置下拉框可见数</li>
+<li>disacled 禁用</li>
+</ul>
+<p>option常见属性</p>
+<ul>
+<li>selected 默认选择项</li>
+<li>disable 禁用某一个选项</li>
+<li>value 提交给服务器的选项值，如果设置了value属性值，则提交的是value值，如果没设置，则提交option双标签中的文本值</li>
+</ul>
+<h4 id="常用字符实体和标签的分类"><a href="#常用字符实体和标签的分类" class="headerlink" title="常用字符实体和标签的分类"></a>常用字符实体和标签的分类</h4><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204262043554.png" alt><br><pre class="language-none"><code class="language-none">&lt; &amp;lt
+&gt; &amp;gt
+空格 &amp;nbsp
+版权声明 &amp;copy</code></pre></p>
+<p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204262045655.png" alt></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -2403,14 +2463,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 
@@ -2422,8 +2482,7 @@ h3:hover {
             <div id="articleContent">
                 <h2 id="HTML、CSS与JS的关系"><a href="#HTML、CSS与JS的关系" class="headerlink" title="HTML、CSS与JS的关系"></a>HTML、CSS与JS的关系</h2><hr>
 <p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204241527153.png" alt></p>
-<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><hr>
-<h3 id="1-基础语法"><a href="#1-基础语法" class="headerlink" title="1.基础语法"></a>1.基础语法</h3><h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p><strong>单标签：</strong></p>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="1-基础语法"><a href="#1-基础语法" class="headerlink" title="1.基础语法"></a>1.基础语法</h3><h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p><strong>单标签：</strong></p>
 <ul>
 <li>无属性&lt;标签名/&gt;</li>
 <li>有属性&lt;标签名 属性名=”属性值”/&gt;</li>
@@ -2547,7 +2606,68 @@ h3:hover {
 <ul>
 <li>border-collapse;合并单元格</li>
 </ul>
-<h4 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h4><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<h4 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h4><p><strong>form</strong><br>表单用于向服务器传输数据。form是块级元素，其前后会产生折行。<br>表单提交时，必须设置表单元素的name属性值，否则无法获取数据。<br>表单需要结合表单元素一起使用。<br>常用属性</p>
+<ul>
+<li>action 提交表单的地址</li>
+<li>method 提交方式<br>GET 提交<br>POST 提交</li>
+<li>target 提交数据时打开窗口的方式<br>_self 当前<br>_lank空白</li>
+</ul>
+<p>⚠️ GET与POST的区别<br>（1）get请求参数会跟在浏览器地址栏的后面，而post不会<br>（2）get相对于post不那么安全<br>（3）get传递的数据长度有限，而post基本没限制（用不到那么多<br>（4）get请求比post快，两倍左右。<br>（5）get请求有缓存，会将数据存在浏览器中，而post无缓存<br>⚠️ 所有标签都有的属性</p>
+<ul>
+<li>id 用来标识元素的唯一性</li>
+<li>name 提交数据的参数名</li>
+<li>style 设置元素的样式（具体的样式</li>
+<li>class 设置元素的样式名</li>
+</ul>
+<p><strong>input</strong><br>用来搜集用户信息，根据不同的type属性值，输入字段拥有很多种形式，输入字段可以是文本字段，复选框，单选按钮，按钮等。</p>
+<p>常用属性</p>
+<ul>
+<li><p>type 元素类型<br>text 文本框<br>password 密码框<br>radio 单选框<br>checkbox 多选框<br>file 文件域<br>hidden 隐藏域<br>button 普通按钮<br>submit 提交按钮<br>reset 重置按钮<br>date 日期框</p>
+</li>
+<li><p>value 元素的值</p>
+</li>
+<li>readonly 只读</li>
+<li>maxlength 最大长度</li>
+<li>disabled 禁用标签</li>
+</ul>
+<p>⚠️ 单选框，多选框需要通过name属性设置成一组<br>  如果是需要上传文件的表单，则表单需要设置一个属性 enctype=”multipart/form-data”,提交方式为post.<br>  没有name属性是无法提交数据的。</p>
+<p><strong>textarea</strong><br>该标签是多行的文本输入控件</p>
+<ul>
+<li>cols 文本的可见宽度</li>
+<li>rows 文本的可见行数</li>
+</ul>
+<p><strong>lable</strong></p>
+<ul>
+<li>for<br>当 for属性与元素的id一致时，点击lable标签，会自动元素聚焦。</li>
+</ul>
+<p><strong>button</strong></p>
+<ul>
+<li>type （button，sunmit(默认），reset）</li>
+</ul>
+<p>和input的区别：双标签，标签之间可以添加内容</p>
+<p><strong>select</strong><br>下拉列表</p>
+<ul>
+<li>select 下拉框标签</li>
+<li>option 选项</li>
+</ul>
+<p>select常见属性</p>
+<ul>
+<li>multiple 设置下拉框可多选</li>
+<li>size 设置下拉框可见数</li>
+<li>disacled 禁用</li>
+</ul>
+<p>option常见属性</p>
+<ul>
+<li>selected 默认选择项</li>
+<li>disable 禁用某一个选项</li>
+<li>value 提交给服务器的选项值，如果设置了value属性值，则提交的是value值，如果没设置，则提交option双标签中的文本值</li>
+</ul>
+<h4 id="常用字符实体和标签的分类"><a href="#常用字符实体和标签的分类" class="headerlink" title="常用字符实体和标签的分类"></a>常用字符实体和标签的分类</h4><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204262043554.png" alt><br><pre class="language-none"><code class="language-none">&lt; &amp;lt
+&gt; &amp;gt
+空格 &amp;nbsp
+版权声明 &amp;copy</code></pre></p>
+<p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204262045655.png" alt></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -3553,14 +3673,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 
@@ -3572,8 +3692,7 @@ h3:hover {
             <div id="articleContent">
                 <h2 id="HTML、CSS与JS的关系"><a href="#HTML、CSS与JS的关系" class="headerlink" title="HTML、CSS与JS的关系"></a>HTML、CSS与JS的关系</h2><hr>
 <p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204241527153.png" alt></p>
-<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><hr>
-<h3 id="1-基础语法"><a href="#1-基础语法" class="headerlink" title="1.基础语法"></a>1.基础语法</h3><h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p><strong>单标签：</strong></p>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><h3 id="1-基础语法"><a href="#1-基础语法" class="headerlink" title="1.基础语法"></a>1.基础语法</h3><h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p><strong>单标签：</strong></p>
 <ul>
 <li>无属性&lt;标签名/&gt;</li>
 <li>有属性&lt;标签名 属性名=”属性值”/&gt;</li>
@@ -3697,7 +3816,68 @@ h3:hover {
 <ul>
 <li>border-collapse;合并单元格</li>
 </ul>
-<h4 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h4><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<h4 id="表单标签"><a href="#表单标签" class="headerlink" title="表单标签"></a>表单标签</h4><p><strong>form</strong><br>表单用于向服务器传输数据。form是块级元素，其前后会产生折行。<br>表单提交时，必须设置表单元素的name属性值，否则无法获取数据。<br>表单需要结合表单元素一起使用。<br>常用属性</p>
+<ul>
+<li>action 提交表单的地址</li>
+<li>method 提交方式<br>GET 提交<br>POST 提交</li>
+<li>target 提交数据时打开窗口的方式<br>_self 当前<br>_lank空白</li>
+</ul>
+<p>⚠️ GET与POST的区别<br>（1）get请求参数会跟在浏览器地址栏的后面，而post不会<br>（2）get相对于post不那么安全<br>（3）get传递的数据长度有限，而post基本没限制（用不到那么多<br>（4）get请求比post快，两倍左右。<br>（5）get请求有缓存，会将数据存在浏览器中，而post无缓存<br>⚠️ 所有标签都有的属性</p>
+<ul>
+<li>id 用来标识元素的唯一性</li>
+<li>name 提交数据的参数名</li>
+<li>style 设置元素的样式（具体的样式</li>
+<li>class 设置元素的样式名</li>
+</ul>
+<p><strong>input</strong><br>用来搜集用户信息，根据不同的type属性值，输入字段拥有很多种形式，输入字段可以是文本字段，复选框，单选按钮，按钮等。</p>
+<p>常用属性</p>
+<ul>
+<li><p>type 元素类型<br>text 文本框<br>password 密码框<br>radio 单选框<br>checkbox 多选框<br>file 文件域<br>hidden 隐藏域<br>button 普通按钮<br>submit 提交按钮<br>reset 重置按钮<br>date 日期框</p>
+</li>
+<li><p>value 元素的值</p>
+</li>
+<li>readonly 只读</li>
+<li>maxlength 最大长度</li>
+<li>disabled 禁用标签</li>
+</ul>
+<p>⚠️ 单选框，多选框需要通过name属性设置成一组<br>  如果是需要上传文件的表单，则表单需要设置一个属性 enctype=”multipart/form-data”,提交方式为post.<br>  没有name属性是无法提交数据的。</p>
+<p><strong>textarea</strong><br>该标签是多行的文本输入控件</p>
+<ul>
+<li>cols 文本的可见宽度</li>
+<li>rows 文本的可见行数</li>
+</ul>
+<p><strong>lable</strong></p>
+<ul>
+<li>for<br>当 for属性与元素的id一致时，点击lable标签，会自动元素聚焦。</li>
+</ul>
+<p><strong>button</strong></p>
+<ul>
+<li>type （button，sunmit(默认），reset）</li>
+</ul>
+<p>和input的区别：双标签，标签之间可以添加内容</p>
+<p><strong>select</strong><br>下拉列表</p>
+<ul>
+<li>select 下拉框标签</li>
+<li>option 选项</li>
+</ul>
+<p>select常见属性</p>
+<ul>
+<li>multiple 设置下拉框可多选</li>
+<li>size 设置下拉框可见数</li>
+<li>disacled 禁用</li>
+</ul>
+<p>option常见属性</p>
+<ul>
+<li>selected 默认选择项</li>
+<li>disable 禁用某一个选项</li>
+<li>value 提交给服务器的选项值，如果设置了value属性值，则提交的是value值，如果没设置，则提交option双标签中的文本值</li>
+</ul>
+<h4 id="常用字符实体和标签的分类"><a href="#常用字符实体和标签的分类" class="headerlink" title="常用字符实体和标签的分类"></a>常用字符实体和标签的分类</h4><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204262043554.png" alt><br><pre class="language-none"><code class="language-none">&lt; &amp;lt
+&gt; &amp;gt
+空格 &amp;nbsp
+版权声明 &amp;copy</code></pre></p>
+<p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204262045655.png" alt></p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -4661,7 +4841,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">10.5k</span>&nbsp;
+        class="white-color">11.2k</span>&nbsp;
       
       
       
