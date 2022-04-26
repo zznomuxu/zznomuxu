@@ -554,7 +554,7 @@ header .side-nav .social-link {
 }
 /* 滚动条 */
 ::-webkit-scrollbar-thumb {
-    background-color: #2ab1ff;
+    background-color: #d199e9;
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
     border-radius: 3em;
 }
@@ -1581,11 +1581,11 @@ body.dark .comment_headling span {
 /* 滚动条 */
 ::-webkit-scrollbar-thumb {
     background-color: #49b1f5;
-    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(225, 189, 242, 0.4) 50%,rgba(14, 2, 16, 0.4) 75%,transparent 75%,transparent);
     border-radius: 2em;
 }
 ::-webkit-scrollbar-track {
-    background-color: rgba(73,177,245,.2);
+    background-color: rgba(227, 240, 249, 0.2);
     border-radius: 2em;
 }
 ::-webkit-scrollbar {
