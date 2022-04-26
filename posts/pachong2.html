@@ -129,8 +129,7 @@
     
       
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="周周的苜蓿园" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1246,14 +1245,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    10 分
                 </div>
                 
 
@@ -1279,88 +1278,58 @@ h3:hover {
 <p>我们需要抓取的目标站点是：<a target="_blank" rel="noopener" href="https://maoyan.com/board/4，页面如下">https://maoyan.com/board/4，页面如下</a><br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231157450.png" alt><br>将网页滚动到最下方，可以发现这个不止一页，所以现在我们点击第二页，看URL和内容都进行了变化<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231157285.png" alt></p>
 <p>可以发现此时页面的URL变为<a target="_blank" rel="noopener" href="https://maoyan.com/board/4?offset=10，比之前的URL多了一个参数offset=10，目前显示11~20名的电影，再点击下一页，发现URL变成">https://maoyan.com/board/4?offset=10，比之前的URL多了一个参数offset=10，目前显示11~20名的电影，再点击下一页，发现URL变成</a> <a target="_blank" rel="noopener" href="https://maoyan.com/board/4?offset=20，offset变成了20，目前显示21~30的电影。">https://maoyan.com/board/4?offset=20，offset变成了20，目前显示21~30的电影。</a></p>
 <p>总结规律，offest代表偏移量值，如果偏移量（内存中存储数据的方式是：一个存储数据的“实际地址”=段首地址+偏移量）为n，则电影序号就是n+1~n+10，每页显示10 个。所以我们想要获取100个，需要分开10次请求，10次每次的offest参数分别设置为0、10、20、30、40、50、60、70、80、90。</p>
-<h3 id="当当当当-抓取首页了"><a href="#当当当当-抓取首页了" class="headerlink" title="当当当当~抓取首页了"></a>当当当当~抓取首页了</h3><p>首先抓取第一页的内容，我们实现了get_one_page()方法，给他传入url参数，然后将抓取的页面结果返回，再通过main()方法调用。headers根据自己实际情况</p>
-<pre><code>import requests
-
-def get_one_page(url):
-    headers = &amp;#123;
-        &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.170 Safari/537.36&#39;,
-    &amp;#125;
-    response = requests.get(url,headers=headers)
-    if response.status_code == 200:
-        return response.text
-    return None
-
-def main():
-    url = &#39;https://maoyan.com/board/4&#39;
-    html = get_one_page(url)
-    print(html)
-
-main()
-</code></pre><p>下图为源码：一部分，哈哈哈哈哈<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231159349.png" alt></p>
+<h3 id="当当当当-抓取首页了"><a href="#当当当当-抓取首页了" class="headerlink" title="当当当当~抓取首页了"></a>当当当当~抓取首页了</h3><p>首先抓取第一页的内容，我们实现了get_one_page()方法，给他传入url参数，然后将抓取的页面结果返回，再通过main()方法调用。headers根据自己实际情况<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">import requests</code></pre></p>
+<p>def get_one_page(url):<br>    headers &#x3D; &#123;<br>        &#39;User-Agent&#39;: &#39;Mozilla&#x2F;5.0 (Windows NT 10.0; WOW64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;66.0.3359.170 Safari&#x2F;537.36&#39;,<br>    &#125;<br>    response &#x3D; requests.get(url,headers&#x3D;headers)<br>    if response.status_code &#x3D;&#x3D; 200:<br>        return response.text<br>    return None</p>
+<p>def main():<br>    url &#x3D; &#39;https:&#x2F;&#x2F;maoyan.com&#x2F;board&#x2F;4&#39;<br>    html &#x3D; get_one_page(url)<br>    print(html)</p>
+<p>main()&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</p>
+<p>下图为源码：一部分，哈哈哈哈哈<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231159349.png" alt></p>
 <p>我们回到网页看源代码：我们可以看到一部电影的源代码是一个dd节点，我们用正则表达式来提取里面的一些电影信息。<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231200077.png" alt></p>
 <p>首先提取排名信息。他的排名信息是在class为board-index的i节点内，这里利用非贪婪匹配来提取i节点内的信息，正则表达式写为：</p>
-<pre><code>&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;
-</code></pre><p>接下来提取电影图片，可以看到后面有a节点，其内部有两个img节点。经过检查发现，第二个img节点的data-src属性是图片链接。这里提取第二个img节点的data-src属性，正则表达式可以写为</p>
-<pre><code>&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;
-</code></pre><p>再往后需要提取电影的名称，他在后面的p节点内，class为name。所以，可以用name做一个标志位，然后进一步提取到其内a节点的正文内容，此时正则表达式改写如下：</p>
-<pre><code>&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;.*?data-src=&quot;(.*?name.*?a.*?&gt;(.*?)&lt;/a&gt;
-</code></pre><p>在提取主演、发布时间/评分等，原理一样，正则表达式如下：</p>
-<pre><code>&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;.*?name.*?a.*?&gt;(.*?)&lt;/a&gt;.*?star.*?&gt;(.*?)&lt;/p&gt;.*?releasetime.*?&gt;(&gt;*?)&lt;/p&gt;
-
-.*?integer.*?&gt;(.*?)&lt;/i&gt;.*?fraction.*?&gt;(.*?)&lt;/i&gt;.*?&lt;/dd&gt;
-</code></pre><p>这样一个正则表达式就可以匹配一个电影的结果，里面匹配了7个信息，通过调用findall()方法提取出所有内容。</p>
+<pre class="language-none"><code class="language-none">&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;&#x2F;i&gt;</code></pre>
+<p>接下来提取电影图片，可以看到后面有a节点，其内部有两个img节点。经过检查发现，第二个img节点的data-src属性是图片链接。这里提取第二个img节点的data-src属性，正则表达式可以写为<br><pre class="language-none"><code class="language-none">&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;&#x2F;i&gt;.*?data-src&#x3D;&quot;(.*?)&quot;</code></pre><br>再往后需要提取电影的名称，他在后面的p节点内，class为name。所以，可以用name做一个标志位，然后进一步提取到其内a节点的正文内容，此时正则表达式改写如下：<br><pre class="language-none"><code class="language-none">&lt;dd&gt;.*?board-index.*?&gt;(.*?)&lt;&#x2F;i&gt;.*?data-src&#x3D;&quot;(.*?name.*?a.*?&gt;(.*?)&lt;&#x2F;a&gt;</code></pre><br>在提取主演、发布时间/评分等，原理一样，正则表达式如下：<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">&lt;dd&gt;.<em>?board-index.</em>?&gt;(.<em>?)&lt;&#x2F;i&gt;.</em>?data-src&#x3D;&quot;(.<em>?)&quot;.</em>?name.<em>?a.</em>?&gt;(.<em>?)&lt;&#x2F;a&gt;.</em>?star.<em>?&gt;(.</em>?)&lt;&#x2F;p&gt;.<em>?releasetime.</em>?&gt;(&gt;*?)&lt;&#x2F;p&gt;</code></pre></p>
+<p>.<em>?integer.</em>?&gt;(.<em>?)&lt;&#x2F;i&gt;.</em>?fraction.<em>?&gt;(.</em>?)&lt;&#x2F;i&gt;.*?&lt;&#x2F;dd&gt;&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;<br>这样一个正则表达式就可以匹配一个电影的结果，里面匹配了7个信息，通过调用findall()方法提取出所有内容。</p>
 <p>代码如下：</p>
-<pre><code>def parse_one_page(html):
-    pattern = re.compile(
-        &#39;&lt;dd&gt;.*?board-index.*?&gt;(\d+)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;.*?name&quot;&gt;&lt;a&#39;
-        + &#39;.*?&gt;(.*?)&lt;/a&gt;.*?star&quot;&gt;(.*?)&lt;/p&gt;.*?releasetime&quot;&gt;(.*?)&lt;/p&gt;&#39;
-        + &#39;.*?integer&quot;&gt;(.*?)&lt;/i&gt;.*?fraction&quot;&gt;(.*?)&lt;/i&gt;.*?&lt;/dd&gt;&#39;,
+<pre class="language-none"><code class="language-none">def parse_one_page(html):
+    pattern &#x3D; re.compile(
+        &#39;&lt;dd&gt;.*?board-index.*?&gt;(\d+)&lt;&#x2F;i&gt;.*?data-src&#x3D;&quot;(.*?)&quot;.*?name&quot;&gt;&lt;a&#39;
+        + &#39;.*?&gt;(.*?)&lt;&#x2F;a&gt;.*?star&quot;&gt;(.*?)&lt;&#x2F;p&gt;.*?releasetime&quot;&gt;(.*?)&lt;&#x2F;p&gt;&#39;
+        + &#39;.*?integer&quot;&gt;(.*?)&lt;&#x2F;i&gt;.*?fraction&quot;&gt;(.*?)&lt;&#x2F;i&gt;.*?&lt;&#x2F;dd&gt;&#39;,
         re.S)
-    items = re.findall(pattern,html)
+    items &#x3D; re.findall(pattern,html)
     print(items)
-</code></pre><p>通过以上我们可以提取一页的10个电影信息，但是数据会很乱，我们需要再进行处理：</p>
-<pre><code>def parse_one_page(html):
-    pattern = re.compile(&#39;&lt;dd&gt;.*?board-index.*?&gt;(\d+)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;.*?name&quot;&gt;&lt;a&#39;
-                         + &#39;.*?&gt;(.*?)&lt;/a&gt;.*?star&quot;&gt;(.*?)&lt;/p&gt;.*?releasetime&quot;&gt;(.*?)&lt;/p&gt;&#39;
-                         + &#39;.*?integer&quot;&gt;(.*?)&lt;/i&gt;.*?fraction&quot;&gt;(.*?)&lt;/i&gt;.*?&lt;/dd&gt;&#39;, re.S)
-    items = re.findall(pattern, html)
-    for item in items:
-        yield &amp;#123;
-            &#39;index&#39;: item[0],
-            &#39;image&#39;: item[1],
-            &#39;title&#39;: item[2],
-            &#39;actor&#39;: item[3].strip()[3:],
-            &#39;time&#39;: item[4].strip()[5:],
-            &#39;score&#39;: item[5] + item[6]
-        &amp;#125;
-</code></pre><h3 id="接下来进行写入文件："><a href="#接下来进行写入文件：" class="headerlink" title="接下来进行写入文件："></a>接下来进行写入文件：</h3><p>我们在这里直接写入到一个文本文件。这里通过Json库的dumps()方法实现字典的序列化，并指定ensure_ascii参数为False，这样保证输出结果是中文形式而不是Unicode编码。代码：</p>
-<pre><code>def write_to_file(content):
-    with open(&#39;result.txt&#39;, &#39;a&#39;, encoding=&#39;utf-8&#39;) as f:
-        f.write(json.dumps(content, ensure_ascii=False) + &#39;\n&#39;)
-</code></pre><p>通过write_to_file()即可将字典写入到文本文件。此处的content参数就是一个电影的提取结果，是一个字典。</p>
+</code></pre>
+<p>通过以上我们可以提取一页的10个电影信息，但是数据会很乱，我们需要再进行处理：<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">def parse_one_page(html):<br>    pattern &#x3D; re.compile(&#39;&lt;dd&gt;.<em>?board-index.</em>?&gt;(\d+)&lt;&#x2F;i&gt;.<em>?data-src&#x3D;&quot;(.</em>?)&quot;.*?name&quot;&gt;&lt;a&#39;</code></pre></p>
+<pre><code>                     + &amp;#39;.*?&amp;gt;(.*?)&amp;lt;&amp;#x2F;a&amp;gt;.*?star&amp;quot;&amp;gt;(.*?)&amp;lt;&amp;#x2F;p&amp;gt;.*?releasetime&amp;quot;&amp;gt;(.*?)&amp;lt;&amp;#x2F;p&amp;gt;&amp;#39;
+                     + &amp;#39;.*?integer&amp;quot;&amp;gt;(.*?)&amp;lt;&amp;#x2F;i&amp;gt;.*?fraction&amp;quot;&amp;gt;(.*?)&amp;lt;&amp;#x2F;i&amp;gt;.*?&amp;lt;&amp;#x2F;dd&amp;gt;&amp;#39;, re.S)
+items &amp;#x3D; re.findall(pattern, html)
+for item in items:
+    yield &amp;#123;
+        &amp;#39;index&amp;#39;: item[0],
+        &amp;#39;image&amp;#39;: item[1],
+        &amp;#39;title&amp;#39;: item[2],
+        &amp;#39;actor&amp;#39;: item[3].strip()[3:],
+        &amp;#39;time&amp;#39;: item[4].strip()[5:],
+        &amp;#39;score&amp;#39;: item[5] + item[6]
+    &amp;#125;&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape--&gt;
+</code></pre><h3 id="接下来进行写入文件："><a href="#接下来进行写入文件：" class="headerlink" title="接下来进行写入文件："></a>接下来进行写入文件：</h3><p>我们在这里直接写入到一个文本文件。这里通过Json库的dumps()方法实现字典的序列化，并指定ensure_ascii参数为False，这样保证输出结果是中文形式而不是Unicode编码。代码：<br><pre class="language-none"><code class="language-none">def write_to_file(content):
+    with open(&#39;result.txt&#39;, &#39;a&#39;, encoding&#x3D;&#39;utf-8&#39;) as f:
+        f.write(json.dumps(content, ensure_ascii&#x3D;False) + &#39;\n&#39;)</code></pre><br>通过write_to_file()即可将字典写入到文本文件。此处的content参数就是一个电影的提取结果，是一个字典。</p>
 <p>整合代码啦<del>~</del>终于要结束了</p>
 <p>最后用main() 函数调用前面的方法，将单页电影结果写入文件</p>
-<p>代码：</p>
-<pre><code>def main():
-    url = &#39;http://maoyan.com/board/4&#39;
-    html = get_one_page(url)
-    for item in parse_one_page(html):
-
-        write_to_file(item)
+<p>代码：<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">def main():<br>    url &#x3D; &#39;http:&#x2F;&#x2F;maoyan.com&#x2F;board&#x2F;4&#39;<br>    html &#x3D; get_one_page(url)<br>    for item in parse_one_page(html):</code></pre></p>
+<pre><code>    write_to_file(item)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape--&gt;
 </code></pre><p>但现在我们完成了10部电影的提取。我们需要top100的电影，所以还需要遍历一下，给链接传入offset参数，将其他90部电影爬取，要添加一下：</p>
-<pre><code>if __name__ == &#39;__main__&#39;:
+<pre class="language-none"><code class="language-none">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
     for i in range(10):
-        main(offset=i * 10)
-</code></pre><p>我们还需要把main()函数改一下，接受一个offest值作为偏移量，然后构造URL进行爬取。代码：</p>
-<pre><code>
+        main(offset&#x3D;i * 10)</code></pre>
+<p>我们还需要把main()函数改一下，接受一个offest值作为偏移量，然后构造URL进行爬取。代码：<br><pre class="language-none"><code class="language-none"> 
 def main(offset):
-    url = &#39;http://maoyan.com/board/4?offset=&#39; + str(offset)
-    html = get_one_page(url)
+    url &#x3D; &#39;http:&#x2F;&#x2F;maoyan.com&#x2F;board&#x2F;4?offset&#x3D;&#39; + str(offset)
+    html &#x3D; get_one_page(url)
     for item in parse_one_page(html):
         print(item)
-        write_to_file(item)
-</code></pre><h3 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h3><pre><code>import json
+        write_to_file(item)</code></pre></p>
+<h3 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h3><pre class="language-none"><code class="language-none">import json
 import requests
 from requests.exceptions import RequestException
 import re
@@ -1369,11 +1338,11 @@ import time
 
 def get_one_page(url):
     try:
-        headers = &amp;#123;
-            &#39;User-Agent&#39;: &#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.162 Safari/537.36&#39;
-        &amp;#125;
-        response = requests.get(url, headers=headers)
-        if response.status_code == 200:
+        headers &#x3D; &#123;
+            &#39;User-Agent&#39;: &#39;Mozilla&#x2F;5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;65.0.3325.162 Safari&#x2F;537.36&#39;
+        &#125;
+        response &#x3D; requests.get(url, headers&#x3D;headers)
+        if response.status_code &#x3D;&#x3D; 200:
             return response.text
         return None
     except RequestException:
@@ -1381,39 +1350,39 @@ def get_one_page(url):
 
 
 def parse_one_page(html):
-    pattern = re.compile(&#39;&lt;dd&gt;.*?board-index.*?&gt;(\d+)&lt;/i&gt;.*?data-src=&quot;(.*?)&quot;.*?name&quot;&gt;&lt;a&#39;
-                         + &#39;.*?&gt;(.*?)&lt;/a&gt;.*?star&quot;&gt;(.*?)&lt;/p&gt;.*?releasetime&quot;&gt;(.*?)&lt;/p&gt;&#39;
-                         + &#39;.*?integer&quot;&gt;(.*?)&lt;/i&gt;.*?fraction&quot;&gt;(.*?)&lt;/i&gt;.*?&lt;/dd&gt;&#39;, re.S)
-    items = re.findall(pattern, html)
+    pattern &#x3D; re.compile(&#39;&lt;dd&gt;.*?board-index.*?&gt;(\d+)&lt;&#x2F;i&gt;.*?data-src&#x3D;&quot;(.*?)&quot;.*?name&quot;&gt;&lt;a&#39;
+                         + &#39;.*?&gt;(.*?)&lt;&#x2F;a&gt;.*?star&quot;&gt;(.*?)&lt;&#x2F;p&gt;.*?releasetime&quot;&gt;(.*?)&lt;&#x2F;p&gt;&#39;
+                         + &#39;.*?integer&quot;&gt;(.*?)&lt;&#x2F;i&gt;.*?fraction&quot;&gt;(.*?)&lt;&#x2F;i&gt;.*?&lt;&#x2F;dd&gt;&#39;, re.S)
+    items &#x3D; re.findall(pattern, html)
     for item in items:
-        yield &amp;#123;
+        yield &#123;
             &#39;index&#39;: item[0],
             &#39;image&#39;: item[1],
             &#39;title&#39;: item[2],
             &#39;actor&#39;: item[3].strip()[3:],
             &#39;time&#39;: item[4].strip()[5:],
             &#39;score&#39;: item[5] + item[6]
-        &amp;#125;
+        &#125;
 
 
 def write_to_file(content):
-    with open(&#39;result.txt&#39;, &#39;a&#39;, encoding=&#39;utf-8&#39;) as f:
-        f.write(json.dumps(content, ensure_ascii=False) + &#39;\n&#39;)
+    with open(&#39;result.txt&#39;, &#39;a&#39;, encoding&#x3D;&#39;utf-8&#39;) as f:
+        f.write(json.dumps(content, ensure_ascii&#x3D;False) + &#39;\n&#39;)
 
 
 def main(offset):
-    url = &#39;http://maoyan.com/board/4?offset=&#39; + str(offset)
-    html = get_one_page(url)
+    url &#x3D; &#39;http:&#x2F;&#x2F;maoyan.com&#x2F;board&#x2F;4?offset&#x3D;&#39; + str(offset)
+    html &#x3D; get_one_page(url)
     for item in parse_one_page(html):
         print(item)
         write_to_file(item)
 
 
-if __name__ == &#39;__main__&#39;:
+if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
     for i in range(10):
-        main(offset=i * 10)
-        time.sleep(1)
-</code></pre><h3 id="延时等待"><a href="#延时等待" class="headerlink" title="延时等待"></a>延时等待</h3><p>猫眼已经增加了反爬虫~如果速度过快则无响应，所以最后加了一个延时等待</p>
+        main(offset&#x3D;i * 10)
+        time.sleep(1)</code></pre>
+<h3 id="延时等待"><a href="#延时等待" class="headerlink" title="延时等待"></a>延时等待</h3><p>猫眼已经增加了反爬虫~如果速度过快则无响应，所以最后加了一个延时等待</p>
 <p>运行结果：（只截取一部分~~）<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231205110.png" alt></p>
 <p>文本文件：（截取一部分）<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204231205407.png" alt></p>
 <p>So~~~此时此刻全部完成了</p>
@@ -2347,7 +2316,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">9.7k</span>&nbsp;
+        class="white-color">10k</span>&nbsp;
       
       
       

@@ -129,8 +129,7 @@
     
       
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="周周的苜蓿园" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1246,7 +1245,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    273
+                    270
                 </div>
                 
 
@@ -1264,53 +1263,55 @@ h3:hover {
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><div class="note info">前言：努力刷题day6</div><br></p>
-<h3 id="LeetCode-349-两个数组的交集传送门"><a href="#LeetCode-349-两个数组的交集传送门" class="headerlink" title="LeetCode 349.  两个数组的交集传送门"></a>LeetCode 349.  两个数组的交集<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-arrays/">传送门</a></h3><pre><code>import java.util.HashSet;
+<h3 id="LeetCode-349-两个数组的交集传送门"><a href="#LeetCode-349-两个数组的交集传送门" class="headerlink" title="LeetCode 349.  两个数组的交集传送门"></a>LeetCode 349.  两个数组的交集<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-arrays/">传送门</a></h3><pre class="language-none"><code class="language-none">import java.util.HashSet;
 import java.util.Set;
 
-class Solution &amp;#123;
-    public int[] intersection(int[] nums1, int[] nums2) &amp;#123;
-        if (nums1 == null || nums1.length == 0 || nums2 == null || nums2.length == 0) &amp;#123;
+class Solution &#123;
+    public int[] intersection(int[] nums1, int[] nums2) &#123;
+        if (nums1 &#x3D;&#x3D; null || nums1.length &#x3D;&#x3D; 0 || nums2 &#x3D;&#x3D; null || nums2.length &#x3D;&#x3D; 0) &#123;
             return new int[0];
-        &amp;#125;
-        Set&lt;Integer&gt; set1 = new HashSet&lt;&gt;();
-        Set&lt;Integer&gt; resSet = new HashSet&lt;&gt;();
-        //遍历数组1
-        for (int i : nums1) &amp;#123;
+        &#125;
+        Set&lt;Integer&gt; set1 &#x3D; new HashSet&lt;&gt;();
+        Set&lt;Integer&gt; resSet &#x3D; new HashSet&lt;&gt;();
+        &#x2F;&#x2F;遍历数组1
+        for (int i : nums1) &#123;
             set1.add(i);
-        &amp;#125;
-        //遍历数组2的过程中判断哈希表中是否存在该元素
-        for (int i : nums2) &amp;#123;
-            if (set1.contains(i)) &amp;#123;
+        &#125;
+        &#x2F;&#x2F;遍历数组2的过程中判断哈希表中是否存在该元素
+        for (int i : nums2) &#123;
+            if (set1.contains(i)) &#123;
                 resSet.add(i);
-            &amp;#125;
-        &amp;#125;
-        int[] resArr = new int[resSet.size()];
-        int index = 0;
-        //将结果几何转为数组
-        for (int i : resSet) &amp;#123;
-            resArr[index++] = i;
-        &amp;#125;
+            &#125;
+        &#125;
+        int[] resArr &#x3D; new int[resSet.size()];
+        int index &#x3D; 0;
+        &#x2F;&#x2F;将结果几何转为数组
+        for (int i : resSet) &#123;
+            resArr[index++] &#x3D; i;
+        &#125;
         return resArr;
-    &amp;#125;
-&amp;#125;
-</code></pre><h3 id="LeetCode-242-有效的字母异位词-传送门"><a href="#LeetCode-242-有效的字母异位词-传送门" class="headerlink" title="LeetCode 242.有效的字母异位词 传送门"></a>LeetCode 242.有效的字母异位词 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/valid-anagram/">传送门</a></h3><pre><code>class Solution &amp;#123;
-    public boolean isAnagram(String s, String t) &amp;#123;
-        if (s.length() != t.length()) &amp;#123;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="LeetCode-242-有效的字母异位词-传送门"><a href="#LeetCode-242-有效的字母异位词-传送门" class="headerlink" title="LeetCode 242.有效的字母异位词 传送门"></a>LeetCode 242.有效的字母异位词 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/valid-anagram/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;
+    public boolean isAnagram(String s, String t) &#123;
+        if (s.length() !&#x3D; t.length()) &#123;
             return false;
-        &amp;#125;
-        int[] table = new int[26];
-        for (int i = 0; i &lt; s.length(); i++) &amp;#123;
+        &#125;
+        int[] table &#x3D; new int[26];
+        for (int i &#x3D; 0; i &lt; s.length(); i++) &#123;
             table[s.charAt(i) - &#39;a&#39;]++;
-        &amp;#125;
-        for (int i = 0; i &lt; t.length(); i++) &amp;#123;
+        &#125;
+        for (int i &#x3D; 0; i &lt; t.length(); i++) &#123;
             table[t.charAt(i) - &#39;a&#39;]--;
-            if (table[t.charAt(i) - &#39;a&#39;] &lt; 0) &amp;#123;
+            if (table[t.charAt(i) - &#39;a&#39;] &lt; 0) &#123;
                 return false;
-            &amp;#125;
-        &amp;#125;
+            &#125;
+        &#125;
         return true;
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
+
 </code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
@@ -2239,7 +2240,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">9.7k</span>&nbsp;
+        class="white-color">10k</span>&nbsp;
       
       
       

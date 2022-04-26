@@ -303,14 +303,14 @@
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/videos/index.html</loc>
+    <loc>https://zznomuxu.github.io/vote/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/vote/index.html</loc>
+    <loc>https://zznomuxu.github.io/videos/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
@@ -324,14 +324,14 @@
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/musics/index.html</loc>
+    <loc>https://zznomuxu.github.io/project/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/project/index.html</loc>
+    <loc>https://zznomuxu.github.io/musics/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
@@ -352,13 +352,6 @@
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/tags/index.html</loc>
-    
-    <lastmod>2022-04-20</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://zznomuxu.github.io/ticktack/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
@@ -366,7 +359,21 @@
   </url>
   
   <url>
+    <loc>https://zznomuxu.github.io/tags/index.html</loc>
+    
+    <lastmod>2022-04-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zznomuxu.github.io/gallery/index.html</loc>
+    
+    <lastmod>2022-04-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://zznomuxu.github.io/count/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
@@ -387,7 +394,7 @@
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/count/index.html</loc>
+    <loc>https://zznomuxu.github.io/friends/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
@@ -395,13 +402,6 @@
   
   <url>
     <loc>https://zznomuxu.github.io/essay/index.html</loc>
-    
-    <lastmod>2022-04-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://zznomuxu.github.io/friends/index.html</loc>
     
     <lastmod>2022-04-20</lastmod>
     
@@ -494,14 +494,14 @@
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/tags/%E4%B9%A6%E5%8D%95/</loc>
+    <loc>https://zznomuxu.github.io/tags/leetcode/</loc>
     <lastmod>2022-04-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/tags/leetcode/</loc>
+    <loc>https://zznomuxu.github.io/tags/%E4%B9%A6%E5%8D%95/</loc>
     <lastmod>2022-04-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -529,14 +529,14 @@
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/tags/%E9%9D%A2%E8%AF%95/</loc>
+    <loc>https://zznomuxu.github.io/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6-%E4%BD%9C%E4%B8%9A/</loc>
     <lastmod>2022-04-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://zznomuxu.github.io/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6-%E4%BD%9C%E4%B8%9A/</loc>
+    <loc>https://zznomuxu.github.io/tags/%E9%9D%A2%E8%AF%95/</loc>
     <lastmod>2022-04-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

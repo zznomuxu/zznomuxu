@@ -129,8 +129,7 @@
     
       
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="周周的苜蓿园" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1270,42 +1269,41 @@ h3:hover {
 
 
 
-<h3 id="LeetCode-704-二分查找【传送门】"><a href="#LeetCode-704-二分查找【传送门】" class="headerlink" title="LeetCode 704.二分查找【传送门】"></a>LeetCode 704.二分查找【<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-search/">传送门</a>】</h3><pre><code>class Solution &amp;#123;
-    public int search(int[] nums, int target) &amp;#123;
-        // 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算
-        if (target &lt; nums[0] || target &gt; nums[nums.length - 1]) &amp;#123;
+<h3 id="LeetCode-704-二分查找【传送门】"><a href="#LeetCode-704-二分查找【传送门】" class="headerlink" title="LeetCode 704.二分查找【传送门】"></a>LeetCode 704.二分查找【<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/binary-search/">传送门</a>】</h3><pre class="language-none"><code class="language-none">class Solution &#123;
+    public int search(int[] nums, int target) &#123;
+        &#x2F;&#x2F; 避免当 target 小于nums[0] nums[nums.length - 1]时多次循环运算
+        if (target &lt; nums[0] || target &gt; nums[nums.length - 1]) &#123;
             return -1;
-        &amp;#125;
-        int left = 0, right = nums.length - 1;
-        while (left &lt;= right) &amp;#123;
-            int mid = left + ((right - left) &gt;&gt; 1);
-            if (nums[mid] == target)
+        &#125;
+        int left &#x3D; 0, right &#x3D; nums.length - 1;
+        while (left &lt;&#x3D; right) &#123;
+            int mid &#x3D; left + ((right - left) &gt;&gt; 1);
+            if (nums[mid] &#x3D;&#x3D; target)
                 return mid;
             else if (nums[mid] &lt; target)
-                left = mid + 1;
+                left &#x3D; mid + 1;
             else if (nums[mid] &gt; target)
-                right = mid - 1;
-        &amp;#125;
+                right &#x3D; mid - 1;
+        &#125;
         return -1;
-    &amp;#125;
-&amp;#125;
-</code></pre><h3 id="LeetCode-27-移除元素【传送门】"><a href="#LeetCode-27-移除元素【传送门】" class="headerlink" title="LeetCode 27.移除元素【传送门】"></a>LeetCode 27.移除元素【<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-element/">传送门</a>】</h3><pre><code>class Solution &amp;#123;
-    public int removeElement(int[] nums, int val) &amp;#123;
+    &#125;
+&#125;</code></pre>
+<h3 id="LeetCode-27-移除元素【传送门】"><a href="#LeetCode-27-移除元素【传送门】" class="headerlink" title="LeetCode 27.移除元素【传送门】"></a>LeetCode 27.移除元素【<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-element/">传送门</a>】</h3><pre class="language-none"><code class="language-none">class Solution &#123;
+    public int removeElement(int[] nums, int val) &#123;
 
-        // 快慢指针
-        int fastIndex = 0;
+        &#x2F;&#x2F; 快慢指针
+        int fastIndex &#x3D; 0;
         int slowIndex;
-        for (slowIndex = 0; fastIndex &lt; nums.length; fastIndex++) &amp;#123;
-            if (nums[fastIndex] != val) &amp;#123;
-                nums[slowIndex] = nums[fastIndex];
+        for (slowIndex &#x3D; 0; fastIndex &lt; nums.length; fastIndex++) &#123;
+            if (nums[fastIndex] !&#x3D; val) &#123;
+                nums[slowIndex] &#x3D; nums[fastIndex];
                 slowIndex++;
-            &amp;#125;
-        &amp;#125;
+            &#125;
+        &#125;
         return slowIndex;
 
-    &amp;#125;
-&amp;#125;
-</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    &#125;
+&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -2233,7 +2231,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">9.7k</span>&nbsp;
+        class="white-color">10k</span>&nbsp;
       
       
       

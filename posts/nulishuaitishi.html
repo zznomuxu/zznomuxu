@@ -129,8 +129,7 @@
     
       
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="周周的苜蓿园" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1246,7 +1245,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    386
+                    377
                 </div>
                 
 
@@ -1264,85 +1263,85 @@ h3:hover {
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><div class="note info">前言：努力刷题day10</div>&lt;</p>
-<h3 id="LeetCode-15-三数之和-传送门"><a href="#LeetCode-15-三数之和-传送门" class="headerlink" title="LeetCode 15. 三数之和 传送门"></a>LeetCode 15. 三数之和 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/3sum/">传送门</a></h3><pre><code>//双指针发
-class Solution &amp;#123;
-    public List&lt;List&lt;Integer&gt;&gt; threeSum(int[] nums) &amp;#123;
-        List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();
+<h3 id="LeetCode-15-三数之和-传送门"><a href="#LeetCode-15-三数之和-传送门" class="headerlink" title="LeetCode 15. 三数之和 传送门"></a>LeetCode 15. 三数之和 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/3sum/">传送门</a></h3><pre class="language-none"><code class="language-none">&#x2F;&#x2F;双指针发
+class Solution &#123;
+    public List&lt;List&lt;Integer&gt;&gt; threeSum(int[] nums) &#123;
+        List&lt;List&lt;Integer&gt;&gt; result &#x3D; new ArrayList&lt;&gt;();
         Arrays.sort(nums);
 
-        for (int i = 0; i &lt; nums.length; i++) &amp;#123;
-            if (nums[i] &gt; 0) &amp;#123;
+        for (int i &#x3D; 0; i &lt; nums.length; i++) &#123;
+            if (nums[i] &gt; 0) &#123;
                 return result;
-            &amp;#125;
+            &#125;
 
-            if (i &gt; 0 &amp;&amp; nums[i] == nums[i - 1]) &amp;#123;
+            if (i &gt; 0 &amp;&amp; nums[i] &#x3D;&#x3D; nums[i - 1]) &#123;
                 continue;
-            &amp;#125;
+            &#125;
 
-            int left = i + 1;
-            int right = nums.length - 1;
-            while (right &gt; left) &amp;#123;
-                int sum = nums[i] + nums[left] + nums[right];
-                if (sum &gt; 0) &amp;#123;
+            int left &#x3D; i + 1;
+            int right &#x3D; nums.length - 1;
+            while (right &gt; left) &#123;
+                int sum &#x3D; nums[i] + nums[left] + nums[right];
+                if (sum &gt; 0) &#123;
                     right--;
-                &amp;#125; else if (sum &lt; 0) &amp;#123;
+                &#125; else if (sum &lt; 0) &#123;
                     left++;
-                &amp;#125; else &amp;#123;
+                &#125; else &#123;
                     result.add(Arrays.asList(nums[i], nums[left], nums[right]));
 
-                    while (right &gt; left &amp;&amp; nums[right] == nums[right - 1]) right--;
-                    while (right &gt; left &amp;&amp; nums[left] == nums[left + 1]) left++;
+                    while (right &gt; left &amp;&amp; nums[right] &#x3D;&#x3D; nums[right - 1]) right--;
+                    while (right &gt; left &amp;&amp; nums[left] &#x3D;&#x3D; nums[left + 1]) left++;
 
                     right--; 
                     left++;
-                &amp;#125;
-            &amp;#125;
-        &amp;#125;
+                &#125;
+            &#125;
+        &#125;
         return result;
-    &amp;#125;
-&amp;#125;
-</code></pre><h3 id="LeetCode-18-四数之和-传送门"><a href="#LeetCode-18-四数之和-传送门" class="headerlink" title="LeetCode 18. 四数之和 传送门"></a>LeetCode 18. 四数之和 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/4sum/">传送门</a></h3><pre><code>//双指针法
-class Solution &amp;#123;
-    public List&lt;List&lt;Integer&gt;&gt; fourSum(int[] nums, int target) &amp;#123;
-        List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();
+    &#125;
+&#125;
+</code></pre>
+<h3 id="LeetCode-18-四数之和-传送门"><a href="#LeetCode-18-四数之和-传送门" class="headerlink" title="LeetCode 18. 四数之和 传送门"></a>LeetCode 18. 四数之和 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/4sum/">传送门</a></h3><pre class="language-none"><code class="language-none">&#x2F;&#x2F;双指针法
+class Solution &#123;
+    public List&lt;List&lt;Integer&gt;&gt; fourSum(int[] nums, int target) &#123;
+        List&lt;List&lt;Integer&gt;&gt; result &#x3D; new ArrayList&lt;&gt;();
         Arrays.sort(nums);
 
-        for (int i = 0; i &lt; nums.length; i++) &amp;#123;
+        for (int i &#x3D; 0; i &lt; nums.length; i++) &#123;
 
-            if (i &gt; 0 &amp;&amp; nums[i - 1] == nums[i]) &amp;#123;
+            if (i &gt; 0 &amp;&amp; nums[i - 1] &#x3D;&#x3D; nums[i]) &#123;
                 continue;
-            &amp;#125;
+            &#125;
 
-            for (int j = i + 1; j &lt; nums.length; j++) &amp;#123;
+            for (int j &#x3D; i + 1; j &lt; nums.length; j++) &#123;
 
-                if (j &gt; i + 1 &amp;&amp; nums[j - 1] == nums[j]) &amp;#123;
+                if (j &gt; i + 1 &amp;&amp; nums[j - 1] &#x3D;&#x3D; nums[j]) &#123;
                     continue;
-                &amp;#125;
+                &#125;
 
-                int left = j + 1;
-                int right = nums.length - 1;
-                while (right &gt; left) &amp;#123;
-                    int sum = nums[i] + nums[j] + nums[left] + nums[right];
-                    if (sum &gt; target) &amp;#123;
+                int left &#x3D; j + 1;
+                int right &#x3D; nums.length - 1;
+                while (right &gt; left) &#123;
+                    int sum &#x3D; nums[i] + nums[j] + nums[left] + nums[right];
+                    if (sum &gt; target) &#123;
                         right--;
-                    &amp;#125; else if (sum &lt; target) &amp;#123;
+                    &#125; else if (sum &lt; target) &#123;
                         left++;
-                    &amp;#125; else &amp;#123;
+                    &#125; else &#123;
                         result.add(Arrays.asList(nums[i], nums[j], nums[left], nums[right]));
 
-                        while (right &gt; left &amp;&amp; nums[right] == nums[right - 1]) right--;
-                        while (right &gt; left &amp;&amp; nums[left] == nums[left + 1]) left++;
+                        while (right &gt; left &amp;&amp; nums[right] &#x3D;&#x3D; nums[right - 1]) right--;
+                        while (right &gt; left &amp;&amp; nums[left] &#x3D;&#x3D; nums[left + 1]) left++;
 
                         left++;
                         right--;
-                    &amp;#125;
-                &amp;#125;
-            &amp;#125;
-        &amp;#125;
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
         return result;
-    &amp;#125;
-&amp;#125;
-</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    &#125;
+&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -2272,7 +2271,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">9.7k</span>&nbsp;
+        class="white-color">10k</span>&nbsp;
       
       
       

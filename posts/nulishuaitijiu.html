@@ -129,8 +129,7 @@
     
       
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="周周的苜蓿园" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1246,7 +1245,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    291
+                    290
                 </div>
                 
 
@@ -1264,51 +1263,51 @@ h3:hover {
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><div class="note info">前言：努力刷题day9</div>&lt;</p>
-<h3 id="LeetCode-454-四数相加-II-传送门"><a href="#LeetCode-454-四数相加-II-传送门" class="headerlink" title="LeetCode 454. 四数相加 II 传送门"></a>LeetCode 454. 四数相加 II <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/4sum-ii/">传送门</a></h3><pre><code>class Solution &amp;#123;
-    public int fourSumCount(int[] A, int[] B, int[] C, int[] D) &amp;#123;
-        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
-        //Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
-        int res = 0;
-        for(int i = 0;i&lt;A.length;i++)&amp;#123;
-            for(int j= 0;j&lt;B.length;j++)&amp;#123;
-                int sumAB = A[i]+B[j];
+<h3 id="LeetCode-454-四数相加-II-传送门"><a href="#LeetCode-454-四数相加-II-传送门" class="headerlink" title="LeetCode 454. 四数相加 II 传送门"></a>LeetCode 454. 四数相加 II <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/4sum-ii/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;
+    public int fourSumCount(int[] A, int[] B, int[] C, int[] D) &#123;
+        Map&lt;Integer, Integer&gt; map &#x3D; new HashMap&lt;&gt;();
+        &#x2F;&#x2F;Map&lt;Integer, Integer&gt; map &#x3D; new HashMap&lt;&gt;();
+        int res &#x3D; 0;
+        for(int i &#x3D; 0;i&lt;A.length;i++)&#123;
+            for(int j&#x3D; 0;j&lt;B.length;j++)&#123;
+                int sumAB &#x3D; A[i]+B[j];
                 if(map.containsKey(sumAB)) map.put(sumAB,map.get(sumAB)+1);
                 else map.put(sumAB,1);
-            &amp;#125;
-        &amp;#125;
+            &#125;
+        &#125;
 
-        for(int i = 0;i&lt;C.length;i++)&amp;#123;
-            for(int j = 0;j&lt;D.length;j++)&amp;#123;
-                int sumCD = -(C[i]+D[j]);
-                if(map.containsKey(sumCD)) res += map.get(sumCD);
-            &amp;#125;
-        &amp;#125;
+        for(int i &#x3D; 0;i&lt;C.length;i++)&#123;
+            for(int j &#x3D; 0;j&lt;D.length;j++)&#123;
+                int sumCD &#x3D; -(C[i]+D[j]);
+                if(map.containsKey(sumCD)) res +&#x3D; map.get(sumCD);
+            &#125;
+        &#125;
         return res;
-    &amp;#125;
-&amp;#125;
-</code></pre><h3 id="LeetCode-383-赎金信-传送门"><a href="#LeetCode-383-赎金信-传送门" class="headerlink" title="LeetCode 383. 赎金信 传送门"></a>LeetCode 383. 赎金信 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ransom-note/">传送门</a></h3><pre><code>class Solution &amp;#123;
-    public boolean canConstruct(String ransomNote, String magazine) &amp;#123;
-        //记录杂志字符串出现的次数
-        int[] arr = new int[26];
+    &#125;
+&#125;
+</code></pre>
+<h3 id="LeetCode-383-赎金信-传送门"><a href="#LeetCode-383-赎金信-传送门" class="headerlink" title="LeetCode 383. 赎金信 传送门"></a>LeetCode 383. 赎金信 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/ransom-note/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;
+    public boolean canConstruct(String ransomNote, String magazine) &#123;
+        &#x2F;&#x2F;记录杂志字符串出现的次数
+        int[] arr &#x3D; new int[26];
         int temp;
-        for (int i = 0; i &lt; magazine.length(); i++) &amp;#123;
-            temp = magazine.charAt(i) - &#39;a&#39;;
+        for (int i &#x3D; 0; i &lt; magazine.length(); i++) &#123;
+            temp &#x3D; magazine.charAt(i) - &#39;a&#39;;
             arr[temp]++;
-        &amp;#125;
-        for (int i = 0; i &lt; ransomNote.length(); i++) &amp;#123;
-            temp = ransomNote.charAt(i) - &#39;a&#39;;
-            //对于金信中的每一个字符都在数组中查找
-            //找到相应位减一，否则找不到返回false
-            if (arr[temp] &gt; 0) &amp;#123;
+        &#125;
+        for (int i &#x3D; 0; i &lt; ransomNote.length(); i++) &#123;
+            temp &#x3D; ransomNote.charAt(i) - &#39;a&#39;;
+            &#x2F;&#x2F;对于金信中的每一个字符都在数组中查找
+            &#x2F;&#x2F;找到相应位减一，否则找不到返回false
+            if (arr[temp] &gt; 0) &#123;
                 arr[temp]--;
-            &amp;#125; else &amp;#123;
+            &#125; else &#123;
                 return false;
-            &amp;#125;
-        &amp;#125;
+            &#125;
+        &#125;
         return true;
-    &amp;#125;
-&amp;#125;
-</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    &#125;
+&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -2244,7 +2243,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">9.7k</span>&nbsp;
+        class="white-color">10k</span>&nbsp;
       
       
       

@@ -129,8 +129,7 @@
     
       
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="周周的苜蓿园" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1264,27 +1263,28 @@ h3:hover {
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><div class="note info">前言：努力刷题day7</div>&lt;</p>
-<h3 id="LeetCode-202-快乐数传送门"><a href="#LeetCode-202-快乐数传送门" class="headerlink" title="LeetCode 202. 快乐数传送门"></a>LeetCode 202. 快乐数<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/happy-number/">传送门</a></h3><pre><code>class Solution &amp;#123;
-    public boolean isHappy(int n) &amp;#123;
-        Set&lt;Integer&gt; record = new HashSet&lt;&gt;();
-        while (n != 1 &amp;&amp; !record.contains(n)) &amp;#123;
+<h3 id="LeetCode-202-快乐数传送门"><a href="#LeetCode-202-快乐数传送门" class="headerlink" title="LeetCode 202. 快乐数传送门"></a>LeetCode 202. 快乐数<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/happy-number/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;
+    public boolean isHappy(int n) &#123;
+        Set&lt;Integer&gt; record &#x3D; new HashSet&lt;&gt;();
+        while (n !&#x3D; 1 &amp;&amp; !record.contains(n)) &#123;
             record.add(n);
-            n = getNextNumber(n);
-        &amp;#125;
-        return n == 1;
-    &amp;#125;
+            n &#x3D; getNextNumber(n);
+        &#125;
+        return n &#x3D;&#x3D; 1;
+    &#125;
 
-    private int getNextNumber(int n) &amp;#123;
-        int res = 0;
-        while (n &gt; 0) &amp;#123;
-            int temp = n % 10;
-            res += temp * temp;
-            n = n / 10;
-        &amp;#125;
+    private int getNextNumber(int n) &#123;
+        int res &#x3D; 0;
+        while (n &gt; 0) &#123;
+            int temp &#x3D; n % 10;
+            res +&#x3D; temp * temp;
+            n &#x3D; n &#x2F; 10;
+        &#125;
         return res;
-    &amp;#125;
-&amp;#125;
-</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    &#125;
+&#125;
+</code></pre>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -2212,7 +2212,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">9.7k</span>&nbsp;
+        class="white-color">10k</span>&nbsp;
       
       
       

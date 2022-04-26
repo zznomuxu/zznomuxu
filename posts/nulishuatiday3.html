@@ -129,8 +129,7 @@
     
       
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="周周的苜蓿园" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1246,7 +1245,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    126
+                    130
                 </div>
                 
 
@@ -1266,27 +1265,28 @@ h3:hover {
                 <div class="note info">努力刷题day3</div>
 
 
-<h3 id="1-LeetCode-203-移除链表元素-传送门"><a href="#1-LeetCode-203-移除链表元素-传送门" class="headerlink" title="1.LeetCode 203.移除链表元素 传送门"></a>1.LeetCode 203.移除链表元素 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-linked-list-elements/">传送门</a></h3><pre><code>class Solution &amp;#123;
-    public ListNode removeElements(ListNode head, int val) &amp;#123;
-        //删除值相同的头结点后，可能新的头结点也值相等，用循环解决
-        while(head!=null&amp;&amp;head.val==val)&amp;#123;
-            head=head.next;
-        &amp;#125;
-        if(head==null)
+<h3 id="1-LeetCode-203-移除链表元素-传送门"><a href="#1-LeetCode-203-移除链表元素-传送门" class="headerlink" title="1.LeetCode 203.移除链表元素 传送门"></a>1.LeetCode 203.移除链表元素 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-linked-list-elements/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;
+    public ListNode removeElements(ListNode head, int val) &#123;
+        &#x2F;&#x2F;删除值相同的头结点后，可能新的头结点也值相等，用循环解决
+        while(head!&#x3D;null&amp;&amp;head.val&#x3D;&#x3D;val)&#123;
+            head&#x3D;head.next;
+        &#125;
+        if(head&#x3D;&#x3D;null)
             return head;
-        ListNode prev=head;
-        //确保当前结点后还有结点
-        while(prev.next!=null)&amp;#123;
-            if(prev.next.val==val)&amp;#123;
-                prev.next=prev.next.next;
-            &amp;#125;else&amp;#123;
-                prev=prev.next;
-            &amp;#125;
-        &amp;#125;
+        ListNode prev&#x3D;head;
+        &#x2F;&#x2F;确保当前结点后还有结点
+        while(prev.next!&#x3D;null)&#123;
+            if(prev.next.val&#x3D;&#x3D;val)&#123;
+                prev.next&#x3D;prev.next.next;
+            &#125;else&#123;
+                prev&#x3D;prev.next;
+            &#125;
+        &#125;
         return head;
-    &amp;#125;
-&amp;#125;
-</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    &#125;
+&#125;
+</code></pre>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -2214,7 +2214,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">9.7k</span>&nbsp;
+        class="white-color">10k</span>&nbsp;
       
       
       

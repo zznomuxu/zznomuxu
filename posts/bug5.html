@@ -129,8 +129,7 @@
     
       
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="周周的苜蓿园" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1246,7 +1245,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    152
+                    173
                 </div>
                 
 
@@ -1265,25 +1264,18 @@ h3:hover {
             <div id="articleContent">
                 <p>在Python3中如果写以下代码会出现报错，原因就是在Python3中应该把            import urllib=======》import urllib.request</p>
 <p>把所有位置都换成带有.request，就可以解决错误了</p>
-<pre><code>import urllib
+<pre class="language-none"><code class="language-none">import urllib
 from bs4 import BeautifulSoup
 
-response = urllib.urlopen(&quot;http://www.imau.edu.cn&quot;)
-html = response.read()
-data = html.decode(&#39;utf-8&#39;)
-soup = BeautifulSoup(data)
-# print soup.findAll(&#39;span&#39;)
-</code></pre><p>response = urllib.urlopen(“<a target="_blank" rel="noopener" href="http://www.imau.edu.cn">http://www.imau.edu.cn</a>“)<br>AttributeError: module ‘urllib’ has no attribute ‘urlopen’</p>
-<p>例如这个例子改一下：两处改好就OK了</p>
-<pre><code>import urllib.request
-from bs4 import BeautifulSoup
-
-response = urllib.request.urlopen(&quot;http://www.imau.edu.cn&quot;)
-html = response.read()
-data = html.decode(&#39;utf-8&#39;)
-soup = BeautifulSoup(data)
-# print soup.findAll(&#39;span&#39;)
-</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+response &#x3D; urllib.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)
+html &#x3D; response.read()
+data &#x3D; html.decode(&#39;utf-8&#39;)
+soup &#x3D; BeautifulSoup(data)
+# print soup.findAll(&#39;span&#39;)</code></pre>
+<p>response = urllib.urlopen(“<a target="_blank" rel="noopener" href="http://www.imau.edu.cn">http://www.imau.edu.cn</a>“)<br>AttributeError: module ‘urllib’ has no attribute ‘urlopen’</p>
+<p>例如这个例子改一下：两处改好就OK了<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">import urllib.request<br>from bs4 import BeautifulSoup</code></pre></p>
+<p>response &#x3D; urllib.request.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)<br>html &#x3D; response.read()<br>data &#x3D; html.decode(&#39;utf-8&#39;)<br>soup &#x3D; BeautifulSoup(data)</p>
+<h1 id="print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt"><a href="#print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt" class="headerlink" title="print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;"></a>print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -2211,7 +2203,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">9.7k</span>&nbsp;
+        class="white-color">10k</span>&nbsp;
       
       
       

@@ -129,8 +129,7 @@
     
       
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="周周的苜蓿园" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1246,7 +1245,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    290
+                    315
                 </div>
                 
 
@@ -1264,73 +1263,74 @@ h3:hover {
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><div class="note info">前言：努力刷题day5</div><br></p>
-<h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><pre><code>class Solution &amp;#123;
-    public ListNode removeNthFromEnd(ListNode head, int n) &amp;#123;
-        ListNode dummyHead=new ListNode(-1);
-         dummyHead.next=head;
-        ListNode fast=dummyHead;
-        ListNode slow=dummyHead;
+<h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;
+    public ListNode removeNthFromEnd(ListNode head, int n) &#123;
+        ListNode dummyHead&#x3D;new ListNode(-1);
+         dummyHead.next&#x3D;head;
+        ListNode fast&#x3D;dummyHead;
+        ListNode slow&#x3D;dummyHead;
         while(n-- &gt;0)
-        &amp;#123;
-            fast=fast.next;
-        &amp;#125;
-        fast=fast.next;
-        while(fast!=null)
-        &amp;#123;
-            fast=fast.next;
-            slow=slow.next;
-        &amp;#125;
-        slow.next=slow.next.next;
+        &#123;
+            fast&#x3D;fast.next;
+        &#125;
+        fast&#x3D;fast.next;
+        while(fast!&#x3D;null)
+        &#123;
+            fast&#x3D;fast.next;
+            slow&#x3D;slow.next;
+        &#125;
+        slow.next&#x3D;slow.next.next;
         return dummyHead.next;
 
 
 
-    &amp;#125;
-&amp;#125;
-</code></pre><h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><pre><code>public class Solution &amp;#123;
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &amp;#123;
-        ListNode curA = headA;
-        ListNode curB = headB;
-        int lenA = 0, lenB = 0;
-        while (curA != null) &amp;#123; // 求链表A的长度
+    &#125;
+&#125;
+</code></pre>
+<h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><pre class="language-none"><code class="language-none">public class Solution &#123;
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &#123;
+        ListNode curA &#x3D; headA;
+        ListNode curB &#x3D; headB;
+        int lenA &#x3D; 0, lenB &#x3D; 0;
+        while (curA !&#x3D; null) &#123; &#x2F;&#x2F; 求链表A的长度
             lenA++;
-            curA = curA.next;
-        &amp;#125;
-        while (curB != null) &amp;#123; // 求链表B的长度
+            curA &#x3D; curA.next;
+        &#125;
+        while (curB !&#x3D; null) &#123; &#x2F;&#x2F; 求链表B的长度
             lenB++;
-            curB = curB.next;
-        &amp;#125;
-        curA = headA;
-        curB = headB;
-        // 让curA为最长链表的头，lenA为其长度
-        if (lenB &gt; lenA) &amp;#123;
-            //1. swap (lenA, lenB);
-            int tmpLen = lenA;
-            lenA = lenB;
-            lenB = tmpLen;
-            //2. swap (curA, curB);
-            ListNode tmpNode = curA;
-            curA = curB;
-            curB = tmpNode;
-        &amp;#125;
-        // 求长度差
-        int gap = lenA - lenB;
-        // 让curA和curB在同一起点上（末尾位置对齐）
-        while (gap-- &gt; 0) &amp;#123;
-            curA = curA.next;
-        &amp;#125;
-        // 遍历curA 和 curB，遇到相同则直接返回
-        while (curA != null) &amp;#123;
-            if (curA == curB) &amp;#123;
+            curB &#x3D; curB.next;
+        &#125;
+        curA &#x3D; headA;
+        curB &#x3D; headB;
+        &#x2F;&#x2F; 让curA为最长链表的头，lenA为其长度
+        if (lenB &gt; lenA) &#123;
+            &#x2F;&#x2F;1. swap (lenA, lenB);
+            int tmpLen &#x3D; lenA;
+            lenA &#x3D; lenB;
+            lenB &#x3D; tmpLen;
+            &#x2F;&#x2F;2. swap (curA, curB);
+            ListNode tmpNode &#x3D; curA;
+            curA &#x3D; curB;
+            curB &#x3D; tmpNode;
+        &#125;
+        &#x2F;&#x2F; 求长度差
+        int gap &#x3D; lenA - lenB;
+        &#x2F;&#x2F; 让curA和curB在同一起点上（末尾位置对齐）
+        while (gap-- &gt; 0) &#123;
+            curA &#x3D; curA.next;
+        &#125;
+        &#x2F;&#x2F; 遍历curA 和 curB，遇到相同则直接返回
+        while (curA !&#x3D; null) &#123;
+            if (curA &#x3D;&#x3D; curB) &#123;
                 return curA;
-            &amp;#125;
-            curA = curA.next;
-            curB = curB.next;
-        &amp;#125;
+            &#125;
+            curA &#x3D; curA.next;
+            curB &#x3D; curB.next;
+        &#125;
         return null;
-    &amp;#125;
+    &#125;
 
-&amp;#125;
+&#125;
 </code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
@@ -2259,7 +2259,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">9.7k</span>&nbsp;
+        class="white-color">10k</span>&nbsp;
       
       
       

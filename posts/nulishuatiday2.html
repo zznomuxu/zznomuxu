@@ -129,8 +129,7 @@
     
       
 <meta name="generator" content="Hexo 5.0.2"><link rel="alternate" href="/atom.xml" title="周周的苜蓿园" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <!-- 提示：若要开启春节或者圣诞主题样式，直接给body标签添加一个class为
@@ -1246,7 +1245,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    189
+                    185
                 </div>
                 
 
@@ -1265,39 +1264,37 @@ h3:hover {
             <div id="articleContent">
                 <div class="note info">努力刷题day2</div>
 
-<h3 id="LeetCode-977-有序数组的平方-传送门"><a href="#LeetCode-977-有序数组的平方-传送门" class="headerlink" title="LeetCode 977.有序数组的平方 传送门"></a>LeetCode 977.有序数组的平方 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/">传送门</a></h3><p>:::default<br>code<br>:::</p>
-<pre><code>class Solution &amp;#123;
-    public int[] sortedSquares(int[] nums) &amp;#123;
-        for(int i=0;i&lt;nums.length;i++)
-        &amp;#123;
-            nums[i]=nums[i]*nums[i];
-        &amp;#125;
+<h3 id="LeetCode-977-有序数组的平方-传送门"><a href="#LeetCode-977-有序数组的平方-传送门" class="headerlink" title="LeetCode 977.有序数组的平方 传送门"></a>LeetCode 977.有序数组的平方 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/">传送门</a></h3><p>:::default<br>code<br>:::<br><pre class="language-none"><code class="language-none">class Solution &#123;
+    public int[] sortedSquares(int[] nums) &#123;
+        for(int i&#x3D;0;i&lt;nums.length;i++)
+        &#123;
+            nums[i]&#x3D;nums[i]*nums[i];
+        &#125;
         Arrays.sort(nums);
         return nums;
-    &amp;#125;
-&amp;#125;
-</code></pre><h3 id="LeetCode-209-长度最小的子数组传送门"><a href="#LeetCode-209-长度最小的子数组传送门" class="headerlink" title="LeetCode 209.长度最小的子数组传送门"></a>LeetCode 209.长度最小的子数组<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-size-subarray-sum/">传送门</a></h3><p>:::default<br>code<br>:::</p>
-<pre><code>class Solution &amp;#123;
-    public int minSubArrayLen(int s, int[] nums) &amp;#123;
-        int n = nums.length;
-        if (n == 0) &amp;#123;
+    &#125;
+&#125;</code></pre></p>
+<h3 id="LeetCode-209-长度最小的子数组传送门"><a href="#LeetCode-209-长度最小的子数组传送门" class="headerlink" title="LeetCode 209.长度最小的子数组传送门"></a>LeetCode 209.长度最小的子数组<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/minimum-size-subarray-sum/">传送门</a></h3><p>:::default<br>code<br>:::<br><pre class="language-none"><code class="language-none">class Solution &#123;
+    public int minSubArrayLen(int s, int[] nums) &#123;
+        int n &#x3D; nums.length;
+        if (n &#x3D;&#x3D; 0) &#123;
             return 0;
-        &amp;#125;
-        int ans = Integer.MAX_VALUE;
-        for (int i = 0; i &lt; n; i++) &amp;#123;
-            int sum = 0;
-            for (int j = i; j &lt; n; j++) &amp;#123;
-                sum += nums[j];
-                if (sum &gt;= s) &amp;#123;
-                    ans = Math.min(ans, j - i + 1);
+        &#125;
+        int ans &#x3D; Integer.MAX_VALUE;
+        for (int i &#x3D; 0; i &lt; n; i++) &#123;
+            int sum &#x3D; 0;
+            for (int j &#x3D; i; j &lt; n; j++) &#123;
+                sum +&#x3D; nums[j];
+                if (sum &gt;&#x3D; s) &#123;
+                    ans &#x3D; Math.min(ans, j - i + 1);
                     break;
-                &amp;#125;
-            &amp;#125;
-        &amp;#125;
-        return ans == Integer.MAX_VALUE ? 0 : ans;
-    &amp;#125;
-&amp;#125;
-</code></pre><div class="spoiler collapsed">
+                &#125;
+            &#125;
+        &#125;
+        return ans &#x3D;&#x3D; Integer.MAX_VALUE ? 0 : ans;
+    &#125;
+&#125;</code></pre></p>
+<div class="spoiler collapsed">
     <div class="spoiler-title">
         code
     </div>
@@ -2234,7 +2231,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">9.7k</span>&nbsp;
+        class="white-color">10k</span>&nbsp;
       
       
       
