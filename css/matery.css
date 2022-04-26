@@ -338,11 +338,11 @@ mark {
 /* 
 /*加入卡片星星背景图片 可以自己选*/
 
-.card {
+/* .card {
     background: url(https://zzblogimages.oss-cn-beijing.aliyuncs.com/blograndom/random/2.webp) top;
    border-radius: 25px;
    box-shadow: 0 15px 35px rgba(42, 89, 165, .1), 0 5px 15px rgba(71, 159, 188, .07) !important;
-} 
+}  */
 
 
 .card .card-image img {
@@ -3836,7 +3836,7 @@ body.dark #artDetail .v[data-class=v] .vcards {
     body.dark .card
     {
         background: url(https://7.dusays.com/2021/01/15/1313017cd1a15.png) top!important;
-    } */
+    }  */
 /* 小花花背景图结束 */
 
 /* 旋转小樱花按钮 */
@@ -3851,7 +3851,7 @@ body.themespring .yinghua, body.themechris .yinghua {
 .titlesline {
   width: 0px;
   height: 4px;
-  background-color: #f2eb00;
+  background-color: #08606c;
   border-radius: 2px;
   position: absolute;
   top: 10px;
