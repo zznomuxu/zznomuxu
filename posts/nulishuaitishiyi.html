@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="链表类刷题day5, 周周">
+    <meta name="keywords" content="字符串类刷题day11, 周周">
     <meta name="description" content="这是一个神秘又开放的地方">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>链表类刷题day5 | 周周的苜蓿园</title>
+    <title>字符串类刷题day11 | 周周的苜蓿园</title>
     
     <script>
         // 隐藏
@@ -924,7 +924,7 @@ class="themespring" -->
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">链表类刷题day5</h1>
+                    <h1 class="description center-align post-title">字符串类刷题day11</h1>
                 </div>
             </div>
         </div>
@@ -1236,7 +1236,7 @@ h3:hover {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-20
+                    2022-04-27
                 </div>
                 
 
@@ -1245,7 +1245,7 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    315
+                    144
                 </div>
                 
 
@@ -1262,74 +1262,25 @@ h3:hover {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><div class="note info">前言：努力刷题day5</div><br></p>
-<h3 id="1-LeetCode-19-删除链表的倒数第-N-个结点-传送门"><a href="#1-LeetCode-19-删除链表的倒数第-N-个结点-传送门" class="headerlink" title="1.LeetCode 19. 删除链表的倒数第 N 个结点 传送门"></a>1.LeetCode 19. 删除链表的倒数第 N 个结点 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;
-    public ListNode removeNthFromEnd(ListNode head, int n) &#123;
-        ListNode dummyHead&#x3D;new ListNode(-1);
-         dummyHead.next&#x3D;head;
-        ListNode fast&#x3D;dummyHead;
-        ListNode slow&#x3D;dummyHead;
-        while(n-- &gt;0)
+                <div class="note info">前言：努力刷题day11</div>
+
+
+<h3 id="LeetCode-344-反转字符串-传送门"><a href="#LeetCode-344-反转字符串-传送门" class="headerlink" title="LeetCode 344. 反转字符串 传送门"></a>LeetCode 344. 反转字符串 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-string/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;
+    public void reverseString(char[] s) &#123;
+        int l&#x3D;0;
+        int r&#x3D;s.length-1;
+        while(l&lt;r)
         &#123;
-            fast&#x3D;fast.next;
+            &#x2F;&#x2F; s[l] ^&#x3D; s[r];  &#x2F;&#x2F;构造 a ^ b 的结果，并放在 a 中
+            &#x2F;&#x2F; s[r] ^&#x3D; s[l];  &#x2F;&#x2F;将 a ^ b 这一结果再 ^ b ，存入b中，此时 b &#x3D; a, a &#x3D; a ^ b
+            &#x2F;&#x2F; s[l] ^&#x3D; s[r];  &#x2F;&#x2F;a ^ b 的结果再 ^ a ，存入 a 中，此时 b &#x3D; a, a &#x3D; b 完成交换
+            char temp&#x3D;s[l];
+            s[l]&#x3D;s[r];
+            s[r]&#x3D;temp;
+            l++;
+            r--;
         &#125;
-        fast&#x3D;fast.next;
-        while(fast!&#x3D;null)
-        &#123;
-            fast&#x3D;fast.next;
-            slow&#x3D;slow.next;
-        &#125;
-        slow.next&#x3D;slow.next.next;
-        return dummyHead.next;
-
-
-
     &#125;
-&#125;
-</code></pre>
-<h3 id="2-LeetCode-面试题-02-07-链表相交-传送门"><a href="#2-LeetCode-面试题-02-07-链表相交-传送门" class="headerlink" title="2.LeetCode 面试题 02.07. 链表相交 传送门"></a>2.LeetCode 面试题 02.07. 链表相交 <a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/intersection-of-two-linked-lists-lcci/">传送门</a></h3><pre class="language-none"><code class="language-none">public class Solution &#123;
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &#123;
-        ListNode curA &#x3D; headA;
-        ListNode curB &#x3D; headB;
-        int lenA &#x3D; 0, lenB &#x3D; 0;
-        while (curA !&#x3D; null) &#123; &#x2F;&#x2F; 求链表A的长度
-            lenA++;
-            curA &#x3D; curA.next;
-        &#125;
-        while (curB !&#x3D; null) &#123; &#x2F;&#x2F; 求链表B的长度
-            lenB++;
-            curB &#x3D; curB.next;
-        &#125;
-        curA &#x3D; headA;
-        curB &#x3D; headB;
-        &#x2F;&#x2F; 让curA为最长链表的头，lenA为其长度
-        if (lenB &gt; lenA) &#123;
-            &#x2F;&#x2F;1. swap (lenA, lenB);
-            int tmpLen &#x3D; lenA;
-            lenA &#x3D; lenB;
-            lenB &#x3D; tmpLen;
-            &#x2F;&#x2F;2. swap (curA, curB);
-            ListNode tmpNode &#x3D; curA;
-            curA &#x3D; curB;
-            curB &#x3D; tmpNode;
-        &#125;
-        &#x2F;&#x2F; 求长度差
-        int gap &#x3D; lenA - lenB;
-        &#x2F;&#x2F; 让curA和curB在同一起点上（末尾位置对齐）
-        while (gap-- &gt; 0) &#123;
-            curA &#x3D; curA.next;
-        &#125;
-        &#x2F;&#x2F; 遍历curA 和 curB，遇到相同则直接返回
-        while (curA !&#x3D; null) &#123;
-            if (curA &#x3D;&#x3D; curB) &#123;
-                return curA;
-            &#125;
-            curA &#x3D; curA.next;
-            curB &#x3D; curB.next;
-        &#125;
-        return null;
-    &#125;
-
 &#125;
 </code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
@@ -1356,7 +1307,7 @@ h3:hover {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zznomuxu.github.io/posts/nulishuatiday5.html">https://zznomuxu.github.io/posts/nulishuatiday5.html</a>
+                    <a href="https://zznomuxu.github.io/posts/nulishuaitishiyi.html">https://zznomuxu.github.io/posts/nulishuaitishiyi.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1930,12 +1881,13 @@ h3:hover {
         
         <div class="article col s12 m6">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/suibi1.html">
+                <a href="/posts/nulishuaitishiyi.html">
                     <div class="card-image">
                         
-                        <img src="/medias/toc-banner/suibi1.jpg" class="responsive-img" alt="那年杏花微雨">
+                        <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="字符串类刷题day11">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -1946,37 +1898,38 @@ h3:hover {
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          那年杏花微雨
+                          字符串类刷题day11
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一次看甄嬛。
+                            前言：努力刷题day11。
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    随笔
+                            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BD%B1%E8%A7%86%E5%89%A7/">
-                        <span class="chip bg-color">影视剧</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
                 </div>
@@ -1990,10 +1943,10 @@ h3:hover {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/nulishuatiday4.html">
+                <a href="/posts/nulishuaitishi.html">
                     <div class="card-image">
                         
-                        <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="链表类刷题day4">
+                        <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="哈希表类刷题day10">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -2004,19 +1957,19 @@ h3:hover {
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          链表类刷题day4
+                          哈希表类刷题day10
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            努力刷题day4。
+                            前言：努力刷题day10。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-26
                             </span>
                         <span class="publish-author">
                             
