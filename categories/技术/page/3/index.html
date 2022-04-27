@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="周周">
+    <meta name="keywords" content="分类: 技术, 周周">
     <meta name="description" content="这是一个神秘又开放的地方">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>周周的苜蓿园</title>
+    <title>分类: 技术 | 周周的苜蓿园</title>
     
     <script>
         // 隐藏
@@ -915,222 +915,725 @@ class="themespring" -->
 </div>
 <!-- 春节主题模式样式结束 -->
 
-    
-
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/0.jpg')">
-    <div class="container" style="right: 0px;left: 0px;">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
         <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
-                </div>
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                    
+                 
+            </div>
+
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: ['欢迎来到苜蓿园，请不要忘记我……',''],
+                        startDelay: 200,
+                        typeSpeed: 120,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
     </div>
 </div>
 
 
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
 
 
-<main class="post-container content">
-    
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    </div>
+    <div class="mohuxiaoguo"></div>
+</div>
+
+
 <style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
+    .bg-cover {
+        height: 44vh;
     }
-
-    #articleContent :focus {
-        outline: none;
+    #sma {
+        bottom: 155px;
     }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
+    .bg-cover::before {
+        background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/grid.png);
     }
-
-    .toc-widget {
-        width: 345px;
-        padding-left: 20px;
-        
+    #articles {
+      margin-top: 16px;
     }
-
-
-    .toc-widget .toc-title {
-        margin: 35px 0 15px 0;
-        padding-left: 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
+    @media only screen and (max-width: 1100px) {
+      .noticess {
+        width: 90%!important;
+      }
     }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
+    .noticess {
+      width: 73%;
+      margin-bottom: 0px;
+      margin-top: 20px;
+      background: url(/medias/banner/flowerbg-white.png);
     }
-
-    #toc-content {
-        height: calc(100vh - 250px);
-        overflow: auto;
+    .noticess .notice-content {
+      font-size: 16px;
     }
-
-    #toc-content ol {
-        padding-left: 10px;
+    .notice #catename {
+      color: #f2eb00;
+      letter-spacing: 4px;
+      padding-bottom: 4px;
+      border-bottom: 1.2px dashed #f2eb00;
+      font-size: 20px;
+      font-weight: 500;
     }
-
-    #toc-content ol li {
-        padding-left: 10px;
+    .notice .jiluwords {
+      color: #49b1f5;
+      letter-spacing: 4px;
+      padding-bottom: 4px;
+      border-bottom: 1.2px dashed #49b1f5;
+      font-size: 20px;
+      font-weight: 500;
     }
-
-    #toc-content .toc-link:hover {
-        color: #93a1ee;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-
-        position: absolute;
-        right: 23.5vw;
-        display: block;
-    }
-
-    #toc-content .is-active-link {
-        color: #f3c7f7;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 15px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-    .suibis[data-spmid="随笔"] {
-        width: 100%!important;
-    }
-    .toc-widget[data-spmid="随笔"],
-    #floating-toc-btn[data-spmid="随笔"]
-    {
-        display: none!important;
-    }
-     
 </style>
-
-<div class="row">
+<main class="content">  
+    <!-- <div class="tag-title center-align">
+      <div class="notice">
+          <div class="notice-content" id="poem"></div>
+          <div class="notice-content" id="info"></div>
+      </div>
+      <script>
+          $.get("https://v1.hitokoto.cn?c=d&c=h",function(data,status){if(status=='success'){$('#poem').html(data.hitokoto);if(data.from_who!=null){$('#info').html(data.from_who+" · "+"《 "+data.from+" 》");}else{$('#info').html(" “ "+data.from+" ” ");}}else{$('#poem').html("获取出错啦");}});
+      </script>
+    </div> -->
+  
     
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/zuoye3.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/js11.webp" class="responsive-img" alt="最大公约数几种算法分析">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              最大公约数几种算法分析
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                复制原本的csdn 格式有时间改。嘿嘿～
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-03-09
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%BD%9C%E4%B8%9A/">
+                            <span class="chip bg-color">程序设计方法学作业</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/zuoye2.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/js11.webp" class="responsive-img" alt="三天打鱼两天晒网 从文件读入数据输出到文件 C语言">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              三天打鱼两天晒网 从文件读入数据输出到文件 C语言
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                复制原本的csdn 格式有时间改。嘿嘿～
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-03-02
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%BD%9C%E4%B8%9A/">
+                            <span class="chip bg-color">程序设计方法学作业</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/bug5.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/js2.jpg" class="responsive-img" alt="运行时报错：AttributeError:module &#39;urllib&#39; has no attribute &#39;urlopen&#39;">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              运行时报错：AttributeError:module &#39;urllib&#39; has no attribute &#39;urlopen&#39;
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                侵删致谢
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-02-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/bug/">
+                            <span class="chip bg-color">bug</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/bug4.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/js2.jpg" class="responsive-img" alt="解释器提示如：SyntaxError:invalid character in identifier">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              解释器提示如：SyntaxError:invalid character in identifier
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                侵删致谢
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-02-15
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/bug/">
+                            <span class="chip bg-color">bug</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/bug3.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/js2.jpg" class="responsive-img" alt="在Online Judege 平台上出现的Presentation Error 错误">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              在Online Judege 平台上出现的Presentation Error 错误
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                侵删致谢
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-02-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/bug/">
+                            <span class="chip bg-color">bug</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/pachong2.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/js9.webp" class="responsive-img" alt="爬取猫眼电影榜单Top100—利用requests、正则表达式">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              爬取猫眼电影榜单Top100—利用requests、正则表达式
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                爬虫实战1.
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-01-25
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">python爬虫</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4">
+                <div class="card">
+                    <a href="/posts/pachong1.html" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/toc-banner/js9.webp" class="responsive-img" alt="python爬虫-- HTML/CSS/JS">
+                            
+                            
+                            <!-- 福袋按钮 -->
+                            <div class="caishendeng">        
+                                <div class="caishenxian fudaixian">
+                                    <img class="caishenpic lala" src="/medias/spring-img/fish.png" />
+                                </div>              
+                            </div>
+                            <!-- 圣诞按钮 -->
+                            <div class="shengdandeng">        
+                                <div class="shengdanxianyou">
+                                    <img class="shengdanpic sdlala" src="/medias/christmas-img/shengdanren3.png" />
+                                </div>              
+                            </div>
+
+                            <span class="card-title">
+                              <!-- 文章卡片hover线条效果 -->
+                              <span class="titlesline">
+                                <style>
+                                  .titlesline {
+                                    width: 0px;
+                                    height: 4px;
+                                    background-color: #f2eb00;
+                                    border-radius: 2px;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 24px;
+                                  }
+                                  body.dark .titlesline {
+                                    filter: brightness(.7);
+                                  }
+                                  article .card .titlesline {
+                                    transition: all 0.36s ease;
+                                  }
+                                  article .card-image:hover .titlesline {
+                                    width: 36px;
+                                  }
+                                </style>
+                              </span>
+                              python爬虫-- HTML/CSS/JS
+                            </span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                爬虫知识1.
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2018-11-11
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    技术
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/python%E7%88%AC%E8%99%AB/">
+                            <span class="chip bg-color">python爬虫</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
+</main>
+
+
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a href="/categories/%E6%8A%80%E6%9C%AF/page/2/"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">3 / 3</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+            <a class="right btn-floating btn-large disabled">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            
+        </div>
     </div>
 </div>
 
-<!-- TOC 悬浮按钮. -->
-
-    
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
-    
-</main>
 
 
 
@@ -1165,7 +1668,7 @@ class="themespring" -->
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">12.7k</span>&nbsp;
+        class="white-color">23.8k</span>&nbsp;
       
       
       
