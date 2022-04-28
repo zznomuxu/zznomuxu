@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>字符串类刷题day11</title>
-      <link href="/posts/nulishuaitishiyi.html"/>
-      <url>/posts/nulishuaitishiyi.html</url>
+      <title>字符串类刷题day12</title>
+      <link href="/posts/nulishuaitishier.html"/>
+      <url>/posts/nulishuaitishier.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">前言：努力刷题day11</div><h3 id="LeetCode-344-反转字符串-传送门"><a href="#LeetCode-344-反转字符串-传送门" class="headerlink" title="LeetCode 344. 反转字符串 传送门"></a>LeetCode 344. 反转字符串 <a href="https://leetcode-cn.com/problems/reverse-string/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;    public void reverseString(char[] s) &#123;        int l&#x3D;0;        int r&#x3D;s.length-1;        while(l&lt;r)        &#123;            &#x2F;&#x2F; s[l] ^&#x3D; s[r];  &#x2F;&#x2F;构造 a ^ b 的结果，并放在 a 中            &#x2F;&#x2F; s[r] ^&#x3D; s[l];  &#x2F;&#x2F;将 a ^ b 这一结果再 ^ b ，存入b中，此时 b &#x3D; a, a &#x3D; a ^ b            &#x2F;&#x2F; s[l] ^&#x3D; s[r];  &#x2F;&#x2F;a ^ b 的结果再 ^ a ，存入 a 中，此时 b &#x3D; a, a &#x3D; b 完成交换            char temp&#x3D;s[l];            s[l]&#x3D;s[r];            s[r]&#x3D;temp;            l++;            r--;        &#125;    &#125;&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">前言：努力刷题day12</div><h3 id="LeetCode-剑指offer-05-替换空格-传送门"><a href="#LeetCode-剑指offer-05-替换空格-传送门" class="headerlink" title="LeetCode 剑指offer 05.替换空格 传送门"></a>LeetCode 剑指offer 05.替换空格 <a href="https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;   public String replaceSpace(String s) &#123;    if(s &#x3D;&#x3D; null || s.length() &#x3D;&#x3D; 0)&#123;        return s;    &#125;    &#x2F;&#x2F;扩充空间，空格数量2倍    StringBuilder str &#x3D; new StringBuilder();    for (int i &#x3D; 0; i &lt; s.length(); i++) &#123;        if(s.charAt(i) &#x3D;&#x3D; &#39; &#39;)&#123;            str.append(&quot;  &quot;);        &#125;    &#125;    &#x2F;&#x2F;若是没有空格直接返回    if(str.length() &#x3D;&#x3D; 0)&#123;        return s;    &#125;    &#x2F;&#x2F;有空格情况 定义两个指针    int left &#x3D; s.length() - 1;&#x2F;&#x2F;左指针：指向原始字符串最后一个位置    s +&#x3D; str.toString();    int right &#x3D; s.length()-1;&#x2F;&#x2F;右指针：指向扩展字符串的最后一个位置    char[] chars &#x3D; s.toCharArray();    while(left&gt;&#x3D;0)&#123;        if(chars[left] &#x3D;&#x3D; &#39; &#39;)&#123;            chars[right--] &#x3D; &#39;0&#39;;            chars[right--] &#x3D; &#39;2&#39;;            chars[right] &#x3D; &#39;%&#39;;        &#125;else&#123;            chars[right] &#x3D; chars[left];        &#125;        left--;        right--;    &#125;    return new String(chars);&#125;&#125;</code></pre><p><div class="note primary">知识点补充</div> </p><ul><li>String、StringBuffer和StringBuilder的区别：【大佬博客链接，侵删致谢】<a href="https://blog.csdn.net/csxypr/article/details/92378336">https://blog.csdn.net/csxypr/article/details/92378336</a><br>-</li></ul><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
@@ -48,6 +48,31 @@
             <tag> 前端 </tag>
             
             <tag> CSS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>字符串类刷题day11</title>
+      <link href="/posts/nulishuaitishiyi.html"/>
+      <url>/posts/nulishuaitishiyi.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">前言：努力刷题day11</div><h3 id="LeetCode-344-反转字符串-传送门"><a href="#LeetCode-344-反转字符串-传送门" class="headerlink" title="LeetCode 344. 反转字符串 传送门"></a>LeetCode 344. 反转字符串 <a href="https://leetcode-cn.com/problems/reverse-string/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;    public void reverseString(char[] s) &#123;        int l&#x3D;0;        int r&#x3D;s.length-1;        while(l&lt;r)        &#123;            &#x2F;&#x2F; s[l] ^&#x3D; s[r];  &#x2F;&#x2F;构造 a ^ b 的结果，并放在 a 中            &#x2F;&#x2F; s[r] ^&#x3D; s[l];  &#x2F;&#x2F;将 a ^ b 这一结果再 ^ b ，存入b中，此时 b &#x3D; a, a &#x3D; a ^ b            &#x2F;&#x2F; s[l] ^&#x3D; s[r];  &#x2F;&#x2F;a ^ b 的结果再 ^ a ，存入 a 中，此时 b &#x3D; a, a &#x3D; b 完成交换            char temp&#x3D;s[l];            s[l]&#x3D;s[r];            s[r]&#x3D;temp;            l++;            r--;        &#125;    &#125;&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
@@ -106,31 +131,6 @@
     
     
     <entry>
-      <title>哈希表类刷题day8</title>
-      <link href="/posts/nulishuaitiba.html"/>
-      <url>/posts/nulishuaitiba.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day8</div>&lt;</p><h3 id="LeetCode-1-两数之和传送门"><a href="#LeetCode-1-两数之和传送门" class="headerlink" title="LeetCode 1. 两数之和传送门"></a>LeetCode 1. 两数之和<a href="https://leetcode-cn.com/problems/two-sum/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;    public int[] twoSum(int[] nums, int target) &#123;        int[] res &#x3D; new int[2];    if(nums &#x3D;&#x3D; null || nums.length &#x3D;&#x3D; 0)&#123;        return res;    &#125;    Map&lt;Integer, Integer&gt; map &#x3D; new HashMap&lt;&gt;();    for(int i &#x3D; 0; i &lt; nums.length; i++)&#123;        int temp &#x3D; target - nums[i];        if(map.containsKey(temp))&#123;            res[1] &#x3D; i;            res[0] &#x3D; map.get(temp);        &#125;        map.put(nums[i], i);    &#125;    return res;    &#125;&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> leetcode </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>B站念安老师课程HTML笔记</title>
       <link href="/posts/qianduan11.html"/>
       <url>/posts/qianduan11.html</url>
@@ -150,6 +150,31 @@
             <tag> 前端 </tag>
             
             <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>哈希表类刷题day8</title>
+      <link href="/posts/nulishuaitiba.html"/>
+      <url>/posts/nulishuaitiba.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day8</div>&lt;</p><h3 id="LeetCode-1-两数之和传送门"><a href="#LeetCode-1-两数之和传送门" class="headerlink" title="LeetCode 1. 两数之和传送门"></a>LeetCode 1. 两数之和<a href="https://leetcode-cn.com/problems/two-sum/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;    public int[] twoSum(int[] nums, int target) &#123;        int[] res &#x3D; new int[2];    if(nums &#x3D;&#x3D; null || nums.length &#x3D;&#x3D; 0)&#123;        return res;    &#125;    Map&lt;Integer, Integer&gt; map &#x3D; new HashMap&lt;&gt;();    for(int i &#x3D; 0; i &lt; nums.length; i++)&#123;        int temp &#x3D; target - nums[i];        if(map.containsKey(temp))&#123;            res[1] &#x3D; i;            res[0] &#x3D; map.get(temp);        &#125;        map.put(nums[i], i);    &#125;    return res;    &#125;&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
             
         </tags>
       
