@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>B站念安老师课程JavaScript笔记</title>
+      <link href="/posts/qianduan33.html"/>
+      <url>/posts/qianduan33.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Javascript简介"><a href="#Javascript简介" class="headerlink" title="Javascript简介"></a>Javascript简介</h2><p>&emsp;&emsp;JavaScript是一种具有面向对象能力，解释型的程序设计语言，更具体一点,它是基于对象和时间驱动并具有安全性的客户端脚本语言。它的主要目的是验证发往服务器的数据，增加web互动，加强用户体验度等。</p><h3 id="1-JavaScript的组成"><a href="#1-JavaScript的组成" class="headerlink" title="1.JavaScript的组成"></a>1.JavaScript的组成</h3><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205131527189.png" alt></p><p><strong>ECMAScript（基础语法）</strong><br>&emsp;&emsp;JavaScript的核心语法ECMAScript描述了该语言的语法和基本对象<br><strong>DOM（文档对象模型）</strong><br>&emsp;&emsp;描述了处理网页的内容的方法和接口<br><strong>BOM（浏览器对象模型</strong><br>&emsp;&emsp;描述了与浏览器进行交互的方法和接口</p><h3 id="2-开发工具"><a href="#2-开发工具" class="headerlink" title="2.开发工具"></a>2.开发工具</h3><ul><li>浏览器：chrome</li><li>开发工具：VScode</li><li>进入浏览器控制台 Console：F12<br>控制台的作用：console对象代表浏览器的JavaScript控制台，用来运行JavaScript命令，常常用来显示网页运行时的错误信息。Elements用来调试网页的html和css代码。</li></ul><h2 id="JavaScript基本用法"><a href="#JavaScript基本用法" class="headerlink" title="JavaScript基本用法"></a>JavaScript基本用法</h2><p>&emsp;&emsp;JS需要和HTML一起使用才有效果，我们可以通过直接或间接的方式将JS代码嵌入在HTML页面中。</p><ul><li>行内JS：写在标签内部的JS代码</li><li>内部JS：定义在JavaScript标签内部的JS代码</li><li>外部JS：单独的JS文件，在HTML中通过script标签引入</li></ul><p>&emsp;&emsp;我们可以将JavaScript代码放在html文件中任何位置，但是我们一般放在网页的head或者body部分。由于页面的加载方式是从上往下依次加载的，而这个对我们放置的JS代码运行是有影响的。</p><p>&emsp;&emsp;放在<head>部分，最常用的方式是在页面head部分防止<script>元素，浏览器解析head部分就会执行这个代码，然后才解析页面的其余部分。<br>&emsp;&emsp;放在<body>部分，JavaScript代码在网页读取到该语句的时候就会执行。</p></script></head></p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数组类刷题day13（Leetcode217+53）</title>
       <link href="/posts/nulishuatiday13.html"/>
       <url>/posts/nulishuatiday13.html</url>
@@ -21,33 +48,6 @@
         <tags>
             
             <tag> leetcode </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>B站念安老师课程JavaScript笔记</title>
-      <link href="/posts/qianduan33.html"/>
-      <url>/posts/qianduan33.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> JavaScript </tag>
             
         </tags>
       
