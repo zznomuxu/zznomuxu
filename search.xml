@@ -4,6 +4,58 @@
   
     
     <entry>
+      <title>数组类刷题day13（Leetcode217+53）</title>
+      <link href="/posts/nulishuatiday13.html"/>
+      <url>/posts/nulishuatiday13.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">努力刷题day13</div><h3 id="LeetCode-217-有序数组的存在重复元素-传送门"><a href="#LeetCode-217-有序数组的存在重复元素-传送门" class="headerlink" title="LeetCode 217.有序数组的存在重复元素 传送门"></a>LeetCode 217.有序数组的存在重复元素 <a href="https://leetcode.cn/problems/contains-duplicate/">传送门</a></h3><pre class="language-none"><code class="language-none">&#x2F;&#x2F;排序法class Solution &#123;public boolean containsDuplicate（int[] nums)&#123;    Arrays.sort(nums);    for(int i&#x3D;0;i&lt;nums.length-1;i++)    &#123;        if(nums[i]&#x3D;&#x3D;nums[i+1])        &#123;            return true;        &#125;    &#125;    return false;&#125;&#125;</code></pre><h3 id="LeetCode-53-最大子数组和传送门"><a href="#LeetCode-53-最大子数组和传送门" class="headerlink" title="LeetCode 53.最大子数组和传送门"></a>LeetCode 53.最大子数组和<a href="https://leetcode.cn/problems/maximum-subarray/">传送门</a></h3><pre class="language-none"><code class="language-none">&#x2F;&#x2F;动态规划法class Solution &#123;    public int maxSubArray(int [] nums)    &#123;        int len&#x3D;nums.length;        int [] dp&#x3D;new int[len];  &#x2F;&#x2F; dp[i] 表示：以 nums[i] 结尾的连续子数组的最大和        dp[0]&#x3D;nums[0];        for(int i&#x3D;1;i&lt;len;i++)        &#123;            if(dp[i-1]&gt;0)            &#123;                dp[i]&#x3D;dp[i-1]+nums[i];            &#125;            else            &#123;                dp[i]&#x3D;nums[i];            &#125;        &#125;        int res&#x3D;dp[0];        for(int i&#x3D;1;i&lt;len;i++)        &#123;            res&#x3D;Math.max(res,dp[i]);        &#125;        return res;    &#125;&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>B站念安老师课程JavaScript笔记</title>
+      <link href="/posts/qianduan33.html"/>
+      <url>/posts/qianduan33.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>字符串类刷题day12</title>
       <link href="/posts/nulishuaitishier.html"/>
       <url>/posts/nulishuaitishier.html</url>
@@ -33,7 +85,7 @@
       <link href="/posts/qianduan22.html"/>
       <url>/posts/qianduan22.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="什么事CSS？（概念）"><a href="#什么事CSS？（概念）" class="headerlink" title="什么事CSS？（概念）"></a>什么事CSS？（概念）</h1><p>CSS（Cascading Style Sheets）层叠样式表，是一种用来表现HTML或XML等文件样式的计算机语言。<br>CSS3目前最新版本。能够做到网页和内容分离，对网页中的元素位置排版等效果进行像素级精准控制；<br>美化网页，依赖html。</p><h1 id="为什么要学CSS？（作用）"><a href="#为什么要学CSS？（作用）" class="headerlink" title="为什么要学CSS？（作用）"></a>为什么要学CSS？（作用）</h1><p>（1）虽然HTML的标签某些属性可以设置样式，但细节处理不好；<br>（2）HTML实现样式效果会出现大量重复代码，维护成本高。</p><h1 id="CSS的基本使用"><a href="#CSS的基本使用" class="headerlink" title="CSS的基本使用"></a>CSS的基本使用</h1><h2 id="CSS基本语法"><a href="#CSS基本语法" class="headerlink" title="CSS基本语法"></a>CSS基本语法</h2><h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p>CSS样式由选择器和一条或多条以分号隔开的样式声明组成，每条声明的样式包含着一个CSS属性和属性值。<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204271320625.png" alt></p><p>样式设置在style标签中。</p><p>⚠️ </p><ul><li>CSS声明要以分号结尾，要用花括号括起来；</li><li>建议一行写一个属性 ；</li><li>如果属性由多个单词组成，要给值加上引号。</li></ul><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><pre class="language-none"><code class="language-none">&#x2F;* 注释 *&#x2F;</code></pre><h2 id="CSS的使用"><a href="#CSS的使用" class="headerlink" title="CSS的使用"></a>CSS的使用</h2><h3 id="行内样式"><a href="#行内样式" class="headerlink" title="行内样式"></a>行内样式</h3><p>将样式定义在html标签上的style属性中。<br>以行内样式写的CSS耦合较高。</p><h3 id="内部样式"><a href="#内部样式" class="headerlink" title="内部样式"></a>内部样式</h3><p>定义在head标签中的style中。</p><h3 id="外部样式"><a href="#外部样式" class="headerlink" title="外部样式"></a>外部样式</h3><p>通过link标签引入外部的css文件</p><pre class="language-none"><code class="language-none">&lt;link rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; href&#x3D;&quot;..&#x2F;css&#x2F;style.css&quot;&#x2F;&gt;rel 当前文件与引入的文件之间的关系type 类型 csshref 引入资源的路径</code></pre><h3 id="三种方法优先级"><a href="#三种方法优先级" class="headerlink" title="三种方法优先级"></a>三种方法优先级</h3><p>就近原则</p><h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><h3 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h3><h4 id="通用选择器"><a href="#通用选择器" class="headerlink" title="通用选择器 *"></a>通用选择器 *</h4><p>选择所有元素</p><p>*{<br>    属性名：属性值<br>}</p><h4 id="元素选择器-标签选择器"><a href="#元素选择器-标签选择器" class="headerlink" title="元素选择器/标签选择器"></a>元素选择器/标签选择器</h4><p>选择指定元素</p><p>标签名{<br>    属性名：属性值；<br>}</p><h4 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h4><p>选择指定id属性值的元素</p><pre class="language-none"><code class="language-none">#id属性值&#123;    属性名：属性值；&#125;</code></pre><p>⚠️ id最好唯一；</p><h4 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h4><p>选择设置指定class属性值的元素</p><p>. class属性名{<br>    属性名：属性值；<br>}</p><h4 id="分组选择器"><a href="#分组选择器" class="headerlink" title="分组选择器"></a>分组选择器</h4><p>指定选择器选中的元素；</p><p>选择器1，选择器2，选择器2{<br>    属性名：属性值</p><p>}</p><h4 id="选择器优先级问题-权重"><a href="#选择器优先级问题-权重" class="headerlink" title="选择器优先级问题 权重"></a>选择器优先级问题 权重</h4><p>id选择器 100&gt;class选择器 10&gt;元素选择器 1&gt;通用选择器</p><p>行内样式优先级最高 1000</p><h3 id="组合选择器"><a href="#组合选择器" class="headerlink" title="组合选择器"></a>组合选择器</h3><h4 id="后代选择器-（以空格分隔）"><a href="#后代选择器-（以空格分隔）" class="headerlink" title="后代选择器 （以空格分隔）"></a>后代选择器 （以空格分隔）</h4><p>选择指定元素的所有后代元素</p><p>指定元素 指定元素{<br>    属性名：属性值<br>}</p><h4 id="子元素选择器-（以大于号分隔）"><a href="#子元素选择器-（以大于号分隔）" class="headerlink" title="子元素选择器 （以大于号分隔）"></a>子元素选择器 （以大于号分隔）</h4><p>选择指定元素的第一代元素</p><p>指定元素&gt;指定元素{<br>    属性名：属性值<br>}</p><h4 id="相邻兄弟选择器-（以加号分隔）"><a href="#相邻兄弟选择器-（以加号分隔）" class="headerlink" title="相邻兄弟选择器 （以加号分隔）"></a>相邻兄弟选择器 （以加号分隔）</h4><p>选择指定元素相邻的下一个指定元素（只会向下找一个）</p><p>指定元素+指定元素{<br>    属性名：属性值<br>}</p><h4 id="普通兄弟选择器-（以波浪号分隔）"><a href="#普通兄弟选择器-（以波浪号分隔）" class="headerlink" title="普通兄弟选择器 （以波浪号分隔）"></a>普通兄弟选择器 （以波浪号分隔）</h4><p>选择指定元素后面的指定的同级元素（只会向下找）</p><p>指定元素~指定元素{<br>    属性名：属性值<br>}</p><h2 id="CSS常用属性设置"><a href="#CSS常用属性设置" class="headerlink" title="CSS常用属性设置"></a>CSS常用属性设置</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p><strong>背景颜色</strong><br><strong>背景图片</strong><br><pre class="language-none"><code class="language-none">&#x2F;* 设置元素背景颜色 *&#x2F;background-color: blueviolet;&#x2F;* 设置背景图片 *&#x2F;background-image: url(..&#x2F;img&#x2F;img1.jpeg);&#x2F;* 设置图片 是否重复 no-repeat:表示不重复 repeat-x 横向重复 repeat-y 纵向重复*&#x2F;background-repeat: repeat-x;&#x2F;* 背景图片大小 *&#x2F;background-size: 100px;</code></pre></p><h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><pre class="language-none"><code class="language-none">#div1&#123;    &#x2F;* 字体颜色 *&#x2F;    color: blue;    color: rgb(255,0,0);    color: #000;&#125;#div2&#123;    &#x2F;* 对齐方式：left（默认） right center *&#x2F;    text-align: right;&#125;#div3&#123;    &#x2F;* 文本修饰 *&#x2F;    &#x2F;* 上划线 *&#x2F;    text-decoration: overline;    &#x2F;* 下划线 *&#x2F;    text-decoration: underline;    &#x2F;* 中划线 *&#x2F;    text-decoration: line-through;&#125;#div4&#123;    &#x2F;* 同时设置元素的上中下划线 *&#x2F;    text-decoration: overline underline line-through;&#125;a&#123;    &#x2F;* 去除文本修饰 *&#x2F;    text-decoration: none;&#125;#p1&#123;    &#x2F;* 缩进 *&#x2F;    text-indent: 4em;&#125;</code></pre><h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p><strong>font-family</strong></p><ul><li>当font-family属性值包括空格或特殊字符，需要将属性值用引号</li><li>含有后备机制，可以设置多种字体，当浏览器不识别自动向下。</li><li>当有多个属性值有多个时，使用逗号隔开。<br><strong>font-size</strong><br>设置字体大小<br><strong>font-style</strong><br>设置字体风格</li><li>normal 正常 </li><li>italic 斜体</li><li>oblique 强制斜体<br><strong>font-weight</strong><br>设置字体的粗细</li><li>bold 粗体<br>100-900 400正常 700粗体<br><strong>对齐方式</strong><br>text-align</li><li>right</li><li>left 默认</li><li>center</li><li>justify</li></ul><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="什么事CSS？（概念）"><a href="#什么事CSS？（概念）" class="headerlink" title="什么事CSS？（概念）"></a>什么事CSS？（概念）</h1><p>CSS（Cascading Style Sheets）层叠样式表，是一种用来表现HTML或XML等文件样式的计算机语言。<br>CSS3目前最新版本。能够做到网页和内容分离，对网页中的元素位置排版等效果进行像素级精准控制；<br>美化网页，依赖html。</p><h1 id="为什么要学CSS？（作用）"><a href="#为什么要学CSS？（作用）" class="headerlink" title="为什么要学CSS？（作用）"></a>为什么要学CSS？（作用）</h1><p>（1）虽然HTML的标签某些属性可以设置样式，但细节处理不好；<br>（2）HTML实现样式效果会出现大量重复代码，维护成本高。</p><h1 id="CSS的基本使用"><a href="#CSS的基本使用" class="headerlink" title="CSS的基本使用"></a>CSS的基本使用</h1><h2 id="CSS基本语法"><a href="#CSS基本语法" class="headerlink" title="CSS基本语法"></a>CSS基本语法</h2><h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><p>CSS样式由选择器和一条或多条以分号隔开的样式声明组成，每条声明的样式包含着一个CSS属性和属性值。<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202204271320625.png" alt></p><p>样式设置在style标签中。</p><p>⚠️ </p><ul><li>CSS声明要以分号结尾，要用花括号括起来；</li><li>建议一行写一个属性 ；</li><li>如果属性由多个单词组成，要给值加上引号。</li></ul><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><pre class="language-none"><code class="language-none">&#x2F;* 注释 *&#x2F;</code></pre><h2 id="CSS的使用"><a href="#CSS的使用" class="headerlink" title="CSS的使用"></a>CSS的使用</h2><h3 id="行内样式"><a href="#行内样式" class="headerlink" title="行内样式"></a>行内样式</h3><p>将样式定义在html标签上的style属性中。<br>以行内样式写的CSS耦合较高。</p><h3 id="内部样式"><a href="#内部样式" class="headerlink" title="内部样式"></a>内部样式</h3><p>定义在head标签中的style中。</p><h3 id="外部样式"><a href="#外部样式" class="headerlink" title="外部样式"></a>外部样式</h3><p>通过link标签引入外部的css文件</p><pre class="language-none"><code class="language-none">&lt;link rel&#x3D;&quot;stylesheet&quot; type&#x3D;&quot;text&#x2F;css&quot; href&#x3D;&quot;..&#x2F;css&#x2F;style.css&quot;&#x2F;&gt;rel 当前文件与引入的文件之间的关系type 类型 csshref 引入资源的路径</code></pre><h3 id="三种方法优先级"><a href="#三种方法优先级" class="headerlink" title="三种方法优先级"></a>三种方法优先级</h3><p>就近原则</p><h2 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h2><h3 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h3><h4 id="通用选择器"><a href="#通用选择器" class="headerlink" title="通用选择器 *"></a>通用选择器 *</h4><p>选择所有元素</p><p>*{<br>    属性名：属性值<br>}</p><h4 id="元素选择器-标签选择器"><a href="#元素选择器-标签选择器" class="headerlink" title="元素选择器/标签选择器"></a>元素选择器/标签选择器</h4><p>选择指定元素</p><p>标签名{<br>    属性名：属性值；<br>}</p><h4 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h4><p>选择指定id属性值的元素</p><pre class="language-none"><code class="language-none">#id属性值&#123;    属性名：属性值；&#125;</code></pre><p>⚠️ id最好唯一；</p><h4 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h4><p>选择设置指定class属性值的元素</p><p>. class属性名{<br>    属性名：属性值；<br>}</p><h4 id="分组选择器"><a href="#分组选择器" class="headerlink" title="分组选择器"></a>分组选择器</h4><p>指定选择器选中的元素；</p><p>选择器1，选择器2，选择器2{<br>    属性名：属性值</p><p>}</p><h4 id="选择器优先级问题-权重"><a href="#选择器优先级问题-权重" class="headerlink" title="选择器优先级问题 权重"></a>选择器优先级问题 权重</h4><p>id选择器 100&gt;class选择器 10&gt;元素选择器 1&gt;通用选择器</p><p>行内样式优先级最高 1000</p><h3 id="组合选择器"><a href="#组合选择器" class="headerlink" title="组合选择器"></a>组合选择器</h3><h4 id="后代选择器-（以空格分隔）"><a href="#后代选择器-（以空格分隔）" class="headerlink" title="后代选择器 （以空格分隔）"></a>后代选择器 （以空格分隔）</h4><p>选择指定元素的所有后代元素</p><p>指定元素 指定元素{<br>    属性名：属性值<br>}</p><h4 id="子元素选择器-（以大于号分隔）"><a href="#子元素选择器-（以大于号分隔）" class="headerlink" title="子元素选择器 （以大于号分隔）"></a>子元素选择器 （以大于号分隔）</h4><p>选择指定元素的第一代元素</p><p>指定元素&gt;指定元素{<br>    属性名：属性值<br>}</p><h4 id="相邻兄弟选择器-（以加号分隔）"><a href="#相邻兄弟选择器-（以加号分隔）" class="headerlink" title="相邻兄弟选择器 （以加号分隔）"></a>相邻兄弟选择器 （以加号分隔）</h4><p>选择指定元素相邻的下一个指定元素（只会向下找一个）</p><p>指定元素+指定元素{<br>    属性名：属性值<br>}</p><h4 id="普通兄弟选择器-（以波浪号分隔）"><a href="#普通兄弟选择器-（以波浪号分隔）" class="headerlink" title="普通兄弟选择器 （以波浪号分隔）"></a>普通兄弟选择器 （以波浪号分隔）</h4><p>选择指定元素后面的指定的同级元素（只会向下找）</p><p>指定元素~指定元素{<br>    属性名：属性值<br>}</p><h2 id="CSS常用属性设置"><a href="#CSS常用属性设置" class="headerlink" title="CSS常用属性设置"></a>CSS常用属性设置</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p><strong>背景颜色</strong><br><strong>背景图片</strong><br><pre class="language-none"><code class="language-none">&#x2F;* 设置元素背景颜色 *&#x2F;background-color: blueviolet;&#x2F;* 设置背景图片 *&#x2F;background-image: url(..&#x2F;img&#x2F;img1.jpeg);&#x2F;* 设置图片 是否重复 no-repeat:表示不重复 repeat-x 横向重复 repeat-y 纵向重复*&#x2F;background-repeat: repeat-x;&#x2F;* 背景图片大小 *&#x2F;background-size: 100px;</code></pre></p><h3 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h3><pre class="language-none"><code class="language-none">#div1&#123;    &#x2F;* 字体颜色 *&#x2F;    color: blue;    color: rgb(255,0,0);    color: #000;&#125;#div2&#123;    &#x2F;* 对齐方式：left（默认） right center *&#x2F;    text-align: right;&#125;#div3&#123;    &#x2F;* 文本修饰 *&#x2F;    &#x2F;* 上划线 *&#x2F;    text-decoration: overline;    &#x2F;* 下划线 *&#x2F;    text-decoration: underline;    &#x2F;* 中划线 *&#x2F;    text-decoration: line-through;&#125;#div4&#123;    &#x2F;* 同时设置元素的上中下划线 *&#x2F;    text-decoration: overline underline line-through;&#125;a&#123;    &#x2F;* 去除文本修饰 *&#x2F;    text-decoration: none;&#125;#p1&#123;    &#x2F;* 缩进 *&#x2F;    text-indent: 4em;&#125;</code></pre><h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p><strong>font-family</strong></p><ul><li>当font-family属性值包括空格或特殊字符，需要将属性值用引号</li><li>含有后备机制，可以设置多种字体，当浏览器不识别自动向下。</li><li>当有多个属性值有多个时，使用逗号隔开。<br><strong>font-size</strong><br>设置字体大小<br><strong>font-style</strong><br>设置字体风格</li><li>normal 正常 </li><li>italic 斜体</li><li>oblique 强制斜体<br><strong>font-weight</strong><br>设置字体的粗细</li><li>bold 粗体<br>100-900 400正常 700粗体<br><strong>对齐方式</strong><br>text-align</li><li>right</li><li>left 默认</li><li>center</li><li>justify</li></ul><h3 id="对齐方式"><a href="#对齐方式" class="headerlink" title="对齐方式"></a>对齐方式</h3><p>设置元素中字体水平方向的对齐方式<br><strong>left</strong><br><strong>right</strong><br><strong>center</strong><br><strong>justify</strong></p><h3 id="display"><a href="#display" class="headerlink" title="display"></a>display</h3><p>规定元素生成框的类型</p><ul><li>block 元素会被显示，且元素会变成块级元素，元素前后会有换行符</li><li>none 元素会被隐藏</li><li>inline 元素会显示为行内元素，元素前后没有换行符</li><li>inline-blovk 行内块级元素</li></ul><p>⚠️ 块级元素 ：可以设置宽高和边距，元素会自动换行；<br>  行内元素 ：不可以设置元素的宽高和边距，元素不会自动换行；<br>  行内块级元素 ：可以设置元素的宽高和边距，元素不会自动换行。</p><h3 id="常用属性-浮动"><a href="#常用属性-浮动" class="headerlink" title="常用属性-浮动"></a>常用属性-浮动</h3><p>float的属性值有none，left，right</p><ul><li>只有横向浮动，并没有纵向浮动；</li><li>会将元素的dispaly属性变更为block</li><li>浮动元素的后一个元素会围绕浮动元素（典型运动时文字围绕图片）</li><li>浮动元素的前一个元素不会受到任何影响（如果你想让两个块状元素并排显示，必须让两个块级元素都应用float）</li></ul><h3 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h3><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205101048086.png" alt></p><h4 id="border"><a href="#border" class="headerlink" title="border"></a>border</h4><p>设置所有的边框属性。</p><ul><li>可以同时设置边框的宽度，样式，颜色。</li><li>使用border-width，border-style，border-color单独设置。</li><li>上右下左<pre><code>  设置一个属性 表示四边效果一致  设置两个属性 表示上下一致，左右一致  设置三个属性 表述上 右 下不一致，左右一致</code></pre><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205101412165.png" alt><br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205101412399.png" alt></li></ul><h4 id="padding"><a href="#padding" class="headerlink" title="padding"></a>padding</h4><ul><li>设置元素所有内边距的宽度，或者设置各边上内边距的宽度。</li><li>如果在表的内容中控制文本到边距的内边距，使用td和th元素的填充属性：<pre class="language-none"><code class="language-none">td&#123;  padding:15px;&#125;</code></pre></li><li>单独设置各边的内边距：padding-top，padding-left，padding-bottom，padding-right</li><li>默认 按照上右下左的顺序设定<pre><code>  设置一个属性 表示四边效果一致  设置两个属性 表示上下一致，左右一致  设置三个属性 表述上 右 下不一致，左右一致</code></pre></li></ul><h4 id="margin"><a href="#margin" class="headerlink" title="margin"></a>margin</h4><ul><li>单独设置各边的外边距：margin-top，margin-left，margin-bottom，margin-right</li><li>默认 按照上右下左的顺序设定<pre><code>  设置一个属性 表示四边效果一致  设置两个属性 表示上下一致，左右一致  设置三个属性 表述上 右 下不一致，左右一致</code></pre></li></ul><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
@@ -249,7 +301,7 @@
       
         <tags>
             
-            <tag> br&gt;- leetcode </tag>
+            <tag> leetcode </tag>
             
         </tags>
       
@@ -358,7 +410,7 @@
     
     
     <entry>
-      <title>链表类刷题day4</title>
+      <title>链表类刷题day4（leetcode206+24）</title>
       <link href="/posts/nulishuatiday4.html"/>
       <url>/posts/nulishuatiday4.html</url>
       
@@ -383,7 +435,7 @@
     
     
     <entry>
-      <title>链表类刷题day3</title>
+      <title>链表类刷题day3（leetcode203）</title>
       <link href="/posts/nulishuatiday3.html"/>
       <url>/posts/nulishuatiday3.html</url>
       
@@ -408,7 +460,7 @@
     
     
     <entry>
-      <title>数组类刷题day2</title>
+      <title>数组类刷题day2（Leetcode977+209）</title>
       <link href="/posts/nulishuatiday2.html"/>
       <url>/posts/nulishuatiday2.html</url>
       
@@ -458,7 +510,7 @@
     
     
     <entry>
-      <title>数组类刷题day1</title>
+      <title>数组类刷题day1（leetcode704+27）</title>
       <link href="/posts/nulishuatiday1.html"/>
       <url>/posts/nulishuatiday1.html</url>
       
