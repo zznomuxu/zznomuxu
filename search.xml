@@ -4,11 +4,61 @@
   
     
     <entry>
+      <title>进京的一天</title>
+      <link href="/posts/shenghuo1.html"/>
+      <url>/posts/shenghuo1.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="ipage">    <div class="ititle">- 前言</div>  <div class="izhengwen">  <p>  今天早早的就被我妈叫起来，为了今天的行程。  </p>  <p>早上7点就出发前往机场，路上并不拥挤，一路顺畅。我爸送我的时候说到公司不要由着自己的性子发脾气，忍着点。我每次都会哼哈的答应着，但我脾气就那样吧。</p>  <p>  不到八点就到了机场，五个月没出门了，一时有点混乱。排队托运，看见旁边队伍的老爷爷，老奶奶也是去北京的，因为听到了工作人员让他们出示北京健康宝，无聊的我听到了他们的对话，也许是年纪大优点不懂这些，后面的一根男生一直在帮他们，真是好人。  </p>  <p>轮到我托运了，一切顺利。</p>  <p>啊 我困了 明天还要体检 有点担心自己的核酸结果 先睡了 明天补上</p>  </div></div><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日志 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>数组类刷题day14（Leetcode88）</title>
+      <link href="/posts/nulishuatiday14.html"/>
+      <url>/posts/nulishuatiday14.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">努力刷题day14</div><h3 id="LeetCode-88-合并两个有序数组-传送门"><a href="#LeetCode-88-合并两个有序数组-传送门" class="headerlink" title="LeetCode 88.合并两个有序数组 传送门"></a>LeetCode 88.合并两个有序数组 <a href="https://leetcode.cn/problems/merge-sorted-array/">传送门</a></h3><pre class="language-none"><code class="language-none">&#x2F;&#x2F;暴力class Solution &#123;    public void merge(int[] nums1, int m, int[] nums2, int n) &#123;        for (int i &#x3D; 0; i !&#x3D; n; ++i) &#123;            nums1[m + i] &#x3D; nums2[i];        &#125;        Arrays.sort(nums1);    &#125;&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>B站念安老师课程JavaScript笔记</title>
       <link href="/posts/qianduan33.html"/>
       <url>/posts/qianduan33.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Javascript简介"><a href="#Javascript简介" class="headerlink" title="Javascript简介"></a>Javascript简介</h2><p>&emsp;&emsp;JavaScript是一种具有面向对象能力，解释型的程序设计语言，更具体一点,它是基于对象和时间驱动并具有安全性的客户端脚本语言。它的主要目的是验证发往服务器的数据，增加web互动，加强用户体验度等。</p><h3 id="1-JavaScript的组成"><a href="#1-JavaScript的组成" class="headerlink" title="1.JavaScript的组成"></a>1.JavaScript的组成</h3><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205131527189.png" alt></p><p><strong>ECMAScript（基础语法）</strong><br>&emsp;&emsp;JavaScript的核心语法ECMAScript描述了该语言的语法和基本对象<br><strong>DOM（文档对象模型）</strong><br>&emsp;&emsp;描述了处理网页的内容的方法和接口<br><strong>BOM（浏览器对象模型</strong><br>&emsp;&emsp;描述了与浏览器进行交互的方法和接口</p><h3 id="2-开发工具"><a href="#2-开发工具" class="headerlink" title="2.开发工具"></a>2.开发工具</h3><ul><li>浏览器：chrome</li><li>开发工具：VScode</li><li>进入浏览器控制台 Console：F12<br>控制台的作用：console对象代表浏览器的JavaScript控制台，用来运行JavaScript命令，常常用来显示网页运行时的错误信息。Elements用来调试网页的html和css代码。</li></ul><h2 id="JavaScript基本用法"><a href="#JavaScript基本用法" class="headerlink" title="JavaScript基本用法"></a>JavaScript基本用法</h2><p>&emsp;&emsp;JS需要和HTML一起使用才有效果，我们可以通过直接或间接的方式将JS代码嵌入在HTML页面中。</p><ul><li>行内JS：写在标签内部的JS代码</li><li>内部JS：定义在JavaScript标签内部的JS代码</li><li>外部JS：单独的JS文件，在HTML中通过script标签引入</li></ul><p>&emsp;&emsp;我们可以将JavaScript代码放在html文件中任何位置，但是我们一般放在网页的head或者body部分。由于页面的加载方式是从上往下依次加载的，而这个对我们放置的JS代码运行是有影响的。</p><p>&emsp;&emsp;放在<head>部分，最常用的方式是在页面head部分防止<script>元素，浏览器解析head部分就会执行这个代码，然后才解析页面的其余部分。<br>&emsp;&emsp;放在<body>部分，JavaScript代码在网页读取到该语句的时候就会执行。</p></script></head></p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Javascript简介"><a href="#Javascript简介" class="headerlink" title="Javascript简介"></a>Javascript简介</h2><p>&emsp;&emsp;JavaScript是一种具有面向对象能力，解释型的程序设计语言，更具体一点,它是基于对象和时间驱动并具有安全性的客户端脚本语言。它的主要目的是验证发往服务器的数据，增加web互动，加强用户体验度等。</p><h3 id="1-JavaScript的组成"><a href="#1-JavaScript的组成" class="headerlink" title="1.JavaScript的组成"></a>1.JavaScript的组成</h3><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205131527189.png" alt></p><p><strong>ECMAScript（基础语法）</strong><br>&emsp;&emsp;JavaScript的核心语法ECMAScript描述了该语言的语法和基本对象<br><strong>DOM（文档对象模型）</strong><br>&emsp;&emsp;描述了处理网页的内容的方法和接口<br><strong>BOM（浏览器对象模型</strong><br>&emsp;&emsp;描述了与浏览器进行交互的方法和接口</p><h3 id="2-开发工具"><a href="#2-开发工具" class="headerlink" title="2.开发工具"></a>2.开发工具</h3><ul><li>浏览器：chrome</li><li>开发工具：VScode</li><li>进入浏览器控制台 Console：F12<br>控制台的作用：console对象代表浏览器的JavaScript控制台，用来运行JavaScript命令，常常用来显示网页运行时的错误信息。Elements用来调试网页的html和css代码。</li></ul><h2 id="JavaScript基本用法"><a href="#JavaScript基本用法" class="headerlink" title="JavaScript基本用法"></a>JavaScript基本用法</h2><p>&emsp;&emsp;JS需要和HTML一起使用才有效果，我们可以通过直接或间接的方式将JS代码嵌入在HTML页面中。</p><ul><li>行内JS：写在标签内部的JS代码</li><li>内部JS：定义在JavaScript标签内部的JS代码</li><li>外部JS：单独的JS文件，在HTML中通过script标签引入</li></ul><p>&emsp;&emsp;我们可以将JavaScript代码放在html文件中任何位置，但是我们一般放在网页的head或者body部分。由于页面的加载方式是从上往下依次加载的，而这个对我们放置的JS代码运行是有影响的。</p><p>&emsp;&emsp;放在<code>&lt;head&gt;</code>部分，最常用的方式是在页面head部分防止<code>&lt;script&gt;</code>元素，浏览器解析head部分就会执行这个代码，然后才解析页面的其余部分。<br>&emsp;&emsp;放在<code>&lt;body&gt;</code>部分，JavaScript代码在网页读取到该语句的时候就会执行。</p><p>⚠️最好放在<code>&lt;body&gt;</code>标签后</p><p><strong>行内JS</strong></p><pre class="language-none"><code class="language-none">&lt;body&gt;    &lt;button type&#x3D;&quot;button&quot; onclick&#x3D;&quot;alert(&#39;hello&#39;)&quot;&gt;按钮&lt;&#x2F;button&gt;&lt;&#x2F;body&gt;</code></pre><p><strong>内部JS</strong></p><pre class="language-none"><code class="language-none">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;    alert(&quot;你好，内部JS&quot;);&lt;&#x2F;script&gt;</code></pre><p><strong>外部JS</strong><br><pre class="language-none"><code class="language-none">&lt;script src&#x3D;&quot;.&#x2F;js&#x2F;test.js&quot; type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot;&gt; &lt;&#x2F;script&gt;</code></pre><br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205131610353.png" alt></p><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205131610585.png" alt></p><p>⚠️ 如果 <code>&lt;script&gt;</code>标签设置了src属性，则在script标签中写的js代码无效。</p><h2 id="JavaScript基础语法"><a href="#JavaScript基础语法" class="headerlink" title="JavaScript基础语法"></a>JavaScript基础语法</h2><h3 id="1-语句和注释"><a href="#1-语句和注释" class="headerlink" title="1.语句和注释"></a>1.语句和注释</h3><p>&emsp;&emsp;JS程序的执行单位为行，也就是一行一行的执行，一般情况下，每一行就是一个语句。<br>&emsp;&emsp;语句是为了完成某种任务而进行的操作，语句以分毫结尾，一个分号即表示一个语句结束。多个语句可以写在一行内，但不建议这么写，但是一行写多条语句时，语句必须以分号结尾。<br>&emsp;&emsp;表达式不需要分号结尾。一旦表达式后面添加分号，则JavaScript引擎就将表达式视为语句，这样会产生一些没有任何意义的与语句。<br><pre class="language-none"><code class="language-none">单行注释：用&#x2F;&#x2F;起头；多行注释：放在&#x2F;**&#x2F;之间。兼容html注释方式： &lt;!--  --&gt;</code></pre></p><h3 id="2-标识符和关键字"><a href="#2-标识符和关键字" class="headerlink" title="2.标识符和关键字"></a>2.标识符和关键字</h3><p><code>标识符</code>就是一个名字，有来给变量和函数进行命名，有特定规则和规范。<br><strong>规则</strong></p><div class="note primary no-icon">由unicode字母，_,$,数字，中文组成- 不能以数字开头- 不能是关键字和保留字- 严格区分大小写</div> <p><strong>规范</strong></p><div class="note primary no-icon">- 见名知意- 驼峰命名或下划线规则</div> <h3 id="3-变量"><a href="#3-变量" class="headerlink" title="3.变量"></a>3.变量</h3><h3 id="4-数据类型"><a href="#4-数据类型" class="headerlink" title="4.数据类型"></a>4.数据类型</h3><h3 id="5-类型转换"><a href="#5-类型转换" class="headerlink" title="5.类型转换"></a>5.类型转换</h3><h3 id="6-运算符"><a href="#6-运算符" class="headerlink" title="6.运算符"></a>6.运算符</h3><h3 id="7-控制语句"><a href="#7-控制语句" class="headerlink" title="7.控制语句"></a>7.控制语句</h3><h3 id="8-数组"><a href="#8-数组" class="headerlink" title="8.数组"></a>8.数组</h3><h3 id="9-函数"><a href="#9-函数" class="headerlink" title="9.函数"></a>9.函数</h3><h3 id="10-内置对象"><a href="#10-内置对象" class="headerlink" title="10.内置对象"></a>10.内置对象</h3><h3 id="11-对象"><a href="#11-对象" class="headerlink" title="11.对象"></a>11.对象</h3><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
@@ -210,11 +260,11 @@
     
     
     <entry>
-      <title>哈希表类刷题day8</title>
+      <title>哈希表类刷题day8（LeetCode1）</title>
       <link href="/posts/nulishuaitiba.html"/>
       <url>/posts/nulishuaitiba.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day8</div>&lt;</p><h3 id="LeetCode-1-两数之和传送门"><a href="#LeetCode-1-两数之和传送门" class="headerlink" title="LeetCode 1. 两数之和传送门"></a>LeetCode 1. 两数之和<a href="https://leetcode-cn.com/problems/two-sum/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;    public int[] twoSum(int[] nums, int target) &#123;        int[] res &#x3D; new int[2];    if(nums &#x3D;&#x3D; null || nums.length &#x3D;&#x3D; 0)&#123;        return res;    &#125;    Map&lt;Integer, Integer&gt; map &#x3D; new HashMap&lt;&gt;();    for(int i &#x3D; 0; i &lt; nums.length; i++)&#123;        int temp &#x3D; target - nums[i];        if(map.containsKey(temp))&#123;            res[1] &#x3D; i;            res[0] &#x3D; map.get(temp);        &#125;        map.put(nums[i], i);    &#125;    return res;    &#125;&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="note info">前言：努力刷题day8</div>&lt;</p><h3 id="LeetCode-1-两数之和传送门"><a href="#LeetCode-1-两数之和传送门" class="headerlink" title="LeetCode 1. 两数之和传送门"></a>LeetCode 1. 两数之和<a href="https://leetcode-cn.com/problems/two-sum/">传送门</a></h3><pre class="language-none"><code class="language-none">&#x2F;&#x2F;暴力class Solution &#123;    public int[] twoSum(int[] nums, int target) &#123;        int[] res &#x3D; new int[2];    if(nums &#x3D;&#x3D; null || nums.length &#x3D;&#x3D; 0)&#123;        return res;    &#125;    Map&lt;Integer, Integer&gt; map &#x3D; new HashMap&lt;&gt;();    for(int i &#x3D; 0; i &lt; nums.length; i++)&#123;        int temp &#x3D; target - nums[i];        if(map.containsKey(temp))&#123;            res[1] &#x3D; i;            res[0] &#x3D; map.get(temp);        &#125;        map.put(nums[i], i);    &#125;    return res;    &#125;&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>

@@ -1249,14 +1249,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    483
+                    945
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -1281,8 +1281,39 @@ h3:hover {
 <li>外部JS：单独的JS文件，在HTML中通过script标签引入</li>
 </ul>
 <p>&emsp;&emsp;我们可以将JavaScript代码放在html文件中任何位置，但是我们一般放在网页的head或者body部分。由于页面的加载方式是从上往下依次加载的，而这个对我们放置的JS代码运行是有影响的。</p>
-<p>&emsp;&emsp;放在<head>部分，最常用的方式是在页面head部分防止<script>元素，浏览器解析head部分就会执行这个代码，然后才解析页面的其余部分。<br>&emsp;&emsp;放在<body>部分，JavaScript代码在网页读取到该语句的时候就会执行。</p>
-</script></head></p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<p>&emsp;&emsp;放在<code>&lt;head&gt;</code>部分，最常用的方式是在页面head部分防止<code>&lt;script&gt;</code>元素，浏览器解析head部分就会执行这个代码，然后才解析页面的其余部分。<br>&emsp;&emsp;放在<code>&lt;body&gt;</code>部分，JavaScript代码在网页读取到该语句的时候就会执行。</p>
+<p>⚠️最好放在<code>&lt;body&gt;</code>标签后</p>
+<p><strong>行内JS</strong></p>
+<pre class="language-none"><code class="language-none">&lt;body&gt;
+    &lt;button type&#x3D;&quot;button&quot; onclick&#x3D;&quot;alert(&#39;hello&#39;)&quot;&gt;按钮&lt;&#x2F;button&gt;
+&lt;&#x2F;body&gt;</code></pre>
+<p><strong>内部JS</strong></p>
+<pre class="language-none"><code class="language-none">
+&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;
+    alert(&quot;你好，内部JS&quot;);
+&lt;&#x2F;script&gt;
+</code></pre>
+<p><strong>外部JS</strong><br><pre class="language-none"><code class="language-none">&lt;script src&#x3D;&quot;.&#x2F;js&#x2F;test.js&quot; type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot;&gt; &lt;&#x2F;script&gt;</code></pre><br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205131610353.png" alt></p>
+<p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205131610585.png" alt></p>
+<p>⚠️ 如果 <code>&lt;script&gt;</code>标签设置了src属性，则在script标签中写的js代码无效。</p>
+<h2 id="JavaScript基础语法"><a href="#JavaScript基础语法" class="headerlink" title="JavaScript基础语法"></a>JavaScript基础语法</h2><h3 id="1-语句和注释"><a href="#1-语句和注释" class="headerlink" title="1.语句和注释"></a>1.语句和注释</h3><p>&emsp;&emsp;JS程序的执行单位为行，也就是一行一行的执行，一般情况下，每一行就是一个语句。<br>&emsp;&emsp;语句是为了完成某种任务而进行的操作，语句以分毫结尾，一个分号即表示一个语句结束。多个语句可以写在一行内，但不建议这么写，但是一行写多条语句时，语句必须以分号结尾。<br>&emsp;&emsp;表达式不需要分号结尾。一旦表达式后面添加分号，则JavaScript引擎就将表达式视为语句，这样会产生一些没有任何意义的与语句。<br><pre class="language-none"><code class="language-none">单行注释：用&#x2F;&#x2F;起头；
+多行注释：放在&#x2F;**&#x2F;之间。
+兼容html注释方式： &lt;!--  --&gt;</code></pre></p>
+<h3 id="2-标识符和关键字"><a href="#2-标识符和关键字" class="headerlink" title="2.标识符和关键字"></a>2.标识符和关键字</h3><p><code>标识符</code>就是一个名字，有来给变量和函数进行命名，有特定规则和规范。<br><strong>规则</strong></p>
+<div class="note primary no-icon">由unicode字母，_,$,数字，中文组成
+- 不能以数字开头
+- 不能是关键字和保留字
+- 严格区分大小写
+</div> 
+
+<p><strong>规范</strong></p>
+<div class="note primary no-icon">
+- 见名知意
+- 驼峰命名或下划线规则
+
+</div> 
+
+<h3 id="3-变量"><a href="#3-变量" class="headerlink" title="3.变量"></a>3.变量</h3><h3 id="4-数据类型"><a href="#4-数据类型" class="headerlink" title="4.数据类型"></a>4.数据类型</h3><h3 id="5-类型转换"><a href="#5-类型转换" class="headerlink" title="5.类型转换"></a>5.类型转换</h3><h3 id="6-运算符"><a href="#6-运算符" class="headerlink" title="6.运算符"></a>6.运算符</h3><h3 id="7-控制语句"><a href="#7-控制语句" class="headerlink" title="7.控制语句"></a>7.控制语句</h3><h3 id="8-数组"><a href="#8-数组" class="headerlink" title="8.数组"></a>8.数组</h3><h3 id="9-函数"><a href="#9-函数" class="headerlink" title="9.函数"></a>9.函数</h3><h3 id="10-内置对象"><a href="#10-内置对象" class="headerlink" title="10.内置对象"></a>10.内置对象</h3><h3 id="11-对象"><a href="#11-对象" class="headerlink" title="11.对象"></a>11.对象</h3><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -1885,13 +1916,12 @@ h3:hover {
         
         <div class="article col s12 m6">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/qianduan33.html">
+                <a href="/posts/nulishuatiday14.html">
                     <div class="card-image">
                         
-                        <img src="/medias/toc-banner/js14.jpeg" class="responsive-img" alt="B站念安老师课程JavaScript笔记">
+                        <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="数组类刷题day14（Leetcode88）">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -1902,20 +1932,20 @@ h3:hover {
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          B站念安老师课程JavaScript笔记
+                          数组类刷题day14（Leetcode88）
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言：自用整理笔记。
+                            努力刷题day14。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-13
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1928,16 +1958,11 @@ h3:hover {
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
                 </div>
@@ -2286,14 +2311,14 @@ h3:hover {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    483
+                    945
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -2318,8 +2343,39 @@ h3:hover {
 <li>外部JS：单独的JS文件，在HTML中通过script标签引入</li>
 </ul>
 <p>&emsp;&emsp;我们可以将JavaScript代码放在html文件中任何位置，但是我们一般放在网页的head或者body部分。由于页面的加载方式是从上往下依次加载的，而这个对我们放置的JS代码运行是有影响的。</p>
-<p>&emsp;&emsp;放在<head>部分，最常用的方式是在页面head部分防止<script>元素，浏览器解析head部分就会执行这个代码，然后才解析页面的其余部分。<br>&emsp;&emsp;放在<body>部分，JavaScript代码在网页读取到该语句的时候就会执行。</p>
-</script></head></p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+<p>&emsp;&emsp;放在<code>&lt;head&gt;</code>部分，最常用的方式是在页面head部分防止<code>&lt;script&gt;</code>元素，浏览器解析head部分就会执行这个代码，然后才解析页面的其余部分。<br>&emsp;&emsp;放在<code>&lt;body&gt;</code>部分，JavaScript代码在网页读取到该语句的时候就会执行。</p>
+<p>⚠️最好放在<code>&lt;body&gt;</code>标签后</p>
+<p><strong>行内JS</strong></p>
+<pre class="language-none"><code class="language-none">&lt;body&gt;
+    &lt;button type&#x3D;&quot;button&quot; onclick&#x3D;&quot;alert(&#39;hello&#39;)&quot;&gt;按钮&lt;&#x2F;button&gt;
+&lt;&#x2F;body&gt;</code></pre>
+<p><strong>内部JS</strong></p>
+<pre class="language-none"><code class="language-none">
+&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;
+    alert(&quot;你好，内部JS&quot;);
+&lt;&#x2F;script&gt;
+</code></pre>
+<p><strong>外部JS</strong><br><pre class="language-none"><code class="language-none">&lt;script src&#x3D;&quot;.&#x2F;js&#x2F;test.js&quot; type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot;&gt; &lt;&#x2F;script&gt;</code></pre><br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205131610353.png" alt></p>
+<p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202205131610585.png" alt></p>
+<p>⚠️ 如果 <code>&lt;script&gt;</code>标签设置了src属性，则在script标签中写的js代码无效。</p>
+<h2 id="JavaScript基础语法"><a href="#JavaScript基础语法" class="headerlink" title="JavaScript基础语法"></a>JavaScript基础语法</h2><h3 id="1-语句和注释"><a href="#1-语句和注释" class="headerlink" title="1.语句和注释"></a>1.语句和注释</h3><p>&emsp;&emsp;JS程序的执行单位为行，也就是一行一行的执行，一般情况下，每一行就是一个语句。<br>&emsp;&emsp;语句是为了完成某种任务而进行的操作，语句以分毫结尾，一个分号即表示一个语句结束。多个语句可以写在一行内，但不建议这么写，但是一行写多条语句时，语句必须以分号结尾。<br>&emsp;&emsp;表达式不需要分号结尾。一旦表达式后面添加分号，则JavaScript引擎就将表达式视为语句，这样会产生一些没有任何意义的与语句。<br><pre class="language-none"><code class="language-none">单行注释：用&#x2F;&#x2F;起头；
+多行注释：放在&#x2F;**&#x2F;之间。
+兼容html注释方式： &lt;!--  --&gt;</code></pre></p>
+<h3 id="2-标识符和关键字"><a href="#2-标识符和关键字" class="headerlink" title="2.标识符和关键字"></a>2.标识符和关键字</h3><p><code>标识符</code>就是一个名字，有来给变量和函数进行命名，有特定规则和规范。<br><strong>规则</strong></p>
+<div class="note primary no-icon">由unicode字母，_,$,数字，中文组成
+- 不能以数字开头
+- 不能是关键字和保留字
+- 严格区分大小写
+</div> 
+
+<p><strong>规范</strong></p>
+<div class="note primary no-icon">
+- 见名知意
+- 驼峰命名或下划线规则
+
+</div> 
+
+<h3 id="3-变量"><a href="#3-变量" class="headerlink" title="3.变量"></a>3.变量</h3><h3 id="4-数据类型"><a href="#4-数据类型" class="headerlink" title="4.数据类型"></a>4.数据类型</h3><h3 id="5-类型转换"><a href="#5-类型转换" class="headerlink" title="5.类型转换"></a>5.类型转换</h3><h3 id="6-运算符"><a href="#6-运算符" class="headerlink" title="6.运算符"></a>6.运算符</h3><h3 id="7-控制语句"><a href="#7-控制语句" class="headerlink" title="7.控制语句"></a>7.控制语句</h3><h3 id="8-数组"><a href="#8-数组" class="headerlink" title="8.数组"></a>8.数组</h3><h3 id="9-函数"><a href="#9-函数" class="headerlink" title="9.函数"></a>9.函数</h3><h3 id="10-内置对象"><a href="#10-内置对象" class="headerlink" title="10.内置对象"></a>10.内置对象</h3><h3 id="11-对象"><a href="#11-对象" class="headerlink" title="11.对象"></a>11.对象</h3><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
             </div>
             <hr/>
 
@@ -2922,13 +2978,12 @@ h3:hover {
         
         <div class="article col s12 m6">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/qianduan33.html">
+                <a href="/posts/nulishuatiday14.html">
                     <div class="card-image">
                         
-                        <img src="/medias/toc-banner/js14.jpeg" class="responsive-img" alt="B站念安老师课程JavaScript笔记">
+                        <img src="/medias/toc-banner/js1.jpg" class="responsive-img" alt="数组类刷题day14（Leetcode88）">
                         
                         <!-- 福袋按钮 -->
                         <div class="caishendeng">        
@@ -2939,20 +2994,20 @@ h3:hover {
                         <span class="card-title">
                           <!-- 文章卡片hover线条效果 -->
                           <span class="titlesline"></span>
-                          B站念安老师课程JavaScript笔记
+                          数组类刷题day14（Leetcode88）
                         </span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            前言：自用整理笔记。
+                            努力刷题day14。
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-13
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -2965,16 +3020,11 @@ h3:hover {
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                        <span class="chip bg-color">前端</span>
-                    </a>
-                    
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
                 </div>
@@ -3271,7 +3321,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
       
       &nbsp;<i class="fas fa-chart-area"></i>&nbsp;全站字数: &nbsp;<span
-        class="white-color">26.4k</span>&nbsp;
+        class="white-color">27.1k</span>&nbsp;
       
       
       
