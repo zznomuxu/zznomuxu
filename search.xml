@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>入职第一天的流水账</title>
+      <link href="/posts/suibi2.html"/>
+      <url>/posts/suibi2.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="ipage">    <div class="ititle"></div>    <div class="izhengwen">  <br><p>现在是晚上八点十四分，在等外卖，记录一下今天的流水账……</p><p>早上跟着cc和另一个同事去买了早饭，买饭的时候碰到了nn姐，告诉我先吃饭，吃完饭去前台办入职，就这样，简单的吃了个包子，还剩了个鸡蛋，吃完就去找前台，前台小姐姐把我领到一个房间，里面坐了一个人，很不好意思，第一眼我以为他是要面试我，因为感觉他比我大很多，既然提到就说一下后来培训的行政姐姐问他多大了，他说他：86的。然后就和这位同事一起参加了培训和参观，之后就是回到工位上坐了一会，组长，hx姐带我吃了午餐，拿着饭盒，今天的菜感觉还挺好吃的，嘻嘻～</p><p>这就说到下午了，下午才是真的令人头大，几乎整个下午我都在和我旁边的同事wdp装主机以及另一个虚拟桌面，忙来忙去，领物料等，终于结束了。</p><p>到点了没好意思下班，等了好久才走，走之前部门经理t总和hx姐大致给我布置了这周的任务，哎！对了还认识了一下软件二组的同事们，感觉大家都很好。</p><p>总的来说今天的感觉，热以及wdp很好，一直在帮忙。就这样吧，哎。</p>  </div></div><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日志 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工作 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>京</title>
       <link href="/posts/shenghuo1.html"/>
       <url>/posts/shenghuo1.html</url>
@@ -1010,11 +1035,11 @@
     
     
     <entry>
-      <title>运行时报错：AttributeError:module &#39;urllib&#39; has no attribute &#39;urlopen&#39;</title>
-      <link href="/posts/bug5.html"/>
-      <url>/posts/bug5.html</url>
+      <title>解释器提示如：SyntaxError:invalid character in identifier</title>
+      <link href="/posts/bug4.html"/>
+      <url>/posts/bug4.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在Python3中如果写以下代码会出现报错，原因就是在Python3中应该把            import urllib=======》import urllib.request</p><p>把所有位置都换成带有.request，就可以解决错误了</p><pre class="language-none"><code class="language-none">import urllibfrom bs4 import BeautifulSoupresponse &#x3D; urllib.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)html &#x3D; response.read()data &#x3D; html.decode(&#39;utf-8&#39;)soup &#x3D; BeautifulSoup(data)# print soup.findAll(&#39;span&#39;)</code></pre><p>response = urllib.urlopen(“<a href="http://www.imau.edu.cn">http://www.imau.edu.cn</a>“)<br>AttributeError: module ‘urllib’ has no attribute ‘urlopen’</p><p>例如这个例子改一下：两处改好就OK了<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">import urllib.request<br>from bs4 import BeautifulSoup</code></pre></p><p>response &#x3D; urllib.request.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)<br>html &#x3D; response.read()<br>data &#x3D; html.decode(&#39;utf-8&#39;)<br>soup &#x3D; BeautifulSoup(data)</p><h1 id="print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt"><a href="#print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt" class="headerlink" title="print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;"></a>print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解释器提示如：SyntaxError: invalid character in identifier相信很多时候遇到这个Error会找不到问题出在哪里，此时就要看错误行是不是夹杂了中文空格字符等。</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
@@ -1035,11 +1060,11 @@
     
     
     <entry>
-      <title>解释器提示如：SyntaxError:invalid character in identifier</title>
-      <link href="/posts/bug4.html"/>
-      <url>/posts/bug4.html</url>
+      <title>运行时报错：AttributeError:module &#39;urllib&#39; has no attribute &#39;urlopen&#39;</title>
+      <link href="/posts/bug5.html"/>
+      <url>/posts/bug5.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解释器提示如：SyntaxError: invalid character in identifier相信很多时候遇到这个Error会找不到问题出在哪里，此时就要看错误行是不是夹杂了中文空格字符等。</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在Python3中如果写以下代码会出现报错，原因就是在Python3中应该把            import urllib=======》import urllib.request</p><p>把所有位置都换成带有.request，就可以解决错误了</p><pre class="language-none"><code class="language-none">import urllibfrom bs4 import BeautifulSoupresponse &#x3D; urllib.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)html &#x3D; response.read()data &#x3D; html.decode(&#39;utf-8&#39;)soup &#x3D; BeautifulSoup(data)# print soup.findAll(&#39;span&#39;)</code></pre><p>response = urllib.urlopen(“<a href="http://www.imau.edu.cn">http://www.imau.edu.cn</a>“)<br>AttributeError: module ‘urllib’ has no attribute ‘urlopen’</p><p>例如这个例子改一下：两处改好就OK了<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">import urllib.request<br>from bs4 import BeautifulSoup</code></pre></p><p>response &#x3D; urllib.request.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)<br>html &#x3D; response.read()<br>data &#x3D; html.decode(&#39;utf-8&#39;)<br>soup &#x3D; BeautifulSoup(data)</p><h1 id="print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt"><a href="#print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt" class="headerlink" title="print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;"></a>print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
