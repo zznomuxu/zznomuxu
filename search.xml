@@ -1060,11 +1060,11 @@
     
     
     <entry>
-      <title>解释器提示如：SyntaxError:invalid character in identifier</title>
-      <link href="/posts/bug4.html"/>
-      <url>/posts/bug4.html</url>
+      <title>运行时报错：AttributeError:module &#39;urllib&#39; has no attribute &#39;urlopen&#39;</title>
+      <link href="/posts/bug5.html"/>
+      <url>/posts/bug5.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解释器提示如：SyntaxError: invalid character in identifier相信很多时候遇到这个Error会找不到问题出在哪里，此时就要看错误行是不是夹杂了中文空格字符等。</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在Python3中如果写以下代码会出现报错，原因就是在Python3中应该把            import urllib=======》import urllib.request</p><p>把所有位置都换成带有.request，就可以解决错误了</p><pre class="language-none"><code class="language-none">import urllibfrom bs4 import BeautifulSoupresponse &#x3D; urllib.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)html &#x3D; response.read()data &#x3D; html.decode(&#39;utf-8&#39;)soup &#x3D; BeautifulSoup(data)# print soup.findAll(&#39;span&#39;)</code></pre><p>response = urllib.urlopen(“<a href="http://www.imau.edu.cn">http://www.imau.edu.cn</a>“)<br>AttributeError: module ‘urllib’ has no attribute ‘urlopen’</p><p>例如这个例子改一下：两处改好就OK了<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">import urllib.request<br>from bs4 import BeautifulSoup</code></pre></p><p>response &#x3D; urllib.request.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)<br>html &#x3D; response.read()<br>data &#x3D; html.decode(&#39;utf-8&#39;)<br>soup &#x3D; BeautifulSoup(data)</p><h1 id="print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt"><a href="#print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt" class="headerlink" title="print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;"></a>print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
@@ -1085,11 +1085,11 @@
     
     
     <entry>
-      <title>运行时报错：AttributeError:module &#39;urllib&#39; has no attribute &#39;urlopen&#39;</title>
-      <link href="/posts/bug5.html"/>
-      <url>/posts/bug5.html</url>
+      <title>解释器提示如：SyntaxError:invalid character in identifier</title>
+      <link href="/posts/bug4.html"/>
+      <url>/posts/bug4.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在Python3中如果写以下代码会出现报错，原因就是在Python3中应该把            import urllib=======》import urllib.request</p><p>把所有位置都换成带有.request，就可以解决错误了</p><pre class="language-none"><code class="language-none">import urllibfrom bs4 import BeautifulSoupresponse &#x3D; urllib.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)html &#x3D; response.read()data &#x3D; html.decode(&#39;utf-8&#39;)soup &#x3D; BeautifulSoup(data)# print soup.findAll(&#39;span&#39;)</code></pre><p>response = urllib.urlopen(“<a href="http://www.imau.edu.cn">http://www.imau.edu.cn</a>“)<br>AttributeError: module ‘urllib’ has no attribute ‘urlopen’</p><p>例如这个例子改一下：两处改好就OK了<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">import urllib.request<br>from bs4 import BeautifulSoup</code></pre></p><p>response &#x3D; urllib.request.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)<br>html &#x3D; response.read()<br>data &#x3D; html.decode(&#39;utf-8&#39;)<br>soup &#x3D; BeautifulSoup(data)</p><h1 id="print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt"><a href="#print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt" class="headerlink" title="print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;"></a>print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解释器提示如：SyntaxError: invalid character in identifier相信很多时候遇到这个Error会找不到问题出在哪里，此时就要看错误行是不是夹杂了中文空格字符等。</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
