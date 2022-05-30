@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>数组类刷题day15（Leetcode88）</title>
+      <link href="/posts/nulishuatiday15.html"/>
+      <url>/posts/nulishuatiday15.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">努力刷题day15</div><h3 id="LeetCode-551-学生出勤记录1-传送门"><a href="#LeetCode-551-学生出勤记录1-传送门" class="headerlink" title="LeetCode 551.学生出勤记录1 传送门"></a>LeetCode 551.学生出勤记录1 <a href="https://leetcode.cn/problems/student-attendance-record-i/">传送门</a></h3><pre class="language-none"><code class="language-none">class Solution &#123;    public boolean checkRecord(String s) &#123;        int absents &#x3D; 0, lates &#x3D; 0;        int n &#x3D; s.length();        for (int i &#x3D; 0; i &lt; n; i++) &#123;            char c &#x3D; s.charAt(i);            if (c &#x3D;&#x3D; &#39;A&#39;) &#123;                absents++;                if (absents &gt;&#x3D; 2) &#123;                    return false;                &#125;            &#125;            if (c &#x3D;&#x3D; &#39;L&#39;) &#123;                lates++;                if (lates &gt;&#x3D; 3) &#123;                    return false;                &#125;            &#125; else &#123;                lates &#x3D; 0;            &#125;        &#125;        return true;    &#125;&#125;</code></pre><h3 id="LeetCode-1446-连续字符串-传送门"><a href="#LeetCode-1446-连续字符串-传送门" class="headerlink" title="LeetCode 1446.连续字符串 传送门"></a>LeetCode 1446.连续字符串 <a href="https://leetcode.cn/problems/consecutive-characters/">传送门</a></h3><pre class="language-none"><code class="language-none">&#x2F;&#x2F;双指针模拟class Solution &#123;    public int maxPower(String s) &#123;        int maxPower &#x3D; 1;        int len &#x3D; s.length();        for (int i &#x3D; 0; i &lt; len; i++) &#123;            int cnt &#x3D; 1;            for (int j &#x3D; i + 1; j &lt; len; j++) &#123;                if (s.charAt(i) &#x3D;&#x3D; s.charAt(j)) &#123;                    cnt++;                    if (cnt &gt; maxPower) &#123;                        maxPower &#x3D; cnt;                    &#125;                &#125; else &#123;                    cnt &#x3D; 1;                    break;                &#125;            &#125;        &#125;        return maxPower;    &#125;&#125;</code></pre><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>入职第二天的感受</title>
       <link href="/posts/rz3.html"/>
       <url>/posts/rz3.html</url>
@@ -1060,11 +1085,11 @@
     
     
     <entry>
-      <title>运行时报错：AttributeError:module &#39;urllib&#39; has no attribute &#39;urlopen&#39;</title>
-      <link href="/posts/bug5.html"/>
-      <url>/posts/bug5.html</url>
+      <title>解释器提示如：SyntaxError:invalid character in identifier</title>
+      <link href="/posts/bug4.html"/>
+      <url>/posts/bug4.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在Python3中如果写以下代码会出现报错，原因就是在Python3中应该把            import urllib=======》import urllib.request</p><p>把所有位置都换成带有.request，就可以解决错误了</p><pre class="language-none"><code class="language-none">import urllibfrom bs4 import BeautifulSoupresponse &#x3D; urllib.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)html &#x3D; response.read()data &#x3D; html.decode(&#39;utf-8&#39;)soup &#x3D; BeautifulSoup(data)# print soup.findAll(&#39;span&#39;)</code></pre><p>response = urllib.urlopen(“<a href="http://www.imau.edu.cn">http://www.imau.edu.cn</a>“)<br>AttributeError: module ‘urllib’ has no attribute ‘urlopen’</p><p>例如这个例子改一下：两处改好就OK了<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">import urllib.request<br>from bs4 import BeautifulSoup</code></pre></p><p>response &#x3D; urllib.request.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)<br>html &#x3D; response.read()<br>data &#x3D; html.decode(&#39;utf-8&#39;)<br>soup &#x3D; BeautifulSoup(data)</p><h1 id="print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt"><a href="#print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt" class="headerlink" title="print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;"></a>print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解释器提示如：SyntaxError: invalid character in identifier相信很多时候遇到这个Error会找不到问题出在哪里，此时就要看错误行是不是夹杂了中文空格字符等。</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
@@ -1085,11 +1110,11 @@
     
     
     <entry>
-      <title>解释器提示如：SyntaxError:invalid character in identifier</title>
-      <link href="/posts/bug4.html"/>
-      <url>/posts/bug4.html</url>
+      <title>运行时报错：AttributeError:module &#39;urllib&#39; has no attribute &#39;urlopen&#39;</title>
+      <link href="/posts/bug5.html"/>
+      <url>/posts/bug5.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>解释器提示如：SyntaxError: invalid character in identifier相信很多时候遇到这个Error会找不到问题出在哪里，此时就要看错误行是不是夹杂了中文空格字符等。</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>在Python3中如果写以下代码会出现报错，原因就是在Python3中应该把            import urllib=======》import urllib.request</p><p>把所有位置都换成带有.request，就可以解决错误了</p><pre class="language-none"><code class="language-none">import urllibfrom bs4 import BeautifulSoupresponse &#x3D; urllib.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)html &#x3D; response.read()data &#x3D; html.decode(&#39;utf-8&#39;)soup &#x3D; BeautifulSoup(data)# print soup.findAll(&#39;span&#39;)</code></pre><p>response = urllib.urlopen(“<a href="http://www.imau.edu.cn">http://www.imau.edu.cn</a>“)<br>AttributeError: module ‘urllib’ has no attribute ‘urlopen’</p><p>例如这个例子改一下：两处改好就OK了<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">import urllib.request<br>from bs4 import BeautifulSoup</code></pre></p><p>response &#x3D; urllib.request.urlopen(&quot;http:&#x2F;&#x2F;www.imau.edu.cn&quot;)<br>html &#x3D; response.read()<br>data &#x3D; html.decode(&#39;utf-8&#39;)<br>soup &#x3D; BeautifulSoup(data)</p><h1 id="print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt"><a href="#print-soup-findAll-39-span-39-lt-code-gt-lt-pre-gt-hexoPostRenderEscape—-gt" class="headerlink" title="print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;"></a>print soup.findAll(&#39;span&#39;)&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;</h1><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
       
       
       <categories>
