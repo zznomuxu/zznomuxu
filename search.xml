@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>C 语言重学</title>
+      <link href="/posts/cplus.html"/>
+      <url>/posts/cplus.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note info">C 1</div><h2 id="C程序结构"><a href="#C程序结构" class="headerlink" title="C程序结构"></a>C程序结构</h2><h3 id="1-Hello-World-例子"><a href="#1-Hello-World-例子" class="headerlink" title="1.Hello World 例子"></a>1.Hello World 例子</h3><pre class="language-none"><code class="language-none">#include&lt;stdio.h&gt;&#x2F;&#x2F;预处理器指令int main（）&#123;    &#x2F;**&#x2F;    printf(&quot;Hello world&quot;);&#x2F;&#x2F;    return 0;&#125;</code></pre><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202206261356609.png" alt></p><h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>（菜鸟教程截图，侵删致谢）</p><h3 id="1-整数类型"><a href="#1-整数类型" class="headerlink" title="1.整数类型"></a>1.整数类型</h3><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202206261405679.png" alt><br>⚠️ 为了得到某个类型或某个变量在特定平台上的准确大小，可以使用sizeof（type），得到存储字节的大小；<br>&lt;!—hexoPostRenderEscape:<pre class="language-none"><code class="language-none">#include &lt;stdio.h&gt;</code></pre></p><h1 id="include-lt-limits-h-gt"><a href="#include-lt-limits-h-gt" class="headerlink" title="include &lt;limits.h&gt;"></a>include &lt;limits.h&gt;</h1><p>int main()<br>&#123;<br>   printf(&quot;int 存储大小 : %lu \n&quot;, sizeof(int));</p><p>   return 0;<br>&#125;&lt;/code&gt;&lt;/pre&gt;:hexoPostRenderEscape—&gt;<br><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202206261423917.png" alt></p><h3 id="2-浮点数类型"><a href="#2-浮点数类型" class="headerlink" title="2.浮点数类型"></a>2.浮点数类型</h3><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202206261424686.png" alt></p><h3 id="3-void类型"><a href="#3-void类型" class="headerlink" title="3.void类型"></a>3.void类型</h3><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202206261425028.png" alt></p><h2 id="C变量"><a href="#C变量" class="headerlink" title="C变量"></a>C变量</h2><pre class="language-none"><code class="language-none">#include &lt;stdio.h&gt;&#x2F;&#x2F; 函数外定义变量 x 和 yint x;int y;int addtwonum()&#123;    &#x2F;&#x2F; 函数内声明变量 x 和 y 为外部变量    extern int x;    extern int y;    &#x2F;&#x2F; 给外部变量（全局变量）x 和 y 赋值    x &#x3D; 1;    y &#x3D; 2;    return x+y;&#125;int main()&#123;    int result;    &#x2F;&#x2F; 调用函数 addtwonum    result &#x3D; addtwonum();    printf(&quot;result 为: %d&quot;,result);    return 0;&#125;</code></pre><p><img src="https://zzblogimages.oss-cn-beijing.aliyuncs.com/202206261429258.png" alt><br>⚠️ 如果需要在一个源文件中引用另外一个源文件中定义的变量，我们只需在引用的文件中将变量加上 extern 关键字的声明即可。</p><h2 id="C常量"><a href="#C常量" class="headerlink" title="C常量"></a>C常量</h2><h3 id="1-定义常量"><a href="#1-定义常量" class="headerlink" title="1.定义常量"></a>1.定义常量</h3><p><strong>使用#define</strong><br><pre class="language-none"><code class="language-none">#define wiight 55</code></pre><br><strong>使用const</strong><br><pre class="language-none"><code class="language-none">const int var&#x3D;5；</code></pre></p><h2 id="C存储类"><a href="#C存储类" class="headerlink" title="C存储类"></a>C存储类</h2><p>想见菜鸟教程：<a href="https://www.runoob.com/cprogramming/c-storage-classes.html">https://www.runoob.com/cprogramming/c-storage-classes.html</a></p><h2 id="C运算符"><a href="#C运算符" class="headerlink" title="C运算符"></a>C运算符</h2><p>⚠️ 前++和后++<br>前++ ：先自加1再运算<br>后++ ：先运算再自加1</p><p>⚠️ — 同理</p><h2 id="C判断"><a href="#C判断" class="headerlink" title="C判断"></a>C判断</h2><h3 id="1-判断语句"><a href="#1-判断语句" class="headerlink" title="1.判断语句"></a>1.判断语句</h3><p>if<br>if else<br>嵌套if<br>switch<br>嵌套switch</p><h3 id="2-三元运算符"><a href="#2-三元运算符" class="headerlink" title="2.三元运算符"></a>2.三元运算符</h3><p>？ ：</p><h2 id="C循环"><a href="#C循环" class="headerlink" title="C循环"></a>C循环</h2><h3 id="1-循环类型"><a href="#1-循环类型" class="headerlink" title="1.循环类型"></a>1.循环类型</h3><p>while<br>for<br>do while<br>嵌套循环</p><h3 id="2-循环控制语句"><a href="#2-循环控制语句" class="headerlink" title="2.循环控制语句"></a>2.循环控制语句</h3><p>break<br>continue<br>goto</p><h2 id="C作用域"><a href="#C作用域" class="headerlink" title="C作用域"></a>C作用域</h2><p><a href="https://www.runoob.com/cprogramming/c-scope-rules.html">https://www.runoob.com/cprogramming/c-scope-rules.html</a></p><h2 id="C数组"><a href="#C数组" class="headerlink" title="C数组"></a>C数组</h2><h3 id="1-声明数组"><a href="#1-声明数组" class="headerlink" title="1.声明数组"></a>1.声明数组</h3><p>type arrayname [ arraysize];</p><h3 id="2-初始化数组"><a href="#2-初始化数组" class="headerlink" title="2.初始化数组"></a>2.初始化数组</h3><p>double balabce[5]={100.0,2.0,3.4,7.0,50.0};</p><h2 id="C枚举"><a href="#C枚举" class="headerlink" title="C枚举"></a>C枚举</h2><pre class="language-none"><code class="language-none">#include &lt;stdio.h&gt;enum DAY&#123;      MON&#x3D;1, TUE, WED, THU, FRI, SAT, SUN&#125; day;int main()&#123;    &#x2F;&#x2F; 遍历枚举元素    for (day &#x3D; MON; day &lt;&#x3D; SUN; day++) &#123;        printf(&quot;枚举元素：%d \n&quot;, day);    &#125;&#125;</code></pre><h2 id="C-指针"><a href="#C-指针" class="headerlink" title="C 指针"></a>C 指针</h2><h3 id="1-指针"><a href="#1-指针" class="headerlink" title="1.指针"></a>1.指针</h3><p><a href="https://www.runoob.com/cprogramming/c-pointers.html">https://www.runoob.com/cprogramming/c-pointers.html</a></p><h3 id="2-函数指针"><a href="#2-函数指针" class="headerlink" title="2.函数指针"></a>2.函数指针</h3><p><a href="https://www.runoob.com/cprogramming/c-fun-pointer-callback.html">https://www.runoob.com/cprogramming/c-fun-pointer-callback.html</a></p><h2 id="C字符串"><a href="#C字符串" class="headerlink" title="C字符串"></a>C字符串</h2><h2 id="C结构体"><a href="#C结构体" class="headerlink" title="C结构体"></a>C结构体</h2><h2 id="C共用体"><a href="#C共用体" class="headerlink" title="C共用体"></a>C共用体</h2><h2 id="C位域"><a href="#C位域" class="headerlink" title="C位域"></a>C位域</h2><h2 id="C-typedef"><a href="#C-typedef" class="headerlink" title="C typedef"></a>C typedef</h2><h2 id="c输入输出"><a href="#c输入输出" class="headerlink" title="c输入输出"></a>c输入输出</h2><h2 id="c文件读写"><a href="#c文件读写" class="headerlink" title="c文件读写"></a>c文件读写</h2><h2 id="C强制类型转换"><a href="#C强制类型转换" class="headerlink" title="C强制类型转换"></a>C强制类型转换</h2><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 语言学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我好难过啊</title>
+      <link href="/posts/rz4.html"/>
+      <url>/posts/rz4.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><div class="ipage">    <div class="ititle"></div><br>    <div class="izhengwen"><br>  <br></div></div></p><p>今天的心情很难过，本来平淡无奇，突然中午被安排个任务，下午看看wdp是如何测试。好，看就看呗，嗯……测第三个的时候，看需要测试的图片的问题就是曲直问题，可是发完结果给领导，领导说的和图片需求不一样嘛，让我再去看看空转问题，说实话，我不懂，也幸亏有yy去了吧。总之，我不会，领导一说话我就很难受，他也没说我，我就觉得自己很愚蠢，并且今天愚蠢就算了，为什么还表现的自己唯唯诺诺，我对自己很不满，嗯。就一份工作而已，不过工作不开心也是个大问题，所以，我要做自己，管他们呢，不会就是不会，又没带我学习过，记住，绝对不可以唯唯诺诺，大不了就不干了。想了想，人家也没说我，我真不适合工作，脸皮太薄。</p><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 日志 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 公司 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数组类刷题day15（Leetcode551+1446）</title>
       <link href="/posts/nulishuatiday15.html"/>
       <url>/posts/nulishuatiday15.html</url>
